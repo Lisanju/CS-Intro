@@ -99,3 +99,63 @@ print("O comprimento em polegadas é: ", p_comp)
 
 #Ex 18#
 
+mc_vol = float(input("Digite um valor de volume em metros cúbicos: "))
+l_vol = mc_vol*1000
+print("O valor de volume em litros é: ", l_vol)
+
+#Ex 19#
+
+l_vol = float(input("Digite um valor de volume em litros: "))
+mc_vol = l_vol/1000
+print("O valor do volume em metros cúbicos é: ", mc_vol)
+
+#Ex 20#
+
+kg_m = float(input("Digite um valor de massa em quilogramas: "))
+lb_m = kg_m/0.45
+print("O valor de massa em libras é: ", lb_m)
+
+#Ex 21#
+
+lb_m = float(input("Digite um valor de massa em libras: "))
+kg_m = lb_m*0.45
+print("O valor de massa em quilogramas é: ", kg_m)
+
+#Ex 22#
+
+j_comp = float(input("Digite um comprimento em jardas: "))
+m_comp = j_comp*0.91
+print("O valor do comprimento em metros é: ", m_comp)
+
+#Ex 23#
+
+m_comp = float(input("Digite um comprimento em metros: "))
+j_comp = m_comp/0.91
+print("O valor do comprimento em jardas é: ", j_comp)
+
+#Ex 24#
+
+mq_a = float(input("Digite um valor de área em metros quadrados: "))
+ac_a = mq_a*0.000247
+print("O valor da área em acres é: ", ac_a)
+
+#Ex 25#
+
+ac_a = float(input("Digite um valor de área em acres: "))
+mq_a = ac_a/0.000247
+print("O valor da área em metros quadrados é: ", mq_a)
+
+#Ex 26#
+
+mq_a = float(input("Digite um valor de área em metros quadrados: "))
+hec_a = mq_a*0.0001
+print("O valor da área em hectares é: ", hec_a)
+
+#Ex 27#
+
+hec_a = float(input("Digite um vlaor de área em hectares: "))
+mq_a = hec_a*1000
+print("O valor da área em metros quadrados é: ", mq_a)
+
+#Ex 28#
+
