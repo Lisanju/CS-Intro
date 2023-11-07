@@ -159,3 +159,131 @@ print("O valor da área em metros quadrados é: ", mq_a)
 
 #Ex 28#
 
+v1 = int(input("Digite um valor: "))
+v2 = int(input("Digite outro valor: "))
+v3 = int(input("Digite mais um valor: "))
+print(v1**2 + v2**2 + v3**2)
+
+#Ex 29#
+
+n1 = int(input("Nota P1: "))
+n2 = int(input("Nota P2: "))
+n3 = int(input("Nota P3: "))
+n4 = int(input("Nota P4: "))
+media = (n1+n2+n3+n4)/4
+
+#Ex 30#
+
+v_real = float(input("Digite um valor de dinheiro em real: "))
+cot_dolar = float(input("Digite a cotação do dolar: "))
+v_dolar_convertido = v_real*cot_dolar
+
+#Ex 31#
+
+intn = int(input("Digite um número inteiro: "))
+print("Antecessor: ", intn - 1, " Sucessor: ", intn + 1)
+
+#Ex 32#
+
+intn = int(input("Digite um número inteiro: "))
+print(((intn*3)+1) + ((intn*2)-1))
+
+#Ex 33#
+
+lado = float(input("Digite o valor do lado de um quadrado: "))
+print("A área desse quadrado é: ", lado*lado)
+
+#Ex 34#
+
+raio = float(input("Digite o valor do raio de um círculo: "))
+print("A área desse círculo é: ", (raio**2)*3.141592)
+
+#Ex 35#
+
+a = int(input("Cateto a: "))
+b = int(input("Cateto b: "))
+hipotenusa = (a**2 + b**2)**0.5
+print("A hipotesuna é: ", hipotenusa)
+
+#Ex 36#
+
+altura = float(input("Digite a altura de um cilindro circular: "))
+raio = float(input("Digite o raio desse mesmo cilindro: "))
+volume = 3.141592*(raio**2)*altura
+print("O volume desse cilindro circular é: ", volume)
+
+#Ex 37#
+
+valor_produto = float(input("Digite o valor do produto: "))
+desconto = valor_produto*(12/100)
+valor_com_desconto = valor_produto - desconto
+print("O valor do produto com desconto é: ", valor_com_desconto)
+
+#Ex 38#
+
+salario = float(input("Salário: "))
+aumento = salario*(25/100)
+salario_aumento = salario + aumento
+print("O salário com aumento é: ", salario_aumento)
+
+#Ex 39#
+
+imp = 780000.00
+d1 = imp*(46/100)
+d2 = imp*(32/100)
+d3 = imp*(22/100)
+g1 = imp - d1
+g2 = imp - d2
+g3 = imp - d3
+print("O ganhador 1 receberá: ", g1, "\nO ganhador 2 receberá: ", g2, "\nO ganhador 3 receberá: ", g3)
+
+#Ex 40#
+
+valor_p_dia = 30.00
+dias_trabalhados = float(input("Digite o número de dias trabalhados: "))
+quantia_liquida = valor_p_dia*dias_trabalhados
+desconto = quantia_liquida*(8/100)
+total = quantia_liquida - desconto
+print("O encanador receberá R$", total, " por ", dias_trabalhados, "dias trabalhados.")
+
+#Ex 41#
+
+valor_de_hora = float(input("Digite o valor de hora de trabalho em reais: "))
+horas_trabalhadas = float(input("Digite o número de horas trabalhadas no mês: "))
+valor_pago = valor_de_hora*horas_trabalhadas
+print(valor_pago+(valor_pago*(10/100)))
+
+#Ex 42#
+
+salario_base = float(input("Digite o salário-base de um funcionário: "))
+grat = salario_base*(5/100)
+imposto = salario_base*(7/100)
+salario_total = salario_base + grat - imposto
+print("O funcionário recebe: ", salario_total)
+
+#Ex 43#
+
+valor = float(input("Digite um valor: "))
+total_desconto = valor - (valor*(10/100))
+total_parcelado = valor/3
+total_comissao_vista = total_desconto + (total_desconto*5/100)
+total_comissao_parcelado = total_desconto + (valor*5/100)
+print("Com desconto de 10%, o valor a se pagar é: ", total_desconto)
+print("O valor parcelado em três vezes sem juros é de ", total_parcelado, " por parcela")
+print("A comissão do vendedor em venda à vista é: ", total_comissao_vista)
+print("A comissão do vendedor em venda parcelada é: ", total_comissao_parcelado)
+
+#Ex 44#
+
+alturade = int(input("Digite a altura atual do degrau: "))
+alturaal = int(input("Digite a altura do degrau que deseja alcançar: "))
+print("Faltam ", alturaal - alturade, " para alcançar o degrau desejado")
+
+#Ex 45#
+
+numero = int(input("Digite um número de três dígitos (100 - 999): "))
+inverso = int(str(numero)[::-1])
+print(inverso)
+
+#Ex 46#
+
