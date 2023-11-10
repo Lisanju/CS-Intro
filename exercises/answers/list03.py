@@ -98,3 +98,23 @@ for i in range(1,10):
         salva_menor = n
 
 print(f"O menor número é {salva_menor} e o maior número é {salva_maior}")
+
+#Ex 9#
+
+n = int(input("Digite N: "))
+
+for i in range(1,n+1,2):
+    print(i)
+
+print("Fim do programa")
+
+#Ex 10#
+
+soma = 0
+for i in range(0,50+1,2):
+    soma = soma+i
+
+print("O resultado da soma dos 50 números pares é: ",soma)
+
+#Ex 11#
+
