@@ -45,3 +45,56 @@ print("Fim do programa")
 
 #Ex 5#
 
+c = 1
+soma = 0
+while(c<=10):
+    n = int(input("Digite um valor: "))
+    soma = soma+n
+    c = c+1
+    
+print(soma)
+print("Fim do programa")
+
+#Ex 6#
+
+c = 0
+soma = 0
+while(c<10):
+    n = int(input("Digite um valor: "))
+    soma = soma+n
+    c = c+1
+
+media = soma/10
+print("A média da soma dos números fornecidos é: ",media)
+
+#Ex 7#
+
+c = 0
+soma = 0
+while(c<10):
+    n = int(input("Digite um valor: "))
+    if(n>0):
+        soma = soma+n
+        c = c+1
+    else:
+        print("Insira apenas valores positivos.")
+
+media = soma/10
+print("A média da soma dos números fornecidos é: ",media)
+
+#Ex 8#
+
+n = int(input("Digite N: "))
+salva_maior = n
+salva_menor = n
+
+for i in range(1,10):
+    n = int(input("Digite N: "))
+
+    if(n>salva_maior):
+        salva_maior = n
+
+    elif(n<salva_menor):
+        salva_menor = n
+
+print(f"O menor número é {salva_menor} e o maior número é {salva_maior}")
