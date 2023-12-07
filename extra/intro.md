@@ -31,3 +31,25 @@ A popularização dos computadores se deu com a invenção dos desktops. A orige
 Com o final do século XX, a habilidade de conectar indivíduos em um sistema de amplitude mundial chamado de Internet estava revolucionando a comunicação. Assim, Tim Berners-Lee propôs um sistema pelo qual documentos armazenados em computadores ao longo da Internet podiam ser unidos, produzindo um emaranhado de informações conectadas chamado de World Wide Web (abreviado para Web). Para tornar a informação na Web acessível, sistema de software chamados de motores de busca foram desenvolvidos, permitindo que as informações na Web sejam categorizadas e pesquisados por tópicos em particulares. Empresas como Google, Yahoo! e Microsoft são exemplos nessa área.
 
 Atualmente, há um movimento de miniaturização dos computadores, estando presentes em diferentes dispositivos, como automóveis, que portam Sistemas de Posicionamento Global (GPS), monitorando o funcionamento do motor e fornecendo serviços de comando de voz para controlar o áudio e os sistema de comunicação telefônica do carro. Os smartphones também são exemplos de computadores em miniatura que se popularizaram atualmente. Esses computadores são equipados com um amplo conjunto de sensores e interfaces, incluindo câmeras, microfones, bússolas, telas sensíveis ao toque, acelerômetros e diversas tecnologias sem fio para se comunicarem com outros smartphones e computadores. 
+
+## A ciência dos algoritmos
+
+Como consequência do teorema da incompletude de Gödel, os matemáticos já investigavam questões relacionadas à processos algorítmicos, que foram evidenciados com os avanços tecnológicos da computação. A ciência da computação estabeleceu-se como a ciência dos algoritmos, incluindo uma variedade de tópicos. De todo modo, as questões gerais que perpassam a ciência da computação são:
+- Que problemas podem ser solucionados por processos algorítmicos?
+- Como tornar mais fácil a descoberta de algoritmos?
+- Como as técnicas de representação e de comunicação de algoritmos podem ser melhoradas?
+- Como as características de diferentes algoritmos podem ser analisadas e comparadas?
+- Como algoritmos podem ser usados para manipular informações?
+- Como algoritmos podem ser aplicados para produzir comportamento inteligente?
+- Como a aplicação de algoritmos afeta a sociedade?
+
+## Abstração
+
+Abstração é uma técnica de simplificação importante que se refere à distinção entre as propriedades externas de uma entidade e os detalhes da sua composição interna. É a abstração que permite que usemos um computador como uma unidade única compreensível, ignorando seus detalhes internos complexos. Para cada nível de abstração, vemos o sistema em termos de componentes chamados de ferramentas abstratas.
+
+## Um esboço de nosso estudo
+
+O capítulo apresenta uma abordagem ascendente para o estudo da ciência da computação, iniciando com tópicos, como hardware de computadores, e indo em direção à tópicos mais abstratos, como complexidade de algoritmos e computabilidade. A ideia é que o estudo siga um padrão de construção de ferramentas de abstração cada vez maiores.
+
+## Repercussões sociais
+
