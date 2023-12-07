@@ -53,3 +53,4 @@ O capítulo apresenta uma abordagem ascendente para o estudo da ciência da comp
 
 ## Repercussões sociais
 
+Na legislação, a ciência da computação gera questões relacionadas ao grau pelo qual a propriedade intelectual pode ser garantida e aos direitos e às responsabilidades que acompanham essa propriedade. Na ética, ela gera numerosas opções que desafiam os princípios tradicionais nos quais o comportamento social é baseado. No governo, gera debates relacionados a quanto a tecnologia computacional e suas aplicações devem ser reguladas. Na filosofia, gera controvérisas entre a presença de um comportamento inteligente e a presença de inteligência propriamente dita. Na sociedade, ela gera disputas que dizem respeito sobre as novas aplicações trazerem novas liberdades ou novos controles. Para tratar dessas questões, no final de cada capítulo há questões sobre repercussões sociais geradas pelos avanços tecnológicos da ciência da computação.
