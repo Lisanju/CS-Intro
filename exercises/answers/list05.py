@@ -80,3 +80,52 @@ print(str_mai)
 
 #Ex 10#
 
+str1 = input("Digite uma palavra: ")
+str2 = input("Digite outra palavra: ")
+
+if (str1 < str2):
+  print(f"{str1} vem antes de {str2}")
+
+else:
+  print(f"{str2} vem antes de {str1}")
+
+#Ex 11#
+
+str1 = input("Digite uma palavra: ")
+str2 = input("Digite outra palavra: ")
+
+if (str1 < str2):
+  print(f"{str1} vem antes de {str2}")
+
+else:
+  print(f"{str2} vem antes de {str1}")
+
+#Ex 12#
+
+nome = input("Insira um nome: ")
+sexo = input("Insira um sexo: ")
+idade = int(input("Insira uma idade: "))
+
+nome_conv = nome[0].upper() + nome[1:len(nome)]
+
+if (sexo.lower() == "feminino" and idade < 25):
+    print(f"{nome_conv}: Aceita.")
+    
+else:
+    print(f"{nome_conv}: Não aceita.")
+
+#Ex 13#
+
+str = "01010011"
+c = 0
+
+for char in str:
+    
+    if (char == "1"):
+        c = c + 1
+        
+print(f"A quantidade de 1's é igual a {c}")
+
+
+#Ex 14#
+
