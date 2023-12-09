@@ -129,3 +129,86 @@ print(f"A quantidade de 1's é igual a {c}")
 
 #Ex 14#
 
+str = input("Digite uma palavra: ")
+x = input("Digite uma letra que faça parte da palavra escolhida: ")
+y = input("Digite uma outra letra do alfabeto: ")
+str_conv = ""
+
+for indice in range(len(str)):
+    
+    if (str[indice] == x):
+        str_conv = str_conv + y 
+        
+    else:
+        str_conv = str_conv + str[indice]
+    
+print(str_conv)
+
+#Ex 15#
+
+str = input("Digite uma palavra: ")
+print(str[::-1])
+
+#Ex 16#
+
+str = input("Insira uma palavra: ")
+str_conv = ""
+
+for indice in range(len(str)):
+
+  if (str[indice] == "a" or str[indice] == "e" or str[indice] == "i" or str[indice] == "o" or str[indice] == "u"):
+      str_conv = str_conv + ""
+      
+  else:
+      str_conv = str_conv + str[indice]
+      
+print(str_conv)
+
+#Ex 17#
+
+str = input("Insira uma palavra: ")
+letra_nova = input("Insira uma letra: ")
+str_conv = ""
+c = 0
+
+for i in range(len(str)):
+    
+    if (str[i] == "a" or str[i] == "e" or str[i] == "i" or str[i] == "o" or str[i] == "u"):
+        c = c + 1
+        str_conv = str_conv + letra_nova
+        
+    else:
+        str_conv = str_conv + str[i]
+
+print(f"A palavra inserida possui {c} vogais")
+print(str_conv)
+
+#Ex 18#
+
+str = input("Digite uma frase: ")
+c = 0
+
+for i in range(len(str)):
+    
+    if (str[i] == " "):
+        c = c + 1
+        
+print(f"Há {c} espaços em branco na frase.")
+
+#Ex 19#
+
+str = input("Digite uma frase: ")
+str_conv = ""
+
+for i in range(len(str)):
+    
+    if (str[i] == " "):
+        str_conv = str_conv + ""
+        
+    else:
+        str_conv = str_conv + str[i]
+        
+print(str_conv)
+
+#Ex 20#
+
