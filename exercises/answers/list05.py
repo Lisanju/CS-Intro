@@ -47,6 +47,18 @@ else:
 
 #Ex 7#
 
+str1 = input("Digite uma palavra: ")
+str2 = input("Digite outra palavra: ")
+s = ""
+
+if str1 in str2:
+    print(f"A sequência {str1} está contida em {str2}")
+    
+else:
+    print(f"A sequência {str1} não está contida em {str2}")
+
+#Ex 8#
+
 str_mai = input("Digite uma palavra em maiúsculo: ")
 str_min = ""
 
@@ -57,5 +69,5 @@ for indice in range(len(str_mai)):
     
 print(str_min)
 
-#Ex 8#
+#Ex 9#
 
