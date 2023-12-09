@@ -59,15 +59,24 @@ else:
 
 #Ex 8#
 
-str_mai = input("Digite uma palavra em maiúsculo: ")
-str_min = ""
+str = input("Digite uma palavra iniciada em letra maiúscula: ")
 
-for indice in range(len(str_mai)):
-    conv = ord(str_mai[indice])
-    conv = conv + 32
-    str_min = str_min + chr(conv)
-    
-print(str_min)
+conv = ord(str[0]) + 32
+str_conv = chr(conv) + str[1:len(str)]
+
+print(str_conv)
 
 #Ex 9#
+
+str_min = input("Digite uma palavra em minúsculo: ")
+str_mai = ""
+
+for indice in range(len(str_min)):
+    conv = ord(str_min[indice])
+    conv = conv - 32
+    str_mai = str_mai + chr(conv)
+    
+print(str_mai)
+
+#Ex 10#
 
