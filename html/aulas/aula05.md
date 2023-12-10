@@ -129,3 +129,21 @@ Através destes tipos de elementos é possível formatá-los com CSS ou manipula
 
 ## Elementos semânticos
 
+Elementos semânticos são elementos que descrevem seus significados para o browser ou para o desenvolvedor.
+
+A estrutura de uma página Web pode seguir o padrão: cabeçalho `<header>`; navegação principal `<nav>`; conteúdo `<div>, <section>, <article>`; rodapé `<footer>`. 
+
+### Lista de elementos semânticos
+
+- `<article>` - Define um artigo.
+- `<aside>` - Define um conteúdo "ao lado" do conteúdo da página.
+- `<details>` - Define detalhes adicionais que o usuário pode ver ou esconder.
+- `<figcaption>` - Define uma legenda para um elemento `<figure>`.
+- `<figure>` - Define uma ilustração, diagrama, foto, listagem de código etc.
+- `<footer>` - Define um rodapé de um documento ou de uma seção.
+- `<main>` - Define o conteúdo principal do documento.
+- `<mark>` - Define um texto em destaque.
+- `<nav>` - Define links de navegação.
+- `<section>` - Define uma seção no documento.
+- `<summary>` - Define um cabeçalho visível para o elemento `<details>`.
+- `<time>` - Define data/hora.
