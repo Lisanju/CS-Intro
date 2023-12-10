@@ -30,3 +30,10 @@ XHTML é uma linguagem variante do HTML que utiliza a sintaxe do XML, possuindo 
 
 CSS é uma linguagem que descreve a apresentação de páginas Web, incluindo cores, layout e fontes.
 
+## Como as páginas são acessadas?
+
+Para produzir páginas Web, você deve escrevê-las em um editor de texto usando HTML e armazená-las em um servidor web. Uma vez que os arquivos estão no servidor, qualquer browser pode recuperar suas páginas Web na Internet.
+
+## Qual a função do servidor Web?
+
+O servidor é apenas um computador contectado à Internet aguardando requisições de browsers. Cada servidor armazena arquivos HTML, imagens, sons e outros tipos de arquivos. Os browsers fazem requisições por páginas HTML ou outro recurso, como imagens. Se o servidor conseguir localizar os recursos requisitados, ele os envia ao browser. Então, o servidor encontra páginas Web e envia elas para os browsers, que mostram as páginas HTML.
