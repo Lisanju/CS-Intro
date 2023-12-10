@@ -68,3 +68,17 @@ Radio é mais um campo de múltipla escolha, mas nesse caso o usuário poderá e
 
 ### Input type reset | button | submit | textarea
 
+- `<input type="reset">` - Apaga os dados e restaura o valor padrão dos campos de um formulário.
+- `<input type="button" value="Texto escrito no botão">` - Botão clicável.
+- `<input type="submit" value="enviar">` - Envia as informações digitadas ao servidor.
+
+Obs: o parâmetro `value` é opcional.
+
+- `<textarea>` - Utilizada para textos maiores, que podem ser livremente digitados.
+
+```
+<textarea name="opinião" rows="5" cols="40"> digite aqui sua avaliação deste curso </textarea>
+```
+
+- Em `<textarea>` o texto default é opcional, mas os parâmetros `rows` e `cols` devem ser especificados.
+
