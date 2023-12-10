@@ -82,3 +82,22 @@ Obs: o parâmetro `value` é opcional.
 
 - Em `<textarea>` o texto default é opcional, mas os parâmetros `rows` e `cols` devem ser especificados.
 
+### Listbox: Select e Option
+
+A tag `<select> ... </select>` é utilizada para criar uma lista de itens, em que um ou mais itens podem ser selecionadas. Cada item da lista deve ser especificado pelo parâmetro `<option>`. Quando o parâmetro `size` é omitido, a lista aparece fechada, caso contrário, a lista é exibida aberta e mostra a quantidade de linhas especificada por esse parâmetro.
+
+```
+<label for="cursos">Escolha um curso:</label>
+<select id="cursos">
+    <option value="bcb">C++Builder</option>
+    <option value="php">PHP</option>
+    <option value="delphi">Delphi</option>
+    <option value="vb">Visual Basic</option>
+    <option value="asm">Assembly</option>
+</select>
+```
+
+O parâmetro `<multiple>` permite que vários itens possam ser selecionados utilizando as teclas CTRL ou SHIFT.
+
+## Tabelas
+
