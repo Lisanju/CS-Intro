@@ -99,7 +99,9 @@ A tag `<select> ... </select>` é utilizada para criar uma lista de itens, em qu
 
 O parâmetro `<multiple>` permite que vários itens possam ser selecionados utilizando as teclas CTRL ou SHIFT.
 
-### Entrada de dados em formulários
+## Entrada de dados
+
+### Input type number e range
 
 O `<input type="number">` define um campo de entrada numérico.
 
@@ -370,7 +372,121 @@ O `<input type="search">` é usado para campos de pesquisa (que se comporta como
 </html>
 ```
 
+### Input type tel
 
+O `<input type="tel">` é usado para campos de entrada que devem conter um número de telefone.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo tel</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type tel</h1>
+        <form>
+            <label for="telefone">Enter a phone number:</label><br><br>
+            <input type="tel" id="telefone" name="telefone" placeholder="(99)99999-9999" pattern="\([0-9]{2}\)[0-9] {5}-[0-9]{4}" required><br><br>
+            <small>Formato: (99)99999-9999</small><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+- O atributo `pattern` contém a expressão regular (o formato) que valida a entrada de um telefone.
+
+### Input type time
+
+O `<input type="time">` permite ao usuário selecionar um horário (sem fuso horário).
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo time</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type time</h1>
+        <form>
+            <label for="horario">Selecione um horário:</label>  
+            <input type="time" id="horario" name="horario">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+### Input type url
+
+O `<input type="url">` é usado para campos de entrada que devem conter um endereço de URL. Dependendo do navegador, o campo de URL pode ser validado automaticamente quando enviado. Alguns dispositivos móveis reconhecem o tipo de URL e adicionam ".com" ao teclado para corresponder à entrada de URL.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo URL</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type URL</h1>
+        <form>
+            <label for="homepage">Insira a sua homepage:</label>
+            <input type="url" id="homepage" name="homepage">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+### Input type hidden
+
+O `<input type="hidden">` define um campo de entrada oculto. Um campo oculto permite que os desenvolvedores da Web incluam dados que não podem ser vistos ou modificados pelos usuários quando um formulário é enviado. Um campo oculto geralmente armazena o registro do banco de dados que precisa ser atualizado quando o formulário é enviado.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo hidden</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type hidden</h1>
+        <form>
+            <label for="Pnome">Nome:</label>
+            <input type="text" id="Pnome" name="Pnome"><br><br>
+            <input type="hidden" id="cliId" name="cliId" value="1628">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+- Embora o input type hidden não seja visível no navegador, ao clicar no botão Submit, os valores inseridos pelo usuário (do input text) e do hidden (do input hidden) serão enviados ao servidor.
+
+### Input type image
+
+O `<input type="image">` define uma imagem como um botão de envio. O caminho para a imagem é especificado no atributo src.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo image</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type image</h1>
+        <form>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome"><br><br>
+            <input type="image" src="01_imgs/imagem_submit.gif" alt="Submit" width="48" height="48">
+        </form>
+    </body>
+</html>
+```
 
 ## Tabelas
 
