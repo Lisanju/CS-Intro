@@ -25,3 +25,26 @@ Por exemplo:
 - O texto entre `<body>` e `</body>` é a parte visível do conteúdo da página.
 - O texto entre `<h1>` e `</h1>` é mostrado como um título.
 - O texto entre `<p>` e `</p>` é mostrado como um parágrafo.
+- A tag `<meta charset="utf-8">` define a codificação do documento HTML como UTF-8.
+
+Então, vimos que documentos HTML são definidos por elementos HTML. Em que os elementos HTML são tudo o que está entre uma tag de abertura e uma tag de fechamento. Alguns elementos HTML são vazios, sendo fechados logo na tag de abertura. Nota-se que as tags devem sempre ser escritas em minúsculo.
+
+A maioria dos elementos HTML podem conter atributos. Além disso, um elemento HTML pode conter outro(s) elemento(s) HTML, o que é chamado de elemento HTML aninhado.
+
+### Atributos
+
+Atributos são sempre representados através do par nome = "valor", por exemplo:
+
+```
+<html>
+    <body>
+     <a href="http://www.ifsp/edu/br">Instituto Federal</a>
+    </body>
+</html>
+```
+- O href é o atributo que possui um endereço como valor.
+- Os valores devem vir envolvidos por aspas.
+- Tanto valores quanto nomes de atributos não diferenciam minúsculas de maiúsculas.
+
+### Títulos
+
