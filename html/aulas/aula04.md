@@ -99,5 +99,130 @@ A tag `<select> ... </select>` é utilizada para criar uma lista de itens, em qu
 
 O parâmetro `<multiple>` permite que vários itens possam ser selecionados utilizando as teclas CTRL ou SHIFT.
 
+### Entrada de dados em formulários
+
+O `<input type="number">` define um campo de entrada numérico.
+
+```
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo de fieldset e legend</title>
+    </head>
+    <body>
+        <form>
+            <label for="quantidade">Quantidade (entre 1 e 5):</label>
+            <input type="number" id="quantidade" min="1" max="5">
+        </form>
+    </body>
+</html>
+```
+
+O `<input type="range">` define um controle para inserir um número cujo valor exato não é importante (como um controle deslizante). O intervalo padrão é de 0 a 100, mas é possível definir restrições sobre quais números são aceitos com os atributos min, max e step.
+
+```
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo de fieldset e legend</title>
+    </head>
+    <body>
+        <form>
+            <label for="vol">Volume (entre 0 e 50):</label>
+            <input type="range" id="vol" name="vol" min="0" max="50">
+        </form>
+    </body>
+</html>
+```
+
+O elemento `<fieldset>` é utilizado para agrupar informações relacionadas em um formulário.
+O elemento `<legend>` define um título para o elemento `<fieldset>`.
+
+```
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo de fieldset e legend</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Informações pessoais</legend>
+                <label for="Pnome">Primeiro Nome:</label><br>
+                <input type="text" id="Pnome" name="nome" value="João"><br>
+                <label for="Snome">Sobrenome:</label><br>
+                <input type="text" id="Snome" name="nome" value="Oliveira"><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>
+```
+
+O elemento `<datalist>` especifica uma lista de opções predefinidas para um elemento `<input>`. O atributo de lista do elemento `<input>` deve se referir ao atributo de id do elemento `<datalist>`.
+
+```
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form>
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            <input type="submit">
+        </form>
+    </body>
+</html>
+```
+
+```
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+            <input type="range" id="a" value="50">100
+            +<input type="number" id="b" value="50">
+            =<output name="x" for="a b"></output>
+        </form>
+    </body>
+</html>
+```
+
+A tag `<optgroup>` é usada para agrupar opções relacionadas em uma lista suspensa. Se você tiver uma lista longa de opções, é mais fácil gerenciar grupos de opções relacionadas a um usuário.
+
+```
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form>
+            <label for="carros">Escolha um carro: </label>
+            <select id="carros">
+                <optgroup label="Carro suecos">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                </optgroup>
+                <optgroup label="Carro Alemães">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+            </select>
+        </form>
+    </body>
+</html>
+```
+
+
+
 ## Tabelas
 
