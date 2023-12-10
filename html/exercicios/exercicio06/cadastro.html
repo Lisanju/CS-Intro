@@ -17,7 +17,9 @@
                 <label for="cor">Selecione a cor do seu cabelo:</label>
                 <input type="color" id="cor" name="cor" value="#ff0000"><br>
                 <label for="fone">Digite o seu telefone de acordo com o formato*:</label><br>
-                <input type="tel"
+                <input type="tel" id="tel" name="tel" placeholder="(99) 99999-9999" pattern="\([0-9]{2}\)[0-9]{5]-[0-9]{4}" required><br>
+                <p><small>*Formato: (99) 99999-9999</small></p><br>
+                <input type="image" src="/alb02.gif" alt="Enviar" width="48" height="48">
             </fieldset>
         </form>
     </body>
