@@ -11,6 +11,8 @@ Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de ex
 - Aula 06 - Listas, Tuplas e Dicionários;
 - Aula 07 - Manipulação de Strings;
 
+Obs: é possível também acessar gratuitamente o conteúdo das aulas no canal do YouTube do professor (Programação Descomplicada).
+
 ## Referências
 
 BACKES, André. Introdução à Computação. São Carlos: 2023. Notas de aula.
