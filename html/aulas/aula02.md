@@ -137,3 +137,120 @@ Por exemplo:
     </body>
 </html>
 ```
+
+### Comentários
+
+As tags de comentários são usadas para inserir comentários no código-fonte HTML. Note que, na tag de abertura há uma exclamação, mas na de fechamento não. Os comentários não são exibidos pelo navegador, mas podem ajudar a documentar seu código-fonte HTML.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo de comentário</title>
+    </head>
+    <body>
+        <!-- Este é um comentário -->
+        <p>Isto é um parágrafo</p>
+        <!-- Comentários não são mostrados no navegador -->
+    </body>
+</html>
+```
+
+### Link externo
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <a href="http://www.ifsp.edu.br">
+                    Instituto Federal
+        </a>
+    </body>
+</html>
+```
+- Os links são encontrados em quase todas as páginas da Web.
+- Os links permitem que os usuários naveguem de uma página para outra.
+- O atributo href contém o link da página que você deseja visitar.
+
+### Link local
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <a href="01_Aula02_Exemplo03_TagParagrafo.html">
+                    Link para o exemplo da tag anterior
+        </a>
+    </body>
+</html>
+```
+- Um link local (link para o mesmo site) é especificado com um URL relativo, (sem https://www...).
+- A URL relativa corresponde ao caminho da página desejada.
+- No caso do exemplo, a página requerida se encontra no caminho/arquivo: 01_Aula02_Exemplo03_TagParagrafo.html.
+
+### Imagens
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Primeiro exemplo sobre imagens</title>
+    </head>
+    <body>
+        <img src="ondaMar.jpg" alt="Ondas do mar...">
+    </body>
+</html>
+```
+- Em HTML as imagens são definidas pela tag `<img>`.
+- A tag `<img>` é vazia, ou seja, não contém uma tag de fechamento e contém somente atributos.
+- O atributo src define o local da imagem a ser mostrado pela página Web.
+- O atributo alt cria uma alternativa para o browser se, por algum motivo, elen ão conseguir abrir a imagem.
+
+### Caminhos de arquivos locais
+
+<b> Caminho absluto: </b>
+
+URL completo para um arquivo da internet, como "https://www.ifsp.edu.br/"
+
+<b> Caminhos relativos de arquivos locais: </b>
+
+Para um primeiro cenário, imagine que para o arquivo "01_Aula02_Exemplo05_TagLinksParte2_PathRelativo.html", a gente queira acessar o arquivo "figura_01.jpg". Nesse caso, o link relativo seria "/01_imgs/figura_01.jpg ". Isso porque a primeira / denota a raiz do diretório onde colocamos a estrutura de arquivos de páginas em um servidor.
+
+Para um segundo cenário, no mesmo arquivo, desejamos acessar o arquivo "01_solarflare.jpg". Nesse caso, não há barra inicial, denotando que a pasta "01_imgs_filha" se encontra em um nível abaixo em relação a pasta do arquivo "01_Aula02_Exemplo05_TagsLinksParte2_PathRelativo.html".
+
+Para um terceiro cenário, desejamos redirecionar para a página "index.html". Nesse caso, o link relativo é "../index.html". Os dois pontos iniciais seguidos da barra denotam que o arquivo "index.html" está em uma pasta um nível acima da pasta do arquivo origem.
+
+Por exemplo:
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo-01 de link relativo</title>
+    </head>
+    <body>
+        <h4>Link relativo com arquivo de imagem na pasta 01_imgs que encontra-se
+na pasta raiz do servidor web: <em>/01_imgs/figura_01.jpeg</em></h4>
+        <img src="/01_imgs/figura_01.jpeg" alt="Imagem de uma cachoeira">
+        <br>
+        <h4>Link relativo com arquivo de imagem na pasta 01_imgs_filha que
+&eacute; uma sub-pasta da pasta onde o arquivo atual .html encontra-se:
+<em>01_imgs_filha/01_solarflare.jpg</em></h4>
+        <img src="01_imgs_filha/01_solarflare.jpg" alt="Imagem de uma
+explos&atilde;o solar">
+        <br>
+        <h4>Link relativo para o arquivo index.html que encontra-se na pasta
+localizada um n&iacute;vel acima da pasta do arquivo html corrente:
+<em>../index.html</em></h4>
+        <a href="../index.html">Voltar para o &iacute;ndice</a>
+    </body>
+</html>
+```
