@@ -19,3 +19,14 @@ Inicialmente a Internet era limitada para universidades e instituições de pesq
 Com a introdução da WWW por Tim Berners-Lee em 1990, permitiu-se que os usuários localizassem e visualizassem documentos baseados em multimídia. Hoje, a Internet envolve uma mistura entre tecnologias de computação e comunicação, tornando a informação constantemente e instantaneamente disponíveis a qualquer pessoa com uma conexão.
 
 Em 1994, Tim Berners-Lee fundou a W3C, dedicada ao desenvolvimento de tecnologias não-proprietárias e interoperáveis para a WWW e tornar a Web acessível para todos. A W3C padronizou tecnologias como Extensible HyperText Markup Language (XHTML), Cascading Style Sheets (CSS) e o Extensible Markup Language (XML).
+
+## HTML, XML, XHTML e CSS
+
+HTML é uma linguagem que define a estrutura de páginas Web. Permite publicar documentos online, recuperar informação com um click e incluir material multimídia.
+
+XML é uma linguagem que permite representar informação estruturada, como em documentos, dados, configurações, livros e transações.
+
+XHTML é uma linguagem variante do HTML que utiliza a sintaxe do XML, possuindo todos os elementos do HTML.
+
+CSS é uma linguagem que descreve a apresentação de páginas Web, incluindo cores, layout e fontes.
+
