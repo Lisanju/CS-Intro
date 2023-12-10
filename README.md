@@ -1,4 +1,5 @@
-Introdução à Ciência da Computação
+#Introdução à Ciência da Computação
+
 Repositório para o estudo introdutório em Ciência da Computação, organizado por Lisanju Lardapide.
 
 ## Referências
