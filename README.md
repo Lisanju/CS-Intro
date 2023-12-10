@@ -1,5 +1,5 @@
 # 2023/2 - Introdução à Computação
-Repositório para um estudo introdutório em Ciência da Computação.
+Repositório para o estudo introdutório em Ciência da Computação, organizado por Lisanju Lardapide.
 
 ## Organização do Repositório
 
