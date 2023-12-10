@@ -222,6 +222,156 @@ A tag `<optgroup>` é usada para agrupar opções relacionadas em uma lista susp
 </html>
 ```
 
+### Input type color
+
+O `<input type="color">` é usado para campos de entrada que devem conter uma cor. Dependendo do navegador utilizado, um seletor de cores pode aparecer no campo de entrada.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo color</title>
+    </head>
+    <body>
+        <form>
+            <label for="selecionaCor">Selecionar a sua cor favorita:</label>
+            <input type="color" id="selecionaCor" name="selecionaCor" value="#ff0000">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+### Input type date
+
+O `<input type="date">` é usado para campos de entrada que devem conter uma data. Dependendo do navegador, um seletor de datas pode aparecer no campo de entrada.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo date</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type date</h1>
+        <form>
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+### Input type email
+
+O `<input type="email">` é usado para campos de entrada que devem conter um endereço de email. Dependendo do navegador, o endereço de email pode ser validado automaticamente quando enviado. Alguns dispositivos móveis reconhecem o tipo de email e adicionam ".com" ao teclado para corresponder à entrada de email.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo date</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type email</h1>
+        <form>
+            <label for="email">Digite seu email:</label>
+            <input type="email" id="email" name="email">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+### Input type file
+
+O `<input type="file">` define um campo de seleção de arquivo e um botão "Procurar" para upload de arquivos.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo date</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type file</h1>
+        <form>
+            <label for="arquivo">Selecione um arquivo:</label>
+            <input type="file" id="arquivo" name="arquivo"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+### Input type month e week
+
+O `<input type="month">` permite ao usuário selecionar um mês e ano, enquanto o `<input type="week">` permite ao usuário selecionar uma semana e ano.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo month</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type month</h1>
+        <form>
+            <label for="diames">Aniversário (dia e mês):</label>
+            <input type="month" id="diames" name="diames">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo month</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type month</h1>
+        <form>
+            <label for="semana">Semana:</label>
+            <input type="week" id="semana" name="semana">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+### Input type search
+
+O `<input type="search">` é usado para campos de pesquisa (que se comporta como um campo de texto comum).
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo search</title>
+    </head>
+    <body>
+        <h1>Exemplo de input type search</h1>
+        <form>
+            <label for="pesquisa">Pesquisar:</label>
+            <input type="search" id="pesquisa" name="pesquisa">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+```
+
+
+
 ## Tabelas
 
 - `<table> ... </table>` - Indica o início e o fim da tabela.
