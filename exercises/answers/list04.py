@@ -78,3 +78,72 @@ print(f"O vetor possui {c} números pares.")
 
 #Ex 6#
 
+N = 10
+vetor = [int(input("Insira um valor: ")) for i in range(0,N)]
+
+maior = vetor[0]
+menor = vetor[0]
+
+for e in vetor:
+    if (e > maior):
+        maior = e
+        
+    elif (e < menor):
+        menor = e
+
+print(f"Maior: {maior}\nMenor: {menor}")
+
+#Ex 7#
+
+vetor = [int(input("Insira um valor: ")) for i in range(0,10)]
+
+maior = vetor[0]
+
+for i in range(len(vetor)):
+    if (vetor[i] > maior):
+        maior = vetor[i]
+        pos = i
+
+print(f"Vetor: {vetor}\nMaior: {maior}\nPosição: {pos}")
+
+#Ex 8#
+
+vetor = [int(input("Insira um valor: ")) for i in range(0,6)]
+print(vetor[::-1])
+
+#Ex 9#
+
+vetor = []
+
+for i in range(0,6):
+    while True:
+        x = int(input(f"Insira o {i +1} número par: "))
+    
+        if (x % 2 == 0):
+            vetor.append(x)
+            break
+            
+        else:
+            print("O número inserido não é par.")
+        
+print(vetor[::-1])
+
+#Ex 10#
+
+N = 15
+vetor = []
+
+for i in range(0,N):
+    nota = float(input("Nota: "))
+    vetor.append(nota)
+    
+media = 0
+
+for n in vetor:
+    media = media + n
+    media = media / N
+    
+print(f"Média geral: {media}")
+
+#Ex 11#
+
