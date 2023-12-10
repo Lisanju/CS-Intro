@@ -227,7 +227,7 @@ A tag `<optgroup>` é usada para agrupar opções relacionadas em uma lista susp
 - `<table> ... </table>` - Indica o início e o fim da tabela.
 - `<caption> título </caption>` - Define o título da tabela (opcional).
 - `<tr> ... </tr>` - Início e fim de uma linha da tabela (Table Row).
-- `<td> ... </td>` - Início e fim da célula que compõe a linha, ou seja, divide a linha em colunas (Table Data).
+- `<td> ... </td>` - Início e fim da célula que compõe a linha, divide a linha em colunas (Table Data).
 - `<th> ... </th>` - Início e fim da célula do cabeçalho (Table Header).
 
 ```
