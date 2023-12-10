@@ -222,7 +222,33 @@ A tag `<optgroup>` é usada para agrupar opções relacionadas em uma lista susp
 </html>
 ```
 
-
-
 ## Tabelas
 
+- `<table> ... </table>` - Indica o início e o fim da tabela.
+- `<caption> título </caption>` - Define o título da tabela (opcional).
+- `<tr> ... </tr>` - Início e fim de uma linha da tabela (Table Row).
+- `<td> ... </td>` - Início e fim da célula que compõe a linha, ou seja, divide a linha em colunas (Table Data).
+- `<th> ... </th>` - Início e fim da célula do cabeçalho (Table Header).
+
+```
+<table>
+    <tr>
+        <th>Mês</th>
+        <th>Custo</th>
+    </tr>
+    <tr>
+        <td>Janeiro</td>
+        <td>R$100</td>
+    </tr>
+    <tr>
+        <td>Fevereiro</td>
+        <td>R$80</td>
+    </tr>
+    <tr>
+        <td>Soma</td>
+        <td>R$180</td>
+    </tr>
+</table>
+```
+
+Os parâmetros possíveis para a tag `<table>` são: `COLSPAN`, que mescla células horizontais adjacentes. Se for atribuído COLSPAN=2 a uma célula, esta célula ocupará o seu espaço e o da próxima célula; `ROWSPAN`, quem escla células verticais adjacentes. Se for atribuído ROWSPAN=2 a uma célula, esta célula ocupará o seu espaço e o da célula abaixo; `WIDTH`, que especifica a largura de uma célula que pode ser definida em pixels ou em percentual referente à largura da tabela.
