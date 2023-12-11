@@ -177,3 +177,159 @@ margin-right:auto;
 ```
 
 As margens da esquerda e direita como auto centralizam a div envólucro.
+
+## Listas
+
+Em listas não ordenadas, é possível simplificar a formatação por:
+
+```
+<style>
+    ul.none{
+        list-style-type:none;
+    }
+    ul.circle{
+        list-style-type:circle;
+    }
+    ul.square{
+        list-style-type:square;
+    }
+</style>
+<body>
+    <ul class="none">
+        <li>Item um</li>
+        <li>Item dois</li>
+    </ul>
+    <ul class="circle">
+        <li>Item um</li>
+        <li>Item dois</li>
+    </ul>
+    <ul class="square">
+        <li>Item um</li>
+        <li>Item dois</li>
+        <li>Item três</li>
+    </ul>
+</body>
+```
+
+Em listas ordenadas, esta propriedade pode assumir os seguintes valores: upper-roman, lower-alpha, decimal, lower-latin, upper-latim, entre outros.
+
+Através de `list-style-position` é possível alinhar a lista na vertical com o valor `outside` ou não alinhar com o valor `inside`.
+
+## Links
+
+Os links podem ter estilos diferentes dependendo do estado em que estão. Os quatro estados dos links são:
+
+- `a: link` - Um link normal e não visitado.
+- `a: visited` - Um link que o usuário visitou.
+- `a: hover` - Um link quando o usuário passa o mouse sobre ele.
+- `a: active` - Um link no momento em que é clicado.
+
+A propriedade `text-decoration` é usada principalmente para remover os sublinhados dos links com o valor `none`.
+
+## Barra de navegação
+
+Uma barra de navegação é feita com uma lista de links:
+
+```
+<ul>
+    <li><a href="principal.html">Home</a></li>
+    <li><a href="noticias.html">Notícias</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+</ul>
+```
+
+Para deixar a lista num formato de barra de navegação vertical, é necessário fazer as seguintes mudanças no HTML e CSS.
+
+```
+<ul>
+    <li><a class="ativo" href="principal.html">Home</a></li>
+    <li><a href="noticias.html">Notícias</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+</ul>
+```
+
+```
+<styles>
+    ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        width:200px;
+        background-color:#f1f1f1;
+        border:1px solid #555;
+    }
+    li a{
+        display:block;
+        color:#000;
+        padding:8px 16px;
+        text-decoration:none;
+    }
+    li{
+        text-align:center;
+        border-bottom:1px solid black;
+    }
+    li:last-child{
+        border-bottom:none;
+    }
+    li a.ativo{
+        background-color:blue;
+        color:white;
+    }
+    li a:hover:not(.ativo){
+        background-color:#555;
+        color:white;
+    }
+</style>
+```
+
+Respectivamente, em CSS, temos:
+
+![image](https://github.com/Lisanju/CS-Intro/assets/106002045/d1a16bde-e333-48b3-82f0-c2d3cbfbaa2d)
+
+Já, para ter uma barra de navegação na horizontal, precisamos fazer as seguintes modificações em HTML e CSS.
+
+```
+<ul>
+    <li><a href="principal.html">Home</a></li>
+    <li><a href="noticias.html">Notícias</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+</ul>
+```
+
+```
+<styles>
+    ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background-color:#f3f3f3;
+        border:1px solid #e7e7e7;
+    }
+    li{
+        float:left;
+    }
+    li a{
+        display:block;
+        color:#666;
+        text-align:center;
+        padding:14px 16px;
+        text-decoration:none;
+    }
+    li a.ativo{
+        background-color:blue;
+        color:white;
+    }
+    li a:hover:not(.ativo){
+        background-color:#ddd;
+    }
+</style>
+```
+
+Em CSS, temos respectivamente:
+
+![image](https://github.com/Lisanju/CS-Intro/assets/106002045/c9289078-4aeb-4a89-9c66-f5fa6a05214d)
+
