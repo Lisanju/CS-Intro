@@ -67,3 +67,73 @@ A propriedade `clear` especific quais elementos podem flutuar ao lado do element
 - `right` - Não são permitidos elementos flutuantes no lado direito.
 - `both` - Não são permitidos elementos flutuantes nos dois lados.
 - `inherit` - O elemento herda o valor de seu ancestral.
+
+## Layout líquido e congelado
+
+O layout líquido se expande para preencher qualquer largura que o navegador tenha. Já o layout congelado mantém a página bloqueada mesmo quando a tela do navegador é redimensionada.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>exemplo</title>
+        <style>
+            body{
+                margin:0px;
+                background-color:burlywood;
+            }
+            #divheader{
+                background-image:url("");
+                height:100px;
+            }
+            #cabecalho{
+                margin:10px;
+            }
+            #principal{
+                background-color:khaki;
+                padding:15px;
+                margin:0px 330px 10px 10px;
+            }
+            #barralateral{
+                background-color:khaki;
+                padding:15px;
+                margin:0px 10px 10px 10px;
+                width:280px;
+                float:right;
+            }
+        </style>
+        <body>
+            <div id="cabecalho">
+                <div id="divheader">
+                </div>
+            </div>
+            <div id="barralateral">
+                <p>
+                    <img src=""><br>
+                </p>
+                <ul>
+                    <li>Item-01</li>
+                    <li>Item-02</li>
+                    <li>Item-03</li>
+                    <li>Item-04</li>
+                    <li>Item-05</li>
+                </ul>
+                <a href="">Fale conosco</a>
+                <p>Lorem ipsum</p>
+            </div>
+            <div id="principal">
+                <h1>Título-01</h1>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+                <h1>Título-02</h1>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+            </div>
+            <div id="rodape">
+                <p>Lorem ipsum</p>
+            </div>
+        </body>
+    </head>
+</html>
+```
