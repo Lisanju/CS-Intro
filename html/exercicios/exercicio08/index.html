@@ -3,6 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>Ho-Kago Chat</title>
+	<style>
+		body{
+			background-color:#FFB6C1;
+		}
+		header,nav{
+			background-color:#FAEBD7;
+		}
+        div.pub{
+        	background-color:#F0F8FF;
+            text-align:center;
+        }
+        div article{
+        	text-align:left;
+        }
+        li:checked{
+        	color:#8A2BE2;
+        }
+        p.msg::first-letter{
+        	color:#8A2BE2;
+        }
+	</style>
     </head>
     <body>
         <header style="display:flex; justify-content:space-between; align-items:center; padding:20px;">
@@ -37,11 +58,11 @@
 	<section>
 		<div>
 			<figure>
-                    	<img src="img/user.png">
+                    	<img src="img/user.png" width="100px" height="100px">
                     	<figcaption>Akiyama Mio</figcaption>
                 	</figure>
 		</div>
-		<div>
+		<div class="pub">
 			<h3>Publicações</h3><br>
                 	<article>
                     		<figure>
@@ -49,11 +70,11 @@
                         		<a href="sub/perfil.html">Akiyama Mio</a>
                     		</figure><br>
                     		<p>19 de junho às 20:00</p><br>
-                    		<p>Acho uma ótima ideia, vamos treinar nesse final de semana!</p><br>
+                    		<p class="msg">Acho uma ótima ideia, vamos treinar nesse final de semana!</p><br>
                     		<input type="image" src="" alt="Curtir">
                     		<input type="image" src="" alt="Comentar">
                     		<input type="image" src="" alt="Compartilhar">
-                	</article>
+                	</article><br><br>
                 
                 	<article>
                     		<figure>
@@ -61,7 +82,7 @@
                         		<a href="usuario/ritsu.html">Tainaka Ritsu</a>
                     		</figure><br>
                     		<p>19 de junho às 17:45</p><br>
-                    		<p></p>A gnte ta sem praticar nada faz tempo, vamos nos reunir logo x.x</p><br>
+                    		<p class="msg">A gnte ta sem praticar nada faz tempo, vamos nos reunir logo x.x</p><br>
                     		<input type="image" src="" alt="Curtir">
                     		<input type="image" src="" alt="Comentar">
                     		<input type="image" src="" alt="Compartilhar">
