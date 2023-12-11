@@ -4,8 +4,6 @@ Repositório para o estudo introdutório de tópicos em Ciência da Computação
 
 ## Referências
 
-ARANTES, Pablo. Noções de Linguagens de Programação para Linguistas. São Carlos: 2023. Notas de aula.
-
 BACKES, André. Introdução à Computação. São Carlos: 2023. Notas de aula.
 
 BROOKSHEAR, J. Glenn. Ciência da Computação: Uma Visão Abrangente. 11 Ed. Bookman. Porto Alegre: 2013.
