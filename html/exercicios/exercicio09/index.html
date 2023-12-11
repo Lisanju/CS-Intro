@@ -13,6 +13,8 @@
         div.pub{
         	background-color:#F0F8FF;
             text-align:center;
+            border-style:dotted;
+            border-color:purple;
         }
         div article{
         	text-align:left;
@@ -22,6 +24,14 @@
         }
         p.msg::first-letter{
         	color:#8A2BE2;
+        }
+        article.art{
+        	border-style:inset;
+            border-width: 2px 2px 2px 2px;
+            border-radius:20px;
+            margin:20px 20px 20px 20px;
+            padding:15px 15px 15px;
+            max-width:1520px;
         }
 	</style>
     </head>
@@ -58,13 +68,15 @@
 	<section>
 		<div>
 			<figure>
+            		<div style="align-items:center">
                     	<img src="img/user.png" width="100px" height="100px">
                     	<figcaption>Akiyama Mio</figcaption>
-                	</figure>
+                    </div>
+            </figure>
 		</div>
 		<div class="pub">
 			<h3>Publicações</h3><br>
-                	<article>
+                	<article class="art">
                     		<figure>
                         		<img src="img/user.png" width="50px" height="50px">
                         		<a href="sub/perfil.html">Akiyama Mio</a>
@@ -73,10 +85,10 @@
                     		<p class="msg">Acho uma ótima ideia, vamos treinar nesse final de semana!</p><br>
                     		<input type="image" src="" alt="Curtir">
                     		<input type="image" src="" alt="Comentar">
-                    		<input type="image" src="" alt="Compartilhar">
+                    		<input type="image" src="" alt="Compartilhar"><br><br>
                 	</article><br><br>
                 
-                	<article>
+                	<article class="art">
                     		<figure>
                         		<img src="img/ritsu.png" width="50px" height="50px">
                         		<a href="usuario/ritsu.html">Tainaka Ritsu</a>
@@ -85,7 +97,7 @@
                     		<p class="msg">A gnte ta sem praticar nada faz tempo, vamos nos reunir logo x.x</p><br>
                     		<input type="image" src="" alt="Curtir">
                     		<input type="image" src="" alt="Comentar">
-                    		<input type="image" src="" alt="Compartilhar">
+                    		<input type="image" src="" alt="Compartilhar"><br><br>
                 	</article>
 		</div>
 	</section>
