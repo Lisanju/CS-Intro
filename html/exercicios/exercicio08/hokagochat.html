@@ -3,18 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>Ho-Kago Chat</title>
+        <style>
+        	h1.titulo{
+            text-align:left;
+            }
+            form.login{
+            text-align:right;
+            }
+        </style>
     </head>
     <body>
         <header>
-            <div style="display:flex; justify-content:space-between; align-items:center">
-                <img src="img/logo.png" width="100" height="100">
-                <h1>Ho-Kago Chat</h1>
-                <form>
+            <div style="display:flex; justify-content:space-between;">
+            	<img src="img/logo.png" width=100px height="100px">
+                <h1 class="titulo">Ho-Kago Chat</h1>
+                <form class="login">
                     <label for="log">Usuário</label><br>
                     <input type="text" id="log" name="log" value=""><br>
                     <label for="psw">Senha</label><br>
                     <input type="password" id="psw" name="psw" value=""><br>
                     <input type="button" value="Login">
+                    <p>Esqueceu seu usuário ou senha?</p>
                 </form>
             </div>
             <div>
