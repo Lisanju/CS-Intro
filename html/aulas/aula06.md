@@ -192,3 +192,9 @@ CSS embutido: é necessário adicionar o atributo style ao elemento relevante. O
 
 Por exemplo - `<p style="color:red;">Parágrafo</p>`
 
+### Sobre a ordem da cascata
+
+Que estilo será usado quando houver mais de um estilo especificado para um elemento HTML? Todos os estilos em uma página serão cascateados em uma nova folha de estilos virtuais pelas seguintes regras, onde o primeiro tem maior prioridade:
+- Estilo embutido (dentro de um elemento HTML);
+- Folhas de estilo externas e internas (na seção principal);
+- Padrão do navegador.
