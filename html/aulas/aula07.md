@@ -135,3 +135,56 @@ Para arredondar a borda:
 - `border-width` - Em px/pt/cm/em/etc e na seguinte ordem: larguras superior, direita, inferior e esquerda.
 - `border-color` - Red, blue, green etc.
 
+### Propriedades de margens
+
+A propriedade `margin` pode receber quatro valores, respectivamente os tamanhos das margens superior, direita, inferior e esquerda. Ou:
+
+- `margin-top` - Tamanho da margem superior.
+- `margin-right` - Tamanho da margem direita.
+- `margin-bottom` - Tamanho da margem inferior.
+- `margin-left` - Tamanho da margem esquerda.
+
+Essas propriedades podem assumir os seguintes valores:
+- `auto` - O browser calcula a margem de forma a centralizar horizontalmente o elemento dentro de seu container.
+- `length` - Valor em px/pt/pc/etc.
+- `%` - Especifica uma margem em % da largura do elemento que contém o elemento estilizado.
+- `inherit` - Especifica que a margem deve ser herdada do elemento pai.
+
+Às vezes, as margens superior e inferior dos elementos são unidas em uma única margem igual à maior das duas margens.
+
+### Propriedades de preenchimento
+
+A propriedade `padding` pode receber quatro valores, respectivamente superior, direito, inferior e esquerdo. Caso receba apenas três valores, trata-se respectivamente de superior, direito/inferior e esquerdo.
+
+- `padding-top` - Tamanho do preenchimento superior.
+- `padding-right` - Tamanho do preenchimento direita.
+- `padding-bottom` - Tamanho do preenchimento inferior.
+- `padding-left` - Tamanho do preenchimento esquerda.
+
+Essas propriedades podem assumir os seguintes valores:
+- `length` - Valor em px/pt/pc/etc.
+- `%` - Especifica em % da largura do elemento que contém o elemento estilizado.
+- `inherit` - Especifica que deve ser herdada do elemento pai.
+
+### Propriedades do conteúdo
+
+- `height` - Altura do conteúdo do elemento.
+- `width` - Largura do conteúdo do elemento.
+
+- `auto` - Isso é padrão. O navegador calcula a altura e a largura.
+- `length` - Define o valor de height;width em px/pt/pc/etc.
+- `%` - Especifica um preenchimento em % do height;width do elemento que contém o elemento estilizado.
+- `init` - Seta o height;width com seu valor padrão.
+- `inherit` - Especifica que o heiht;width deve ser herdada do elemento pai.
+
+A propriedade `max-width` é usada para definir a largura máxima de um elemento. Ao reduzir a janela da página, uma barra de rolagem surge caso a largura máxima seja atravessada.
+
+```
+<style>
+    div{
+      height:100px;
+      max-width:500px;
+      background-color:powderblue;
+    }
+</style>
+```
