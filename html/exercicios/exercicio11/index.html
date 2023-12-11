@@ -8,6 +8,14 @@
         background-color:#FAFAD2;
         font-family:'Comic Sans MS', cursive;
       }
+      #envolucro{
+        width:800px;
+        padding-top:5px;
+        padding-bottom:5px;
+        background-color:#FAFAD2;
+        margin-left:auto;
+        margin-right:auto;
+      }
       #divheader{
       	display:flex;
         align-items:center;
@@ -106,66 +114,68 @@
       }
     </style>
     <body>
-      <div id="cabecalho">
-        <div id="divheader">
-          <img src="img/icon.png" width="150px" height="150px" style="margin-right:15px">
-          <h1>Ho-Kago Chat</h1>
-          <form style="position:absolute; right:30px">
-            <label for="log">Usuário</label><br>
-            <input type="text" id="log" name="log" value=""><br>
-            <label for="psw">Senha</label><br>
-            <input type="password" id="psw" name="psw" value=""><br>
-            <div style="display:flex; align-items:center;">
-              <input type="button" value="Login">
-              <p><a href="sub/suporte/recuperar.html" style="text-decoration:none; color:black; margin-left:10px;">Perdi a senha</a></p>
-            </div>
-          </form>
+      <div id="envolucro">
+        <div id="cabecalho">
+          <div id="divheader">
+            <img src="img/icon.png" width="150px" height="150px" style="margin-right:15px">
+            <h1>Ho-Kago Chat</h1>
+            <form style="position:absolute; right:30px">
+              <label for="log">Usuário</label><br>
+              <input type="text" id="log" name="log" value=""><br>
+              <label for="psw">Senha</label><br>
+              <input type="password" id="psw" name="psw" value=""><br>
+              <div style="display:flex; align-items:center;">
+                <input type="button" value="Login">
+                <p><a href="sub/suporte/recuperar.html" style="text-decoration:none; color:black; margin-left:10px;">Perdi a senha</a></p>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-      <div id="barranavegacao">
-        <ul class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sub/entr/musica.html">Músicas</a></li>
-          <li><a href="sub/entr/amigos.html">Amigos</a></li>
-          <li><a href="sub/suporte/sobre.html">Sobre</a></li>
-          <li><a href="sub/suporte/contato.html">Contato</a></li>
-          <li><input type="button" value="Criar uma página"></li>
-        </ul>
-      </div>
-      <div id="barralateral">
-      	<h2 id="mio"><a href="sub/users/mio.html">Akiyama Mio</a></h2>
-        <img src="img/mio.png" alt=user width="160px" height="160px">
-      	<h2>Seus amigos =)</h2>
-        <ul class="amigos">
-          <li><a href="sub/users/ritsu.html">Tainaka Ritsu</a></li><br>
-          <li><a href="sub/users/yui.html">Hirasawa Yui</a></li><br>
-          <li><a href="sub/users/mugi.html">Tsumugi Kotobuki</a></li><br>
-          <li><a href="sub/users/azusa.html">Nakano Azusa</a></li><br>
-          <li><a href="sub/users/sawako.html">Yamanaka Sawako</a></li>
-        </ul>
-      </div>
-      <div id="barraprincipal">
-        <h2>Publicações</h2>
-        <article class="mio">
-          <img src="img/mio.png" width="50px" height="50px">
-          <figcaption style="display:inline-block; vertical-align:top; margin-left:10px;"><a href="sub/users/mio.html">Akiyama Mio</a></figcaption><br>
-          <p>19 de junho às 20:00</p><br>
-          <p>Acho uma ótima ideia, vamos treinar nesse final de semana! Consegui uma vaga pra HTT tocar no estúdio Kogarasu *u*</p><br>
-          <input type="image" id="like" alt="curtir" src="img/curtir.png" width="10px" height="10px">
-          <input type="image" id="comment" alt="comentar" src="img/comentar.png" width="10px" height="10px">
-          <input type="image" id="share" alt="compartilhar" src="img/compartilhar.png" width="10px" height="10px">
-        </article>
-        <article class="ritsu">
-          <img src="img/ritsu.png" width="50px" height="50px">
-          <figcaption style="display:inline-block; vertical-align:top; margin-left:10px;"><a href="sub/users/ritsu.html">Tainaka Ritsu</a></figcaption><br>
-          <p>19 de junho às 20:00</p><br>
-          <p>Alguém aí??? Eu já tô morrendo de tédio, vamos voltar a praticar logo!@!@!</p><br>
-          <input type="image" id="like" alt="curtir" src="img/curtir.png" width="10px" height="10px">
-          <input type="image" id="comment" alt="comentar" src="img/comentar.png" width="10px" height="10px">
-          <input type="image" id="share" alt="compartilhar" src="img/compartilhar.png" width="10px" height="10px">
-      </div>
-      <div id="rodape">
-        <p>HChat - feito com <3 por Lisanju</p>
+        <div id="barranavegacao">
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sub/entr/musica.html">Músicas</a></li>
+            <li><a href="sub/entr/amigos.html">Amigos</a></li>
+            <li><a href="sub/suporte/sobre.html">Sobre</a></li>
+            <li><a href="sub/suporte/contato.html">Contato</a></li>
+            <li><input type="button" value="Criar uma página"></li>
+          </ul>
+        </div>
+        <div id="barralateral">
+        	<h2 id="mio"><a href="sub/users/mio.html">Akiyama Mio</a></h2>
+          <img src="img/mio.png" alt=user width="160px" height="160px">
+        	<h2>Seus amigos =)</h2>
+          <ul class="amigos">
+            <li><a href="sub/users/ritsu.html">Tainaka Ritsu</a></li><br>
+            <li><a href="sub/users/yui.html">Hirasawa Yui</a></li><br>
+            <li><a href="sub/users/mugi.html">Tsumugi Kotobuki</a></li><br>
+            <li><a href="sub/users/azusa.html">Nakano Azusa</a></li><br>
+            <li><a href="sub/users/sawako.html">Yamanaka Sawako</a></li>
+          </ul>
+        </div>
+        <div id="barraprincipal">
+          <h2>Publicações</h2>
+          <article class="mio">
+            <img src="img/mio.png" width="50px" height="50px">
+            <figcaption style="display:inline-block; vertical-align:top; margin-left:10px;"><a href="sub/users/mio.html">Akiyama Mio</a></figcaption><br>
+            <p>19 de junho às 20:00</p><br>
+            <p>Acho uma ótima ideia, vamos treinar nesse final de semana! Consegui uma vaga pra HTT tocar no estúdio Kogarasu *u*</p><br>
+            <input type="image" id="like" alt="curtir" src="img/curtir.png" width="10px" height="10px">
+            <input type="image" id="comment" alt="comentar" src="img/comentar.png" width="10px" height="10px">
+            <input type="image" id="share" alt="compartilhar" src="img/compartilhar.png" width="10px" height="10px">
+          </article>
+          <article class="ritsu">
+            <img src="img/ritsu.png" width="50px" height="50px">
+            <figcaption style="display:inline-block; vertical-align:top; margin-left:10px;"><a href="sub/users/ritsu.html">Tainaka Ritsu</a></figcaption><br>
+            <p>19 de junho às 20:00</p><br>
+            <p>Alguém aí??? Eu já tô morrendo de tédio, vamos voltar a praticar logo!@!@!</p><br>
+            <input type="image" id="like" alt="curtir" src="img/curtir.png" width="10px" height="10px">
+            <input type="image" id="comment" alt="comentar" src="img/comentar.png" width="10px" height="10px">
+            <input type="image" id="share" alt="compartilhar" src="img/compartilhar.png" width="10px" height="10px">
+        </div>
+        <div id="rodape">
+          <p>HChat - feito com <3 por Lisanju</p>
+        </div>
       </div>
     </body>
   </head>
