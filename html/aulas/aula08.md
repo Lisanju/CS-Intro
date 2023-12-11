@@ -145,3 +145,35 @@ O layout líquido se expande para preencher qualquer largura que o navegador ten
     </head>
 </html>
 ```
+
+Para esse arquivo HTML, temos a seguinte disposição de div's: cabeçalho, barra lateral, principal e rodapé. Aplicando `float:right` na barra lateral, ela sai do fluxo e vai para a direita e a principal sobe.
+
+Mas, para ficar com a disposição visível ao lado, devemos limitar a largura da barra lateral (280px) e aumentar a margem da principal (330px).
+
+Por fim, o `clear:right` no rodapé foi necessário para a barra lateral não sobrepor ele.
+
+Porém, toda essa disposição do arquivo HTML é para um layout líquido. E se quisermos congelar o layout? Vamos precisar alterar o HTML e o CSS.
+
+Pelo lado do HTML, temos que inserir uma div envolvendo as div's já existentes. Neste caso, a div pode ser chamada de div "envólucro".
+
+Pelo lado do CSS, temos o seguinte código para a div "envólucro".
+
+```
+#envolucro{
+    width:800px;
+    padding-top:5px;
+    padding-bottom:5px;
+    background-color:#675c47;
+}
+```
+
+Ao definir `width:800px`, toda página caberá nesta largura. Como resultado, a página estará fixada, mas você notará que o layout inteiro estará disposto na esquerda do site.
+
+Para centralizar a página, usamos mais duas propriedades no CSS do envólucro.
+
+```
+margin-left:auto;
+margin-right:auto;
+```
+
+As margens da esquerda e direita como auto centralizam a div envólucro.
