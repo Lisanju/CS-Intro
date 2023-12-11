@@ -90,3 +90,48 @@ Especifica se a imagem de segundo plano deve ser rolada ou não com o restante d
 ## Modelo de caixa
 
 Cada elemento HTML pode ser considerado uma caixa retangular. O modelo de caixa CSS é uma caixa que envolve todos os elementos HTML, consiste em margens, bordas, preenchimento e conteúdo real.
+
+Para calcular a largura total de um elemento como o parágrafo:
+
+`Largura total do elemento parágrafo = margem x 2 + borda X 2 + padding x 2 + width`
+
+![image](https://github.com/Lisanju/CS-Intro/assets/106002045/db5bf219-f82a-4dee-8682-315e039ff41c)
+
+- Nesse caso, `largura total = 10 x 2 + 1 x 2 + 10 x 2 + 200 = 242 pixels`.
+
+### Pra que serve o modelo de caixa?
+
+Quando você combina as 4 variáveis (margin, border, padding e width), há diversas formas de se determinar o layout de um elemento com seu espaço interno e a margem.
+
+É possível manter todos os elementos (caixa com margem, borda, preenchimento e conteúdo), retirar a margem (caixa com borda, preenchimento e conteúdo), retirar o preenchimento (caixa com borda e conteúdo), manter apenas margem (caixa com margem e conteúdo), variar o formato da borda para sólida ou tracejada, colorir a borda, estender as margens, recuar o conteúdo para o canto inferior direito do preenchimento...
+
+### Estilo de uma borda
+
+- `border-style:dotted;` - Borda pontilhada.
+- `border-style:dashed;` - Borda tracejada.
+- `border-style:solid;` - Borda sólida.
+- `border-style:double;` - Borda dupla.
+- `border-style:groove;` - Borda com ranhura.
+- `border-style:ridge;` - Borda de cume.
+- `border-style:inset;` - Borda inserida.
+- `border-style:outset;` - Borda de fronteira inicial.
+- `border-style:none;` - Nenhuma borda.
+- `border-style:hidden;` - Borda escondida.
+- `border-style:dotted dashed solid double;` - Borda mista.
+
+Para estilizar um dos lados da borda:
+
+- `border-top-style` - Borda superior.
+- `border-right-style` - Borda direita.
+- `border-bottom-style` - Borda inferior.
+- `border-left-style` - Borda esquerda.
+
+Para arredondar a borda:
+
+- `border-radius` - Pode receber qualquer valor em pixels que se refere ao raio do vértice arredondado da borda estilizada.
+
+### Largura e cores de bordas
+
+- `border-width` - Em px/pt/cm/em/etc e na seguinte ordem: larguras superior, direita, inferior e esquerda.
+- `border-color` - Red, blue, green etc.
+
