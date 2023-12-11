@@ -6,15 +6,36 @@
     <style>
       body{
         background-color:#FAFAD2;
+      }
       #divheader{
       }
       #cabecalho{
       }
       #barranavegacao{
+        
+      }
+      ul.nav{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background-color:#FFC0CB;
+        border:2px dashed #FF69B4;
+      }
+      ul.nav li{
+        float:left;
+      }
+      ul.nav li a{
+        display:block;
+        color:#666;
+        text-align:center;
+        padding:14px 16px;
+        text-decoration:none;
       }
       #barralateral{
         background-color:#FFC0CB;
         padding:15px;
+        border:2px dashed #FF69B4;
         margin:0px 10px 10px 10px;
         width:280px;
         float:right;
@@ -22,12 +43,14 @@
       #barraprincipal{
         background-color:#FFC0CB;
         padding:15px;
+        border:2px dashed #FF69B4;
         margin:0px 330px 10px 10px;
       }
       #rodape{
-        background-color:#FF69B4;
+        background-color:#FFC0CB;
         text-align:center;
         padding:15px;
+        border:2px dashed #FF69B4;
         margin:10px;
         clear:right;
       }
@@ -47,12 +70,12 @@
         </div>
       </div>
       <div id="barranavegacao">
-        <ul>
-          <li>Home</li>
-          <li>Músicas</li>
-          <li>Amigos</li>
-          <li>Sobre</li>
-          <li>Contato</li>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sub/entr/musica.html">Músicas</a></li>
+          <li><a href="sub/entr/amigos.html">Amigos</a></li>
+          <li><a href="sub/suporte/sobre.html">Sobre</a></li>
+          <li><a href="sub/suporte/contato.html">Contato</a></li>
           <li><input type="button" value="Criar uma página"></li>
         </ul>
         <img src="img/mio.png" alt=user width="100px" height="100px">
