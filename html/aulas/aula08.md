@@ -58,3 +58,12 @@ O posicionamento `position:sticky` alterna entre relativo e fixo, dependendo da 
 
 ## Flutuação
 
+Através do conceito de flutuação, uma caixa flutuante pode ser mudada para a esquerda ou direita até que sua borda externa toque a borda da caixa que a contém ou uma outra caixa flutuante. Com a flutuação, as caixas são retiradas do fluxo normal. Logo, as demais caixas se comportam como se a caixa flutuante não estivesse no documento.
+
+A propriedade `clear` especific quais elementos podem flutuar ao lado do elemento limpo e de qual lado. A propriedade `clear` pode ter um dos seguintes valores:
+
+- `none` - Permite elementos flutuantes nos dois lados. Isso é padrão.
+- `left` - Não são permitidos elementos flutuantes no lado esquerdo.
+- `right` - Não são permitidos elementos flutuantes no lado direito.
+- `both` - Não são permitidos elementos flutuantes nos dois lados.
+- `inherit` - O elemento herda o valor de seu ancestral.
