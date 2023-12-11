@@ -13,6 +13,7 @@
       #cabecalho{
       }
       #barranavegacao{
+      	margin:0px 10px 10px 10px;
       }
       ul.nav{
         list-style-type:none;
@@ -30,6 +31,7 @@
         text-align:center;
         padding:14px 16px;
         text-decoration:none;
+        color:black;
       }
       #barralateral{
         background-color:#FFC0CB;
@@ -44,8 +46,27 @@
       	list-style-type:none;
         margin:0;
         padding:0;
+        padding-top:15px;
+        padding-bottom:15px;
         width:180px;
         text-align:center;
+        background-color:white;
+     	border:1px solid #FF69B4;
+     	border-radius:30px;
+      }
+      ul.amigos li a{
+      	display:block;
+        padding:8px 16px;
+        text-decoration:none;
+        color:black;
+      }
+      ul.amigos li{
+      	text-align:center;
+      }
+      #mio a{
+      	display:block;
+        text-decoration:none;
+        color:black;
       }
       #barraprincipal{
         background-color:#FFC0CB;
@@ -61,6 +82,14 @@
       }
       article.mio{
       	margin-bottom:10px;
+      }
+      article.mio a{
+      	text-decoration:none;
+        color:black;
+      }
+      article.ritsu a{
+      	text-decoration:none;
+        color:black;
       }
       #rodape{
         background-color:#FFC0CB;
@@ -94,10 +123,10 @@
           <li><a href="sub/suporte/contato.html">Contato</a></li>
           <li><input type="button" value="Criar uma página"></li>
         </ul>
-        <img src="img/mio.png" alt=user width="100px" height="100px">
-        <figcaption>Akiyama Mio</figcaption>
       </div>
       <div id="barralateral">
+      	<h2 id="mio"><a href="sub/users/mio.html">Akiyama Mio</a></h2>
+        <img src="img/mio.png" alt=user width="160px" height="160px">
       	<h2>Seus amigos =)</h2>
         <ul class="amigos">
           <li><a href="sub/users/ritsu.html">Tainaka Ritsu</a></li><br>
@@ -111,7 +140,7 @@
         <h2>Publicações</h2>
         <article class="mio">
           <img src="img/mio.png" width="50px" height="50px">
-          <figcaption><a href="sub/users/mio.html">Akiyama Mio</a></figcaption><br>
+          <figcaption style="display:inline-block; vertical-align:top; margin-left:10px;"><a href="sub/users/mio.html">Akiyama Mio</a></figcaption><br>
           <p>19 de junho às 20:00</p><br>
           <p>Acho uma ótima ideia, vamos treinar nesse final de semana! Consegui uma vaga pra HTT tocar no estúdio Kogarasu *u*</p><br>
           <input type="image" id="like" alt="curtir" src="img/curtir.png">
@@ -120,7 +149,7 @@
         </article>
         <article class="ritsu">
           <img src="img/ritsu.png" width="50px" height="50px">
-          <figcaption><a href="sub/users/ritsu.html">Tainaka Ritsu</a></figcaption><br>
+          <figcaption style="display:inline-block; vertical-align:top; margin-left:10px;"><a href="sub/users/ritsu.html">Tainaka Ritsu</a></figcaption><br>
           <p>19 de junho às 20:00</p><br>
           <p>Alguém aí??? Eu já tô morrendo de tédio, vamos voltar a praticar logo!@!@!</p><br>
           <input type="image" id="like" alt="curtir" src="img/curtir.png">
