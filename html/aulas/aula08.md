@@ -102,6 +102,14 @@ O layout líquido se expande para preencher qualquer largura que o navegador ten
                 width:280px;
                 float:right;
             }
+            #rodape{
+                color:white;
+                background-color:darkred;
+                text-align:center;
+                padding:15px;
+                margin:10px;
+                clear:right;
+            }
         </style>
         <body>
             <div id="cabecalho">
