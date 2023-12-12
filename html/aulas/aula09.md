@@ -67,3 +67,78 @@ No CSS, é definido a largura pro input de 100% da largura do elemento pai (form
 
 No CSS acima, é incluída uma imagem no input text, lagura e altura da imagem e posição em relação à esquerda-topo.
 
+```
+<style>
+  select{
+    width:100%;
+    padding:16px 20px;
+    border:none;
+    border-radius:4px;
+    background-color:#f1f1f1;
+    margin-bottom:50px;
+  }
+
+  input[type=button]{
+    background-color:aqua;
+    border:none;
+    color:darkblue;
+    padding:16px 32px;
+    text-decoration:none;
+    margin:4px 2px;
+    cursos:pointer;
+  }
+</style>
+<body>
+  <form>
+    <select id="pais" name="pais">
+      <option value="br">Brasil</option>
+      <option value="ar">Argentina</option>
+      <option value="par">Paraguai</option>
+    </select>
+    <br><br>
+    <input type="button" value="Escolher País">
+  </form>
+</body>
+```
+
+No CSS acima, é estilizado a largura, a borda e o raio do vértice do select e o tipo de ponteiro ao passar sobre o botão (o ponteiro é uma mão ao passar sobre o botão).
+
+## Transformações
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utd-8">
+    <title>Exemplo-03: Forms-select</title>
+    <style>
+      #div1{
+        width:100px;
+        height:100px;
+        background-color:aqua;
+        border:solid 1px darkblue;
+        }
+      #div1:hover{
+        transform:translate(20px,20px);
+        }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+  </body>
+</html>
+```
+
+`transform:translate(20px,20px);`
+
+Ao passar com o mouse por cima do elemento (hover), faz uma translação 20px a partir da esquerda e 20px a partir do topo.
+
+Existem outros métodos de transformação de elementos HTML em CSS:
+
+- `rotate()` - `transform:rotate(20deg)` - Rotaciona 20 graus no sentido horário.
+- `scale()` - `transform:scale(2,5)` - Dobra a largura e quintuplica a altura.
+- `scaleX()` - `transform:scaleX(2)` - Dobra a largura.
+- `scaleY()` - `transform:scaleY(4)` - Quadruplica a altura.
+- `skewX()` - `transform:skewX(20deg)` - Inclina 20 graus em relação ao eixo X.
+- `skewY()` - `transform:skewY(20deg)` - Inclina 20 graus em relação ao eixo Y.
+
