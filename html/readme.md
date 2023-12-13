@@ -17,5 +17,3 @@ Neste diretório, disponibilizei minhas notas de estudo sobre o conteúdo das au
 ## Referências
 
 DÍSCOLA, Sérgio. Introdução à Web. São Carlos: 2020. Notas de aula.
-
-DÍSCOLA, Sérgio. Programação para Web. São Carlos: 2020. Notas de aula.
