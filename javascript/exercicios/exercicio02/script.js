@@ -1,4 +1,4 @@
-document.getelementsByTagName("p").style.fontSize = "30px";
-document.getelementsByTagName("p").style.color = "white";
-document.getelementsByTagName("p").style.backgroundColor = "black";
-document.getelementsByTagName("p").style.fontSize = "35px";
+document.getElementById("texto").style.fontSize = "30px";
+document.getElementById("texto").style.color = "white";
+document.getElementById("texto").style.backgroundColor = "black";
+document.getElementById("texto").style.fontSize = "35px";
