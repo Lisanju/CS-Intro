@@ -106,3 +106,76 @@ Todos os números são representados em ponto flutuante.
 
 Não há caracteres. Um caractere é uma string com tamanho 1.
 
+## Concatenação de strings
+
+Como o operador `+` é usado tanto para soma quanto para concatenação entre strings, o JavaScript adota como padrão que, caso `+` apareça entre uma string e um número, a partir desse momento, todos os `+` seguintes no mesmo nível de prioridade serão considerados como concatenação.
+
+## Laços condicionais
+
+If, Else If e Else.
+```
+var idade = 10;
+if(idade < 13){
+  console.log("Acesso negado");
+}
+else if(idade < 18){
+  console.log("Acesso limitado");
+}
+else{
+  console.log("Acesso ilimitado");
+}
+```
+
+Switch (case, default e break).
+```
+var cidade="SPO";
+switch(cidade){
+  case "CAM":
+    alert("Campinas");
+    break;
+case "SPO":
+    alert("São Paulo");
+    break;
+case "SCL":
+    alert("São Carlos");
+    break;
+default:
+    alert("Não reconhecido");
+    break;
+}
+```
+
+Há dois pares gêmeos de comparadores de igualdade e desiguladade, o par restrito e o par com conversor de tipo.
+
+- Conversor de tipo - `==` e `!=`, se as variáveis sendo comparadas são iguais, eles se comportam normalmente. Mas caso sejam de tipos diferentes, os tipos são convertidos.
+- Restrito - `===` e `!==`, não realizam conversão de tipo, funcionam como todas as demais linguagens.
+
+```
+var str = "10";
+str == 10 // convertido -> true!
+```
+
+Mas cuidado, pois há casos onde a conversão de tipo pode dar resultados inesperados.
+
+```
+"" == false;
+"0" == 0
+"" == 0
+```
+
+Todas as comparações acima não são válidas (não são iguais) caso seja usado o comparador estrito.
+
+## Operadores lógicos
+
+- `<` - Menor que;
+- `>` - Maior que;
+- `<=` - Menor/igual que;
+- `>=` - Maior/igual que;
+- `==` - Igual (com conversão de tipo);
+- `!=` ou `<>` - Diferente (com conversão de tipo);
+- `===` - Igual (sem conversão de tipo);
+- `!==` - Diferente (sem conversão de tipo);
+- `&&` - Operação AND lógica;
+- `||` - Operação OR lógica;
+- `!` - Operação NOT lógica.
+
