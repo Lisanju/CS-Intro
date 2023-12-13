@@ -179,3 +179,119 @@ Todas as comparações acima não são válidas (não são iguais) caso seja usa
 - `||` - Operação OR lógica;
 - `!` - Operação NOT lógica.
 
+## Laços de repetição
+
+For, While e Do While.
+```
+for(i = 0; i < 12; i++){                    //(inicialização; condição; incremento)
+  console.log("Iteração número " + i);
+}
+
+var contador=0;
+while(contador < 12){
+  console.log("Iteração número " + contador);
+  contador++;
+}
+
+var contador = 0;
+do{
+  console.log("Iteração número " + contador);
+  contador++;
+} while (contador < 12);
+```
+
+## Interação com o usuário
+
+`alert("Teste de algoritmo");`
+
+![image](https://github.com/Lisanju/CS-Intro/assets/106002045/0affc1f8-00b9-493b-9dff-a0573f5dd62e)
+
+```
+var resp = confirm("Você está entendendo?");
+if(resp === true){
+  console.log("Entendi");
+}
+else{
+  console.log("Não entendi");
+}
+```
+
+![image](https://github.com/Lisanju/CS-Intro/assets/106002045/58d2f5e0-c1af-4293-ba01-947d308d02a3)
+
+```
+var nome = prompt("Qual é o seu nome?, "João");     // "João" é um valor padrão opcional
+if(nome != null){
+  alert("Olá " + nome);
+}
+```
+
+![image](https://github.com/Lisanju/CS-Intro/assets/106002045/b0751c69-9e54-45d6-b9cb-336c7afa291e)
+
+## var e let
+Além do var, uma variável ainda pode ser declarada como let
+
+`var valor = 10;` e `let valor = 10;`
+
+A diferença é o alcance do escopo de cada variável:
+- Variáveis declaradas como let são consideradas de escopo limitado (chamado de escopo em bloco);
+- Variáveis declaradas como var possuem escopo global. Com içamento de variável.
+
+## Içamento de variável
+
+Variáveis identificadas como var são içadas ao começo do código independentemente de onde estavam.
+
+```
+<script>
+  x = 10;      //Funciona!
+  var x;
+</script>
+```
+
+```
+<script>
+  x = 10;      //Não funciona :(
+  let x;
+</script>
+```
+
+```
+var x = 10;
+if(x > 0){
+  var y = "Oi";
+}
+console.log(x); // 10
+console.log(y); // "Oi"
+
+var x = 10;
+if(x > 0){
+  let x = "Oi";
+}
+console.log(x); // 10
+
+var x = 10;
+if(x > 0){
+  let y = "Oi";
+}
+console.log(x); // 10
+console.log(y); // Erro
+```
+
+## const
+
+Variáveis podem ser declaradas como tipo const. Possuem escopo limitado (assim como o let), devem ser atribuídos um valor e não podem ser modificados, mas somente lidos.
+
+```
+var x = 10;
+if(x > 0){
+  const y = "Oi";
+}
+console.log(x); // 10
+console.log(y); // Erro
+
+const x = 10;
+if(x > 0){
+  x = "Oi"; // Erro
+}
+
+const x; // Erro
+```
