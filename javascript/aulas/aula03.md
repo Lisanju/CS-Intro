@@ -53,3 +53,64 @@ A interação do usuário dá origem aos eventos. Alguns eventos comuns são o C
 
 A lista a seguir contém vários eventos: https://developer.mozilla.org/en-US/docs/Web/Events
 
+`<a href = "#" onClick = "alert("Cliquei nesse link")">Link teste</a>` - É uma maneira simples de adicionar eventos, porém de manutenção dificultada.
+
+```
+<body>
+  <p>Um parágrafo de texto de exemplo</p>
+  <script type="text/javascript">
+    document.getElementsByTagName("p")[0].onClick = function(){
+      alert("Cliquei no parágrafo");
+      };
+  </script>
+</body>
+```
+
+A maneira acima é de mais fácil manutenção.
+
+```
+<head>
+  <meta charset="utf-8">
+  <title>Página de teste</title>
+  <script type="text/javascript">
+    window.onload = function(){
+    document.getElementsByTagName("p")[0].onClick = function(){
+      alert("Cliquei no parágrafo");
+    };
+  </script>
+</head>
+<body>
+  <p>Um parágrafo de texto de exemplo</p>
+</body>
+```
+
+O código acima não funciona. Para ele funcionar, é necessário acrescentar `window.onload` no `<script>`. Ele execut após todos os elementos HTML estiverem carregados.
+
+```
+<head>
+  <meta charset="utf-8">
+  <title>Página de teste</title>
+  <script type="text/javascript">
+    window.onload = function(){
+      document.getElementsByTagName("p")[0].onClick = function(){
+        alert("Cliquei no parágrafo");
+      };
+    };
+  </script>
+</head>
+<body>
+  <p>Um parágrafo de texto de exemplo</p>
+</body>
+```
+
+Para ter uma maior flexibilidade, é possível usar um objeto do tipo evento como parâmetro.
+
+```
+document.getElementsByTagName("p")[0].onClick = function(evento){
+  alert(evento.type);
+}
+```
+
+- `type` - Retorna o tipo de evento que foi disparado (Click, MouseOver etc).
+- `target` - Retorna o objeto ao qual o evento está atrelado.
+- `preventDefault():` - Cancela o comportamento padrão do evento.
