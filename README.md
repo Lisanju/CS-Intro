@@ -1,6 +1,6 @@
 # Introdução à Ciência da Computação
 
-Repositório para o estudo introdutório de tópicos em Ciência da Computação, organizado por Lisanju Lardapide.
+Repositório para o estudo introdutório de tópicos em Ciência da Computação.
 
 ## Referências
 
