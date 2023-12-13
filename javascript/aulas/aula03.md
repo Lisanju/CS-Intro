@@ -114,3 +114,13 @@ document.getElementsByTagName("p")[0].onClick = function(evento){
 - `type` - Retorna o tipo de evento que foi disparado (Click, MouseOver etc).
 - `target` - Retorna o objeto ao qual o evento está atrelado.
 - `preventDefault():` - Cancela o comportamento padrão do evento.
+
+Para modificar uma propriedade CSS de um elemento selecionado:
+
+`elemento.style.fontSize = "10px";`
+
+Em que `style` altera o CSS do `elemento`, `fontSize` é o nome da propriedade CSS e `10px` é o novo valor da propriedade.
+
+`getComputedStyle(elemento)["propriedae"];`
+
+Em que `getComputedStyle(elemento)` retorna todos os valores dos estilos como um array e `propriedade` é a propriedade CSS desejada.
