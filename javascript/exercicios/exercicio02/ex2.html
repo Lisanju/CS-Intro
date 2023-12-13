@@ -2,11 +2,7 @@
   <html>
     <head>
       <meta charset="utf-8">
-      <style type="text/javascript">
-        window.onload = function(){
-          id.mudar.style.fontSize = "10px";
-      </style>
-    </head>
+      </head>
     <body>
       <ul>
         <li id="mudar">Mudar fonte para 30px</li>
@@ -14,5 +10,13 @@
         <li id="fundo">Fundo preto, texto branco</li>
         <li id="aumentar">Aumentar fonte em 5px</li>
       </ul>
+      <style type="text/javascript">
+        window.onload = function(){
+          id.mudar.style.fontSize = "30px";
+          id.cor.style.color = "white";
+          id.fundo.style.background-color = "black";
+          id.aumentar.style.font-size = "5px";
+        }
+      </style>
     </body>
   </html>
