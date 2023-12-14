@@ -193,3 +193,85 @@ print(f"O menor valor do vetor é {menor}.")
 print(f"O maior valor do vetor é {maior}.")
 
 #Ex 13#
+
+vetor = []
+N = 5
+
+for n in range(0,N):
+    numero = int(input("Digite um número: "))
+    vetor.append(numero)
+    
+menor = vetor[0]
+posmenor = 0
+maior = vetor[0]
+posmaior = 0
+    
+for i in range(0,len(vetor)):
+    if (vetor[i] > maior):
+        maior = vetor[i]
+        posmaior = i
+        
+    elif (vetor[i] < menor):
+        menor = vetor[i]
+        posmenor = i
+
+print(f"A posição do menor valor do vetor é {posmenor}.")
+print(f"A posição do maior valor do vetor é {posmaior}.")
+
+#Ex 14#
+
+vetor = []
+N = 10
+
+for n in range(0,N):
+    valor = int(input("Digite um valor: "))
+    vetor.append(valor)
+    
+for i in range(0,N):
+    for e in range(i+1,N):
+        if (vetor[i] == vetor[e]):
+            print(vetor[i])
+
+#Ex 15#
+
+vetor = []
+vetorSemRepeticao = []
+N = 20
+
+for n in range(0,N):
+    valor = int(input("Digite um valor: "))
+    vetor.append(valor)
+    
+for v in vetor:
+    if v not in vetorSemRepeticao:
+        vetorSemRepeticao.append(v)
+    
+print(f"Vetor sem elementos repetidos: {vetorSemRepeticao}")
+
+#Ex 16#
+
+vetor = []
+N = 5
+
+for n in range(0,N):
+    valor = int(input("Digite um número real: "))
+    vetor.append(valor)
+    
+print("Selecione um dos códigos abaixo:\n- 0\n- 1\n- 2")
+codigo = int(input(""))
+vetor.append(f"código {codigo}")
+
+if (codigo == 0):
+    print("Programa finalizado")
+    
+elif (codigo == 1):
+    print(vetor)
+    
+elif (codigo == 2):
+    print(vetor[::-1])
+    
+else:
+    print("Código inválido")
+
+E#x 17#
+
