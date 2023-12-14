@@ -147,3 +147,28 @@ print(f"Média geral: {media}")
 
 #Ex 11#
 
+vetor = []
+vetorNegativo = []
+vetorPositivo = []
+N = 10
+soma = 0
+
+for n in range(0,N):
+    numero = float(input("Digite um número real: "))
+    vetor.append(numero)
+    
+for valor in vetor:
+    if (valor<0):
+        vetorNegativo.append(valor)
+        
+    else:
+        vetorPositivo.append(valor)
+        
+for valor in vetorPositivo:
+    soma = soma + valor
+        
+print(f"A quantidade de números negativos é {len(vetorNegativo)}.")
+print(f"A soma dos números positivos é {soma}.")
+
+#Ex 12#
+
