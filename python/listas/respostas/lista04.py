@@ -273,5 +273,53 @@ elif (codigo == 2):
 else:
     print("Código inválido")
 
-E#x 17#
+#Ex 17#
+
+vetor = []
+N = 10
+
+for n in range(0,N):
+    valor = int(input("Digite um valor: "))
+    vetor.append(valor)
+    
+for i in range(0,N):
+    if (vetor[i] < 0):
+        vetor[i] = 0
+        
+print(vetor)
+
+#Ex 18#
+
+vetor = []
+vetorMultiplos = []
+N = 10
+
+for n in range(0,N):
+    valor = int(input("Digite um número: "))
+    vetor.append(valor)
+    
+x = int(input("Selecione um valor x: "))
+
+for valor in vetor:
+    multiplo = x * valor
+    vetorMultiplos.append(multiplo)
+    
+print(vetorMultiplos)
+
+#Ex 19#
+
+vetor = []
+
+for i in range(0,50):
+    valor = (i+5*i)%(i+1)
+    vetor.append(valor)
+    
+print(vetor)
+
+# ou #
+
+vetor = [((i+5*i)%(i+1)) for i in range(0,50)]
+print(vetor)
+
+#Ex 20#
 
