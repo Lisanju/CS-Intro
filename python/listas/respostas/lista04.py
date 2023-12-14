@@ -605,3 +605,44 @@ print(vetorUniao)
 
 #Ex 32#
 
+x = []
+y = []
+N = 5
+vetorSoma = []
+vetorProduto = []
+vetorDiferenca = []
+vetorIntersecao = []
+vetorUniao = []
+
+for n in range(0,N*2):
+    if (n < N):
+        numero = int(input("Digite um número para o vetor x: "))
+        x.append(numero)
+        
+    else:
+        numero = int(input("Digite um número para o vetor y: "))
+        y.append(numero)
+        
+for i in range(0,N):
+    vetorSoma.append((x[i] + y[i]))
+    vetorProduto.append((x[i] * y[i]))
+    
+    if (x[i] not in y):
+        vetorDiferenca.append(x[i])
+        
+for i in range(0,N):
+    if (x[i] in y and x[i] not in vetorIntersecao):
+        vetorIntersecao.append(x[i])
+        
+for i in range(0,N):
+    if (x[i] not in vetorUniao):
+        vetorUniao.append(x[i])
+        
+for i in range(0,N):
+    if (y[i] not in vetorUniao):
+        vetorUniao.append(y[i])
+        
+print(f"Soma - {vetorSoma}\nProduto - {vetorProduto}\nDiferença - {vetorDiferenca}\nInterseção - {vetorIntersecao}\nUnião - {vetorUniao}")
+
+#Ex 33#
+
