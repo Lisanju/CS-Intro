@@ -365,3 +365,50 @@ for i in range(0,10):
 print(f"Vetor C: {C}.")
 
 #Ex 22#
+
+vetorA = []
+vetorB = []
+vetorC = []
+cA = 0
+cB=0
+
+for n in range(0,10):
+    valor = int(input("Digite um número para o vetor A: "))
+    vetorA.append(valor)
+    
+for n in range(0,10):
+    valor = int(input("Digite um número para o vetor B: "))
+    vetorB.append(valor)
+    
+for i in range(0,20):
+    if (i % 2 == 0):
+        vetorC.append(vetorA[cA])
+        cA = cA + 1
+        
+    else:
+        vetorC.append(vetorB[cB])
+        cB = cB + 1
+    
+print(vetorC)
+
+#Ex 23#
+
+vetor1 = []
+vetor2 = []
+pescalar = 0
+
+for n in range(0,5):
+    valor = int(input("Insira um valor para o vetor 1: "))
+    vetor1.append(valor)
+    
+for n in range(0,5):
+    valor = int(input("Insira um valor para o vetor 2: "))
+    vetor2.append(valor)
+    
+for i in range(0,5):
+    pescalar = pescalar + (vetor1[i] * vetor2[i])
+    
+print(f"Vetor 1: {vetor1}\nVetor 2: {vetor2}\nProduto escalar: {pescalar}")
+
+#Ex 24#
+
