@@ -646,3 +646,20 @@ print(f"Soma - {vetorSoma}\nProduto - {vetorProduto}\nDiferença - {vetorDiferen
 
 #Ex 33#
 
+vetor = []
+N = 15
+c = 0
+
+for n in range(0,N):
+    numero = int(input("Digite um número: "))
+    vetor.append(numero)
+    
+for i in range(0,N):
+    if (vetor[i - c] == 0):
+        del vetor[i - c]
+        c = c + 1
+        
+print(vetor)
+
+#Ex 34#
+
