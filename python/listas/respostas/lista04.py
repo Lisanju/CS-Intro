@@ -172,3 +172,24 @@ print(f"A soma dos números positivos é {soma}.")
 
 #Ex 12#
 
+vetor = []
+N = 5
+
+for n in range(0,N):
+    numero = int(input("Digite um número: "))
+    vetor.append(numero)
+    
+menor = vetor[0]
+maior = vetor[0]
+    
+for valor in vetor:
+    if (valor > maior):
+        maior = valor
+        
+    elif (valor < menor):
+        menor = valor
+
+print(f"O menor valor do vetor é {menor}.")
+print(f"O maior valor do vetor é {maior}.")
+
+#Ex 13#
