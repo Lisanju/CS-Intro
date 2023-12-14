@@ -530,3 +530,30 @@ print(v2)
 
 #Ex 29#
 
+vetor = []
+N = 6
+cImpar = 0
+somaPares = 0
+pares = []
+impares = []
+
+for n in range(0,N):
+    numero = int(input(f"{n} - Digite um número inteiro: "))
+    vetor.append(numero)
+    
+for valor in vetor:
+    if (valor % 2 == 0):
+        pares.append(valor)
+        somaPares = somaPares + valor
+        
+    else:
+        impares.append(valor)
+        cImpar = cImpar + 1
+        
+print(f"Números pares digitados: {pares}.")
+print(f"Soma dos números pares digitados: {somaPares}.")
+print(f"Números ímpares digitados: {impares}.")
+print(f"Quantidade de números ímpares digitados: {cImpar}.")
+
+#Ex 30#
+
