@@ -506,3 +506,27 @@ print(vetorPrimos)
 
 #Ex 28#
 
+v = []
+N = 10
+v1 = []
+v2 = []
+
+for n in range(0,N):
+    valor = int(input("Digite um número inteiro: "))
+    v.append(valor)
+    
+for i in range(0,N):
+    if (v[i] % 2 == 0):
+        v2.append(v[i])
+            
+    elif (v[i] == 0):
+        continue
+    
+    else:
+        v1.append(v[i])
+        
+print(v1)
+print(v2)
+
+#Ex 29#
+
