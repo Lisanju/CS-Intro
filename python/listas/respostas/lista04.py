@@ -557,3 +557,51 @@ print(f"Quantidade de números ímpares digitados: {cImpar}.")
 
 #Ex 30#
 
+vetorA = []
+vetorB = []
+vetorIntersecao = []
+N = 10
+
+for n in range(0,N*2):
+    if (n < N):
+        numero = int(input("Digite um número para o vetor A: "))
+        vetorA.append(numero)
+        
+    elif (n >= N):
+        numero = int(input("Digite um número para o vetor B: "))
+        vetorB.append(numero)
+        
+for valor in vetorA:
+    if (valor in vetorB and valor not in vetorIntersecao):
+        vetorIntersecao.append(valor)
+
+print(vetorIntersecao)
+
+#Ex 31#
+
+vetorA = []
+vetorB = []
+vetorUniao = []
+N = 10
+
+for n in range(0,N*2):
+    if (n < N):
+        numero = int(input("Digite um número para o vetor A: "))
+        vetorA.append(numero)
+        
+    else:
+        numero = int(input("Digite um número para o vetorB: "))
+        vetorB.append(numero)
+        
+for i in range(0,N):
+    if (vetorA[i] not in vetorUniao):
+        vetorUniao.append(vetorA[i])
+        
+for i in range(0,N):
+    if (vetorB[i] not in vetorUniao):
+        vetorUniao.append(vetorB[i])
+    
+print(vetorUniao)
+
+#Ex 32#
+
