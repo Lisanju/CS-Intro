@@ -412,3 +412,30 @@ print(f"Vetor 1: {vetor1}\nVetor 2: {vetor2}\nProduto escalar: {pescalar}")
 
 #Ex 24#
 
+numeros = []
+alturas = []
+N = 10
+maiorAltura = 0
+numeroMaiorAltura = 0
+menorAltura = 10
+numeroMenorAltura = 0
+
+for n in range(0,N):
+    numero = int(input(f"Insira o número do aluno {n}: "))
+    numeros.append(numero)
+    altura = float(input(f"Insira a altura do aluno {n}: "))
+    alturas.append(altura)
+    
+for i in range(0,N):
+    if (alturas[i] > maiorAltura):
+        maiorAltura = alturas[i]
+        numeroMaiorAltura = numeros[i]
+
+    elif (alturas[i] < menorAltura):
+        menorAltura = alturas[i]
+        numeroMenorAltura = numeros[i]
+        
+print(f"Aluno mais alto:\nNúmero - {numeroMaiorAltura}\nAltura - {maiorAltura}\n\nAluno mais baixo:\nNúmero - {numeroMenorAltura}\nAltura - {menorAltura}")
+
+#Ex 25#
+
