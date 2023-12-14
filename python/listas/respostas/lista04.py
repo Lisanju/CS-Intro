@@ -439,3 +439,70 @@ print(f"Aluno mais alto:\nNúmero - {numeroMaiorAltura}\nAltura - {maiorAltura}\
 
 #Ex 25#
 
+vetor = []
+
+for n in range(1,101):
+    if (n % 7 != 0 and n % 10 != 7):
+        vetor.append(n)
+        
+print(vetor)
+
+#Ex 26#
+
+import math
+
+v = []
+n = 10
+soma = 0
+quadradoDaDiferenca = []
+somatorio = 0
+
+for numero in range(0,n):
+    add = int(input("Insira um número: "))
+    v.append(add)
+    
+for valor in v:
+    soma = soma + valor
+    
+m = soma/n
+
+for valor in v:
+    quadradoDaDiferenca.append((valor - m)**2)
+    
+for valor in quadradoDaDiferenca:
+    somatorio = somatorio + valor
+
+desvioPadrao = math.sqrt(somatorio/n-1)
+print(desvioPadrao)
+
+#Ex 27#
+
+vetor = []
+N = 10
+vetorPrimos = []
+c = 3
+
+for n in range(0,N):
+    numero = int(input("Insira um número: "))
+    vetor.append(numero)
+    
+for i in range(0,N):
+    if (vetor[i] < 2):
+        continue                ## 0 e 1 não são primos e números negativos são desconsiderados
+    
+    elif (vetor[i] == 2):
+        vetorPrimos.append(f"Número {vetor[i]} - Posição {i}")      ## 2 é o único número par primo
+        
+    elif (vetor[i] % 2 == 0):
+        continue                ## Se é par, então não é primo
+    
+    elif (vetor[i] != c and vetor[i] % c == 0):
+        continue                ## Se o resto da divisão de um número ímpar com outro ímpar é 0, então não é primo
+    
+    else:
+        vetorPrimos.append(f"Número {vetor[i]} - Posição {i}")
+        
+print(vetorPrimos)
+
+#Ex 28#
+
