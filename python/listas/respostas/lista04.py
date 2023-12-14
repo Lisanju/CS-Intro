@@ -323,3 +323,45 @@ print(vetor)
 
 #Ex 20#
 
+vetor1 = []
+vetor2 = []
+N = 10
+
+for n in range(0,N):
+    valor = int(input("Digite um valor no intervalo [0-50]: "))
+    if (valor >= 0 and valor <= 50):
+        vetor1.append(valor)
+        
+    else:
+        print("O número inserido não faz parte do intervalo [0-50].")
+        pass
+        
+print(f"Vetor 1: {vetor1}.")
+
+for valor in vetor1:
+    if (valor % 2 == 0):
+        vetor2.append(valor)
+        
+print(f"Vetor 2: {vetor2}.")
+
+#Ex 21#
+
+A = []
+B = []
+C = []
+
+for n in range(0,10):
+    valor = int(input("Insira um número para o vetor A: "))
+    A.append(valor)
+
+for n in range(0,10):
+    valor = int(input("Insira um número para o vetor B: "))
+    B.append(valor)
+
+for i in range(0,10):
+    mult = A[i] * B[i]
+    C.append(mult)
+        
+print(f"Vetor C: {C}.")
+
+#Ex 22#
