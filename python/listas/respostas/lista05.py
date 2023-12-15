@@ -212,3 +212,70 @@ print(str_conv)
 
 #Ex 20#
 
+idades = []
+nomes = []
+botao = True
+maisNovo = float("inf")
+nomeMaisNovo = ""
+maisVelho = 0
+nomeMaisVelho = ""
+
+while(botao):
+    idade = int(input("Digite uma idade: "))
+    
+    if (idade > 0):
+        idades.append(idade)
+        nome = input("Digite um primeiro nome: ")
+        nomes.append(nome)
+        
+    else:
+        botao = False
+        break
+    
+for i in range(0,len(idades)):
+    if (idades[i] > maisVelho):
+        maisVelho = idades[i]
+        nomeMaisVelho = nomes[i]
+        
+    elif (idades[i] < maisNovo):
+        maisNovo = idades[i]
+        nomeMaisNovo = nomes[i]
+        
+print(f"Mais velho\nNome: {nomeMaisVelho} - Idade: {maisVelho}\n\nMais novo\nNome: {nomeMaisNovo} - Idade: {maisNovo}")
+
+#Ex 21#
+
+carros = []
+consumo = []
+consumo1000km = []
+N = 5
+consumoMaisEconomico = float('inf')
+carroMaisEconomico = ""
+
+for n in range(0,N):
+    addCarro = input("Digite o nome de um carro: ")
+    addConsumo = int(input("Digite o consumo em quilômetros desse carro com 1 litro de combustível: "))
+    carros.append(addCarro)
+    consumo.append(addConsumo)
+    
+for i in range(0,N):
+    consumo1000km.append(consumo[i]*1000)
+    if (consumo[i] < consumoMaisEconomico):
+        consumoMaisEconomico = consumo[i]
+        carroMaisEconomico = carros[i]
+
+print(f"Carro mais econômico: {carroMaisEconomico} - Consumo: {consumoMaisEconomico}\n\nCarros: {carros}\nConsumo em 1000km: {consumo1000km}")
+
+#Ex 22#
+
+nome = input("Digite o nome de uma mercadoria: ")
+valor = float(input("Digite o valor dessa mercadoria: "))
+
+desconto = valor*10/100
+
+valorVista = valor - desconto
+
+print(f"Mercadoria: {nome}\nValor total: {valor}\nValor do desconto: {desconto}\nValor à vista: {valorVista}")
+
+#Ex 23#
+
