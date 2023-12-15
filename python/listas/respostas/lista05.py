@@ -354,3 +354,28 @@ print(str1)
 
 #Ex 28#
 
+A = input("Digite uma palavra ou um texto: ")
+B = input("Digite outra palavra ou outro texto: ")
+
+c = B.count(A)
+print(c)
+
+# ou #
+
+A = input("Digite uma palavra ou um texto: ")
+B = input("Digite outra palavra ou outro texto: ")
+posicao = 0
+ocorrencia = 0
+
+while (posicao <= len(B) - len(A)):
+    if (B[posicao:posicao + len(A)] == A):
+        ocorrencia = ocorrencia + 1
+        posicao = posicao + len(A)
+        
+    else:
+        posicao = posicao + 1
+        
+print(ocorrencia)
+
+#Ex 29#
+
