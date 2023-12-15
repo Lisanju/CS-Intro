@@ -663,3 +663,69 @@ print(vetor)
 
 #Ex 34#
 
+vetor = []
+N = 10
+
+for n in range(0,N):
+    numero = int(input("Digite um número: "))
+    
+    if (numero not in vetor):
+        vetor.append(numero)
+        
+    else:
+        numero = int(input("Esse número já foi inserido, digite outro número: "))
+        vetor.append(numero)
+        
+print(vetor)
+
+#Ex 35#
+
+a = int(input("Digite um número positivo menor que 10000: "))
+b = int(input("Digite outro número positivo menor que 10000: "))
+
+vetorA = []
+vetorB = []
+
+for algarismo in str(a):
+    vetorA.append(int(algarismo))
+    
+for algarismo in str(b):
+    vetorB.append(int(algarismo))
+    
+for i in range(0,len(vetorA)):
+
+#Ex 36#
+
+vetor = []
+N = 10
+
+for n in range(0,N):
+    n = float(input(f"{n} - Digite um número real: "))
+    vetor.append(n)
+
+vetor.sort()
+print("Vetor ordenado: ", vetor)
+
+#Ex 37#
+
+vetor1 = []
+vetor2 = []
+
+for n in range(0,6):
+    valor = int(input(f"{n} - Digite um valor: "))
+    vetor1.append(valor)
+    
+for n in range(6,11):
+    valor = int(input(f"{n} - Digite um valor: "))
+    vetor2.append(valor)
+    
+vetor1.sort()
+vetor2.sort()
+vetor2conv = vetor2[::-1]
+
+vetorFinal = vetor1 + vetor2conv
+
+print(vetorFinal)
+
+#Ex 38#
+
