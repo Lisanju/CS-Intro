@@ -749,3 +749,40 @@ print(vetor)
 
 #Ex 1#
 
+matriz = []
+maiorQue10 = []
+c = 0
+
+for n in range(0,4):
+    vetor = []
+    for n in range(0,4):
+        valor = int(input("Digite um valor: "))
+        vetor.append(valor)
+    matriz.append(vetor)
+
+for n in range(0,len(matriz)):
+    for m in range(0,len(matriz[n])):
+        if (matriz[n][m] > 10):
+            maiorQue10.append(matriz[n][m])
+            c = c + 1
+            
+print(f"A matriz possui {c} valores maiores que 10.\nEles são: {maiorQue10}.")
+
+#Ex 2#
+
+matriz = []
+cP = 0
+
+for n in range(0,5):
+    linha = []
+    for m in range(0,5):
+        linha.append(0)
+        
+    linha.insert(cP,1)
+    cP = cP + 1
+    matriz.append(linha)
+    
+print(matriz)
+
+#Ex 3#
+
