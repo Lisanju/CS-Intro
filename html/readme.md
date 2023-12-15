@@ -1,6 +1,6 @@
 # HTML - Introdução
 
-Neste diretório, disponibilizei minhas notas de estudo sobre o conteúdo das aulas das disciplinas 'Introdução à Web' e 'Programação para Web', ofertada pelo Instituto Federal de São Paulo em São Carlos e ministradas pelo Prof. Dr. Sérgio Luisir Díscola Junior.
+Neste diretório, disponibilizei minhas notas de estudo sobre o conteúdo das aulas das disciplinas 'Introdução à Web', ofertada pelo Instituto Federal de São Paulo em São Carlos e ministradas pelo Prof. Dr. Sérgio Luisir Díscola Junior.
 
 ## Conteúdo por aula
 
