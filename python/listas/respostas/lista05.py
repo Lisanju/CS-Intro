@@ -279,3 +279,40 @@ print(f"Mercadoria: {nome}\nValor total: {valor}\nValor do desconto: {desconto}\
 
 #Ex 23#
 
+S = input("Digite um texto: ")
+botao = True
+
+while(botao):
+    I = int(input("Digite um número inteiro não-negativo"))
+    J = int(input("Digite outro número inteiro não-negativo"))
+    
+    if (I <  0 and  J < 0):
+        print("Os números digitados são negativos! Digite-os novamente!")
+        
+    elif (I < 0 and J > 0):
+        print("O primeiro número digitado é negativo! Digite-o novamente!")
+        
+    elif (I > 0 and J < 0):
+        print("O segundo número digitado é negativo! Digite-o novamente!")
+        
+    else:
+        botao = False
+
+print(S[I:J])
+
+#Ex 24#
+
+S = input("Digite um texto: ")
+C = input("Digite um caractere: ")
+I = int(input("Digite uma posição: "))
+caracteres = []
+posicao = []
+
+for i in range(I,len(S)):
+    if (S[i] == C):
+        posicao.append(i)
+        break
+
+print(f"Posição: {posicao}")
+
+#Ex 25#
