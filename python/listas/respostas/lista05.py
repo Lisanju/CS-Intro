@@ -316,3 +316,41 @@ for i in range(I,len(S)):
 print(f"Posição: {posicao}")
 
 #Ex 25#
+
+string = input("Digite um texto: ")
+nova_string = ""
+
+for i in range(0,len(string)):
+    nova_string = nova_string + chr(ord(string[i]) + 3)
+    
+print(nova_string)
+
+#Ex 26#
+
+string = input("Digite uma palavra: ")
+stringComparada = ""
+
+for i in range(0,len(string)):
+    if (string[i] == string[len(string)-1-i]):
+        stringComparada = stringComparada + string[len(string)-1-i]
+        
+if (stringComparada == string):
+    print(string + " é um palíndromo.")
+    
+else:
+    print(string + " não é um palíndromo.")
+
+#Ex 27#
+
+str1 = input("Digite um texto: ")
+str2 = input("Digite outro texto: ")
+N = int(input("Digite um número inteiro positivo: "))
+
+for i in range(0,N):
+    str1 = str1 + str2[i]
+    
+str1 = str1 + "\0"
+print(str1)
+
+#Ex 28#
+
