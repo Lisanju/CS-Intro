@@ -692,7 +692,7 @@ for algarismo in str(a):
 for algarismo in str(b):
     vetorB.append(int(algarismo))
     
-for i in range(0,len(vetorA)):
+for i in range(0,len(vetorA)): # Incompleto #
 
 #Ex 36#
 
@@ -728,4 +728,24 @@ vetorFinal = vetor1 + vetor2conv
 print(vetorFinal)
 
 #Ex 38#
+
+vetor = []
+menor = int(input("0 - Digite um número: "))
+
+for i in range(1,10):
+    numero = int(input(f"{i} - Digite um número: "))
+    if (numero < menor):
+        vetor.insert(0,numero)
+        menor = numero
+        
+    else:
+        vetor.append(numero)
+        
+print(vetor)
+
+#Ex 39#
+
+#Matrizes#
+
+#Ex 1#
 
