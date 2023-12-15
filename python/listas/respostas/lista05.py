@@ -379,3 +379,68 @@ print(ocorrencia)
 
 #Ex 29#
 
+opcoesRodando = True
+
+while(opcoesRodando):
+    print("[Menu de opções]\n(a) - Ler uma string S1 (tamanho máximo de 20 caracteres);\n(b) - Imprimir o tamanho da string S1;\n(c) - Comparar a string S1 com uma nova string S2 fornecida pelo usuário e imprimir o resultado da comparação;\n(d) - Concatenar a string S1 com uma nova string S2 e imprimir na tela o resultado da concatenação'\n(e) - Imprimir a string S1 de forma reversa;\n(f) - Contar quntas vezes um dado caractere aparece na string S1. Esse caractere deve ser informado pelo usuário;\n(g) - Substituir a primeira ocorrência do caractere C1 da string S1 pelo caractere C2. Os caracteres C1 e C2 serão lidos pelo usuário;\n(h) - Verificar se uma string S2 é substring de S1. A string S2 deve ser informada pelo usuário;\n(i) - Retornar uma substring da string S1. Para isso o usuário deve informar a partir de qual posição deve ser criada a substring e qual é o tamanho da substring.\n")
+    opcao = input("Selecione uma das opções acima.")
+    botao = True
+
+    if (opcao == "a"):
+        while(botao):
+            S1 = input("Insira um texto de até 20 caracteres: ")
+            if (len(S1) > 20):
+                print("Foram inseridos mais de 20 caracteres.")
+        
+            else:
+                botao = False
+            
+    if (opcao == "b"):
+        print(S1)
+            
+    if (opcao == "c"):
+        S2 = input("Digite um novo texto: ")
+        
+        if (S1 < S2):
+            print(S1 + " vem antes de " + S2)
+            
+        else:
+            print(S2 + " vem antes de " + S1)
+            
+    if (opcao == "d"):
+        S2 = input("Digite um novo texto: ")
+        print(S1 + S2)
+        
+    if (opcao == "e"):
+        S1Rev = S1[::-1]
+        print(S1Rev)
+        
+    if (opcao == "f"):
+        C = input("Digite um caractere: ")
+        print(S1.count(C))
+        
+    if (opcao == "g"):
+        S1Conv = S1
+        C1 = input("Digite um caractere: ")
+        C2 = input("Digite outro caractere: ")
+        
+        for i in range(0,len(S1Conv)):
+            if (S1Conv[i] == C1):
+                print(S1Conv.replace(S1Conv[i],C2))
+                break
+        
+    if (opcao == "h"):
+        S2 = input("Digite um texto: ")
+        
+        if (S2 in S1):
+            print(S2 + " é substring de " + S1)
+            
+    if (opcao == "i"):
+        subS = ""
+        p = int(input("Digite uma posição: "))
+        t = int(input("Digite um tamanho de substring: "))
+        
+        while (len(subS) <= t):
+            subS = subS + S1[p:]
+            
+        print(subS)
