@@ -135,3 +135,25 @@ Para remover do final `vetor.pop()` (e retorna o valor removido), e do início `
 
 É utilizado para remover vários elementos sequenciais do vetor. Em que `indice_inicio` é o índice do primeiro elemento a ser removido e `quantos_remover` é o número de elementos que devem ser removidos (é opcional, se não for especificado, removerá até o último elemento). Retorna os elementos que foram removidos como array.
 
+## Atribuição
+
+Para evitar atribuição por referência, deve-se copiar dos dados do vetor. Para isso, usa-se o `slice`.
+
+`var novoVetor = vetorAntigo.slice();`
+
+## Outros métodos úteis
+
+```
+var palavras = "Eu gosto muito de estudar".split(" ");
+console.log(palavras);  // "Eu", "gosto", "muito", "de", "estudar"
+
+var novaFrase = palavras.join("-");
+console.log(novaFrase);  // "Eu-gosto-muito-de-estudar"
+```
+
+- `vetor.reverse();` - Reverte o vetor.
+- `vetor.sort();` - Ordena o vetor.
+- `vetor.indexOf(valor);` - Retorna o índice do primeiro elemento 'valor', ou -1 se não existir.
+- `vetor.lastIndexOf(valor);` - Retorna o índice do último elemento 'valor', ou -1 se não existir.
+- `vetor.includes(valor);` - Retorna true se 'valor' existir no vetor, ou false caso contrário.
+
