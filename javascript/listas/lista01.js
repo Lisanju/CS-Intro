@@ -385,3 +385,48 @@ sumGrades(grades);
 
 /*Ex 37*/
 
+function sumPositiveNumbers(numbers){
+    let sum = 0;
+    numbers.forEach(function(number){
+        if (number > 0){
+            sum += number;
+        }
+    });
+    return sum;
+}
+
+numbers = [-1,-2,-3,-4,5,6];
+console.log(sumPositiveNumbers(numbers));
+
+/*Ex 38*/
+
+function sumOddNumbers(numbers){
+    let sum = 0;
+    numbers.forEach(function(number){
+        if (number % 2 !== 0){
+            sum += number;
+        }
+    });
+    return sum;
+}
+
+numbers = [1,2,3,4,5,6,7,8,9,10];
+console.log(sumOddNumbers(numbers));
+
+/*Ex 39*/
+
+function getDropdown(countries){
+    let html = `<option value="">Please select</option>`;
+    countries.forEach(function(country){
+        console.log(country);
+        html += `<option value="${country.toLowerCase()}">${country.at(0).toUpperCase() + country.substring(1).toLowerCase()}</option>`;
+    });
+    return html;
+}
+
+const countries = ["Brazil","Russia","Spain","Netherlands"];
+
+console.log(getDropdown(countries));
+
+/*Ex 40*/
+
