@@ -157,3 +157,12 @@ console.log(novaFrase);  // "Eu-gosto-muito-de-estudar"
 - `vetor.lastIndexOf(valor);` - Retorna o índice do último elemento 'valor', ou -1 se não existir.
 - `vetor.includes(valor);` - Retorna true se 'valor' existir no vetor, ou false caso contrário.
 
+## map, filter e reduce
+
+`map(function())` - é usada para converter, traduzir ou mapear todos os elementos de um vetor em outro vetor. Ele percorre o vetor, da esquerda para a direita. Para cada elemento do vetor, invoca a função passada como parâmetro. O resultado é um vetor com o retorno individual de cada invocação da função.
+
+`filter(function())` - é usada para verificar um vetor de entrada e filtrá-lo conforme a regra especificada. Percorre o vetor, da esquerda para a direita. Para cada elemento do vetor, invoca a função passada como parâmetro. O resultado será composto de todos os elementos cuja invocação retornaram true (isso é, caso a função retorne true para aquele elemento).
+
+`reduce(function())` - `function(total, valorAtual)` - realiza uma operação sobre todos os elementos, reduzindo-os a um único valor.
+
+Para mais detalhes sobre Array, consulte a documentação em: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
