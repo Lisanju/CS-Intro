@@ -292,11 +292,51 @@ console.log(evenOrOdd(10));
 /*Ex 28*/
 
 function getEmptyArray(){
-    array = [];
+    const array = [];
     return array
 }
 
 console.log(getEmptyArray());
 
 /*Ex 29*/
+
+function getNumberOfElements(array){
+    return array.length;
+}
+
+const gatos = ["tom","nana","brisa","salem"];
+
+console.log(getNumberOfElements(gatos));
+
+/*Ex 30*/
+
+const apps = [];
+
+function useCalculator(array){
+    array.push("Calculator");
+    return array;
+}
+
+console.log(useCalculator(apps));
+
+/*Ex 31*/
+
+function useApp(apps,app){
+    apps.push(app);
+    return apps;
+}
+
+const apps = [];
+console.log(useApp(apps,"sonok"));
+
+/*Ex 32*/
+
+function getFirstApp(array){
+    return array[0];
+}
+
+apps = ["sonok","manek","tilap"];
+console.log(getFirstApp(apps));
+
+/*Ex 33*/
 
