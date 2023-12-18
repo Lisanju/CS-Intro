@@ -211,3 +211,11 @@ console.log(getBoxWidth("50px"));
 
 /*Ex 20*/
 
+function getDivisionRemainderBy2(number){
+    return number % 2;
+}
+
+console.log(getDivisionRemainderBy2(8));
+
+/*Ex 21*/
+
