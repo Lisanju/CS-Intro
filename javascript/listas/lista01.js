@@ -89,3 +89,61 @@ concatenarN(pN,sN);
 
 /*Ex 10*/
 
+var texto = "nikondacurry pi pi pi";
+
+function getDescription(str){
+    console.log(str.substring(0,10) + "...");
+    return str.substring(0,10) + "...";
+}
+
+getDescription(texto);
+
+/*Ex 11*/
+
+let gato = "nana";
+
+function darNome(str){
+    console.log(`O gato se chama ${str}`);
+    return `O gato se chama ${str}`
+};
+
+darNome(gato);
+
+/*Ex 12*/
+
+let nome = "Elisa";
+let sobrenome = "Lardapide";
+
+function getFullName(str1,str2){
+    return `${str1} ${str2}`;
+};
+
+console.log(getFullName(nome,sobrenome));
+
+/*Ex 13*/
+
+function getMultilineString(str){
+    return `I am learning JavaScript  
+and I found it to be  
+quite fun!`;
+};
+
+console.log(getMultilineString());
+
+/*Ex 14*/
+
+function renderTableRow(linha,valor){
+    return `
+            <tr>
+                <td>${linha}</td>
+                <td>${valor}</td>
+            </tr>`;
+};
+
+let rr = "baste";
+let pb = "mão";
+
+console.log(renderTableRow(rr,pb));
+
+/*Ex 15*/
+
