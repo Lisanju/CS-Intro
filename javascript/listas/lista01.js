@@ -514,3 +514,58 @@ console.log(getStringSizes(strings));
 
 /*Ex 47*/
 
+function getNumberOfGrades(grades) {
+    return grades.length;
+}
+
+function getSumGrades(grades) {
+    let sum = 0;
+    grades.forEach(function(grade){
+        sum += grade;
+        return sum;
+    })
+    return sum;
+}
+function getAverageValue(grades) {
+    let sum = 0;
+    grades.forEach(function(grade){
+        sum += grade;
+        return sum;
+    })
+    let avarageValue = sum / grades.length;
+    return avarageValue;
+}
+
+function getPassingGrades(grades) {
+    let passingGrades = grades.filter(function(grade){
+        return grade >= 10;
+    })
+    return passingGrades;
+}
+
+function getFailingGrades(grades) {
+    let failingGrades = grades.filter(function(grade){
+        return grade < 10;
+    })
+    return failingGrades;
+}
+
+function getRaisedGrades(grades) {
+    let raisedGrades = grades.map(function(grade){
+        if (grade < 20){
+            return grade + 1;
+        }
+        return grade;
+    })
+    return raisedGrades;
+}
+
+/*Ex 48*/
+
+function getVotersCount(ages) {
+    console.log(ages);
+    let votersCount = ages.filter(function(age){
+        return age >= 18;
+    })
+    return votersCount.length;
+}
