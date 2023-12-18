@@ -272,3 +272,22 @@ console.log(getDescription("nana é uma gatona"));
 
 /*Ex 26*/
 
+function canVote(age){
+    return age >= 18;
+}
+
+console.log(canVote(20));
+
+/*Ex 27*/
+
+function evenOrOdd(number){
+    if (number % 2 === 0){
+        return "even";
+    }
+    return "odd";
+}
+
+console.log(evenOrOdd(10));
+
+/*Ex 28*/
+
