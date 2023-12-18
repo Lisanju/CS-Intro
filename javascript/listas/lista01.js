@@ -187,3 +187,27 @@ console.log(nameVariations("nana"));
 
 /*Ex 17*/
 
+function convertNumberToString(num){
+    return num.toString();
+}
+
+console.log(convertNumberToString(7));
+
+/*Ex 18*/
+
+function getNextAge(str){
+    return Number.parseInt(str) + 1;
+}
+
+console.log(getNextAge(20));
+
+/*Ex 19*/
+
+function getBoxWidth(width){
+    return Number.parseInt(width);
+}
+
+console.log(getBoxWidth("50px"));
+
+/*Ex 20*/
+
