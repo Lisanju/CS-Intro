@@ -66,3 +66,26 @@ ultimoChar(gato);
 
 /*Ex 8*/
 
+function pularPrimeiro(str){
+    var resultado = str.substring(1);
+    console.log(resultado);
+    return resultado
+}
+
+var gato = "nana gato preto";
+pularPrimeiro(gato);
+
+/*Ex 9*/
+
+var pN = "nana";
+var sN = "lardapide";
+
+function concatenarN(str1,str2){
+    console.log(str1 + " " + str2);
+    return str1 + " " + str2;
+}
+
+concatenarN(pN,sN);
+
+/*Ex 10*/
+
