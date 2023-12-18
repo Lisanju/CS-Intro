@@ -234,7 +234,7 @@ console.log(ageLimit);
 const age = 18;
 
 function canVote(number){
-    if (age >= 18){
+    if (number >= 18){
         return true;
     }
     else{
@@ -245,4 +245,30 @@ function canVote(number){
 console.log(canVote(age));
 
 /*Ex 24*/
+
+function getNextAge(str){
+    if (str === ""){
+        return 0;
+    }
+    str = Number.parseInt(str);
+    return str + 1;
+}
+
+let age = "20";
+console.log(getNextAge(age));
+
+/*Ex 25*/
+
+function getDescription(string){
+    if (string.length > 10){
+        return string.substring(0,10) + "...";
+    }
+    else{
+        return string;
+    }
+}
+
+console.log(getDescription("nana é uma gatona"));
+
+/*Ex 26*/
 
