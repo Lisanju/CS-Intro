@@ -219,3 +219,30 @@ console.log(getDivisionRemainderBy2(8));
 
 /*Ex 21*/
 
+let count = 0;
+count += 1;
+
+console.log(count);
+
+/*Ex 22*/
+
+const ageLimit = 18;
+console.log(ageLimit);
+
+/*Ex 23*/
+
+const age = 18;
+
+function canVote(number){
+    if (age >= 18){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+console.log(canVote(age));
+
+/*Ex 24*/
+
