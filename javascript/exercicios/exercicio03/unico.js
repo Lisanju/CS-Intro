@@ -1,6 +1,13 @@
-var vetor = [1,2,3,4,a,2,3,5];
+function valoresUnicos(array){
+    const arrayVU = [];
+    for (let i = 0; i < array.length; i++){
+        if (arrayVU.includes(array[i]) === false){
+            arrayVU.push(array[i]);
+        }
+    }
+    return arrayVU;
+}
 
+const gatos = Array("tom","tom","nana","salem","nana","brisa","nana");
 
-
-var resultado = unicos(vetor);
-console.log(resultado);
+console.log(valoresUnicos(gatos));
