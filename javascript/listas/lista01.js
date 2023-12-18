@@ -340,3 +340,48 @@ console.log(getFirstApp(apps));
 
 /*Ex 33*/
 
+function getLastApp(array){
+    return array.at(-1);
+}
+
+apps = ["sonok","manek","tilap"];
+console.log(getLastApp(apps));
+
+/*Ex 34*/
+
+function loopThroughElements(array){
+    array.forEach(function(element){
+       console.log(element); 
+    });
+}
+
+const gatos = ["nana","tom","salem","brisa"];
+console.log(loopThroughElements(gatos));
+
+/*Ex 35*/
+
+function logUserIds(array){
+    array.forEach(function(element){
+        console.log(element);
+    })
+}
+
+userIds = [0,3,5,6,7];
+logUserIds(userIds);
+
+/*Ex 36*/
+
+function sumGrades(grades){
+    let sum = 0
+    grades.forEach(function(grade){
+        sum += grade;
+    })
+    console.log(sum);
+    return sum;
+}
+
+const grades = [7,10,6];
+sumGrades(grades);
+
+/*Ex 37*/
+
