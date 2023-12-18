@@ -147,3 +147,43 @@ console.log(renderTableRow(rr,pb));
 
 /*Ex 15*/
 
+function capitalize(word){
+    return word.at(0).toUpperCase() + word.substring(1).toLowerCase();
+};
+
+console.log(capitalize("nANA"));
+
+/*Ex 16*/
+
+function nameVariations(str){
+    return `
+            <tr>
+                <td>Number of characters</td>
+                <td>${str.length}</td>
+            </tr>
+            <tr>
+                <td>First character</td>
+                <td>${str.at(0)}</td>
+            </tr>
+            <tr>
+                <td>Last character</td>
+                <td>${str.at(str.length - 1)}</td>
+            </tr>
+            <tr>
+                <td>Lower case</td>
+                <td>${str.toLowerCase()}</td>
+            </tr>
+            <tr>
+                <td>Upper case</td>
+                <td>${str.toUpperCase()}</td>
+            </tr>
+            <tr>
+                <td>Capitalize</td>
+                <td>${str.at(0).toUpperCase() + str.substring(1).toLowerCase()}</td>
+            </tr>`
+};
+
+console.log(nameVariations("nana"));
+
+/*Ex 17*/
+
