@@ -445,3 +445,72 @@ function renderTableRows(rows){
 rows = [["Carbs", "17g"], ["Protein", "19g"], ["Fat", "5g"]];
 
 console.log(renderTableRows(rows));
+
+/*Ex 41*/
+
+function getPositiveTemperatures(temperatures){
+    const positiveTemperatures = temperatures.filter(function(temperature){
+        return temperature > 0;
+    })
+    return positiveTemperatures;
+}
+
+const temperatures = [-30,-5,-1,5,18,28,36];
+console.log(getPositiveTemperatures(temperatures));
+
+/*Ex 42*/
+
+function getFreezingTemperatures(temperatures){
+    const freezingTemperatures = temperatures.filter(function(temperature){
+        return temperature <= 0;
+    })
+    return freezingTemperatures;
+}
+
+const temperatures = [-30,-5,-1,5,18,28,36];
+console.log(getFreezingTemperatures(temperatures));
+
+/*Ex 43*/
+
+function getYear(years,searchYear){
+    let year = years.find(function(year){
+        return year === searchYear;
+    })
+    return year;
+}
+
+const years = [2020,2021,2022,2023,2024];
+console.log(getYear(years,2023));
+
+/*Ex 44*/
+
+function getOddYears(years){
+    let year = years.filter(function(year){
+        return year % 2 !== 0;
+    })
+    return year;
+}
+
+const years = [2020,2021,2022,2023,2024];
+console.log(getOddYears(years));
+
+/*Ex 45*/
+
+function isAppUsed(apps,app){
+    return apps.includes(app)
+}
+
+/*Ex 46*/
+
+function getStringSizes(strings){
+    let stringSizes = strings.map(function(string){
+        return string.length;
+    })
+    return stringSizes;
+}
+
+const strings = ["nana","tom"]
+console.log(getStringSizes(strings));
+
+/*Ex 47*/
+
