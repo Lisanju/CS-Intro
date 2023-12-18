@@ -291,3 +291,12 @@ console.log(evenOrOdd(10));
 
 /*Ex 28*/
 
+function getEmptyArray(){
+    array = [];
+    return array
+}
+
+console.log(getEmptyArray());
+
+/*Ex 29*/
+
