@@ -105,8 +105,67 @@ Como os números digitados PODEM ser com vírgula (float), usaremos parseFloat.
 
 Colocando o mouse sobre as variáveis na chamada da função, podemos verificar que está tudo ok. São reconhecidos como números como esperado...
 
+```
+function delta(a, b, c) {
+    return b*2 - 4 * a * c;
+}
+
+function baskhara(a, b, c) {
+    var valor_delta = delta(a,b,c);
+    var x1 = (-b + Math.sqrt(valor_delta)) / (2 * a);
+    var x2 = (-b - Math.sqrt(valor_delta)) / (2 * a);
+
+    console.log("X1: " + x1);
+    console.log("X2: " + x1);
+}
+
+var a = parseFloat(prompt("Digite a"));
+var b = parseFloat(prompt("Digite b"));
+var c = praseFloat(prompt("Digite c"));
+
+baskhara(a,b,c);
+```
+
 Mas funciona? Para verificarmos, podemos clicar para continuar a execução do código-fonte com o controle de Resume script execution. 
 
 É possível notar mudanças significativas na interface. Primeiro, os valores resultantes das operações são mostradas diretamente no código fonte (painel superior central), além dos valores das variáveis no escopo local (canto superior direito).
 
 Graças a tal recursos, é possível detectar mais um bug. Veja que o resultado original imprimiu dois valores iguais (4.370828....). Porém, podemos ver que os valores x1 e x2 tem valores diferentes! Isso se deve ao engano na linha de código 18, onde desejamos imprimir o valor da variável x2, mas imprimimos o valor de x1! Corrigindo...
+
+### Step
+
+Vimos como podemos controlar a execução do código-fonte por meio da inserção de breakpoints e do controle de execução usando a opção de resume script execution. Embora auxilie o nosso processo de debug, o processo de pause/resume é pouco eficiente. Se quisermos verificar se o código está executando diversas linhas corretamente nós precisaríamos colocar breakpoints em TODAS elas.
+
+Para melhorarmos o controle (e evitar ter que colocar dezenas de breakpoints consecutivos), podemos usar o extremo oposto do resume (que executa diversas instruções em uma mesma rodada). O step!
+
+Clicar no step faz com que a próxima linha do código seja executada. Note que os parâmetros recebido e que serão passados a função são mostrados:
+
+Ao utilizar a opção "step" novamente, a função "delta" é chamada e a execução é pausada na primeira linha da função.
+
+O cálculo da execução da linha ainda não foi realizado! para sabermos o valor retornado, basta executar novamente o step.
+
+Note que o cálculo foi realizado, embora indique que a execução ainda encontra-se na mesma linha. Isso se deve pois a linha 9 contém uma instrução composta, onde diversas comandos são executados em ordem. No caso, a operação:
+
+`return b * 2 - 4 * a * c;`
+
+Contém duas instruções a serem executadas:
+
+Realizar a operação matemática `b * 2 - 4 * a * c` e, com o resultado da operação, retornar o valor obtido.
+
+
+O resultado da operação, mesmo que a instrução composta ainda não tenha sido finalizada, é exibida no canto direito superior...
+
+Notamos um bug nessa instrução! Como pode ser percebido, o código não apresenta a operação de potência! 
+
+`return b * 2 - 4 * a * c;
+`
+
+### step-into, step-over e step-out
+
+Os últimos três recursos básicos de controle de fluxo de execução são os recursos chamados de step-into, step-over e step-out.
+
+- step-into: Quando pausado sobre uma chamada de função, chama a função e a pausa sobre a primeira instrução sobre a mesma. Na maioria dos casos, é idêntico a operação "step".
+- step-over: Quando pausado sobre uma chamada de função, a sua utilização faz com que a função da presente na instrução seja chamada e executada completamente sem pausar a execução.
+- step-out: Quando a execução estiver pausada dentro de uma função, acionar o "step-out" causará o sistema a terminar a execução da função atual e pausar assim que acabá-la.
+
+Na prática, os recursos citados são bastante utilizados em situações onde o número de funções é considerável. Step-over, por exemplo, é útil quando você tiver certa confiança de que o código executado pela função esteja correto. Já o step-out pode ser utilizado quando você já verificou uma parte importante da função e pode deixar a execução fluir até o seu fim.
