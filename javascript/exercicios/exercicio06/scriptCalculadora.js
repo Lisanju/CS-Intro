@@ -3,11 +3,11 @@ $(document).ready(function(){
   let resultado = "";
   
   $("div").click(function(e){
-    if (e.div !== "=" && e.div !== "AC"){
-      armazenador += e.div;
+    if (e.div.innerText !== "=" && e.div.innerText !== "AC"){
+      armazenador += e.div.innerText;
     };
 
-    else if (e.div === "AC"){
+    else if (e.div.innerText === "AC"){
       armazenador = "";
     };
 
