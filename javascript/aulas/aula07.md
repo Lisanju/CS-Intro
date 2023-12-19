@@ -63,3 +63,195 @@ Em 99,99% dos casos, a melhor opções é usar um CDN. A única opção onde um 
 
 Nesse link, você pode ver bons motivos para usar um CDN: https://www.globaldots.com/blog/9-benefits-using-cdn
 
+# Criando um objeto moment
+
+Em geral, o primeiro passo ao usar a biblioteca Moment é criar um objeto próprio dela. Esse objeto representa um momento na linha temporal, como um determinado horário de um determinado dia.
+
+No seu modo mais simples, basta atribuir a uma variável o valor da função moment(), que retornará então o tempo AGORA para a variável. Exemplo:
+
+`var agora = moment();`
+
+Em vários casos, porém, gostariamos de manipular alguma data ou horário que não seja imediatamente AGORA (por exemplo, para calcular quantos dias faltam para um determinado evento). Ou seja, queremos que a variável aponte para uma data futura ou passada para ser manipulada.
+
+Nesse caso, existem diversas formas. Em geral, basta passar como parâmetro para a função moment() uma string contendo a descrição da data e/ou horário. Por padrão, a biblioteca tentará fazer o parser usando padrão ISO-8061 (https://en.wikipedia.org/wiki/ISO_8601). Exemplo:
+
+`var data = moment("2020-08-01 14:32:13"); //Cria um momento no dia 01/08/2020 as 14h, 32m e 13s`
+
+Em geral, o formato ISO-8061 é amplamente utilizado e deve funcionar adequadamente bem na maioria dos casos. Porém, a biblioteca permite o uso de um parser complexo definido pelo próprio desenvolvedor.
+
+Por exemplo, considere o seguinte formato de data, indicando o dia 13 de fevereiro de 2020, as 18h, 24m e 21s.
+
+`13 Fev. 20 18-24-21`
+
+Como podemos perceber, a string acima está fora do formato ISO-8601. Podemos, porém, realizar o parser de tal horário usando o seguinte comando:
+
+`var data = moment("13 Fev. 20 18-24-21", "DD MMM YY HH-mm-ss");`
+
+Existem uma combinação diferentes para definir o formato desejado para a data/hora. Para mais informações, consulte as tabelas de configurações na documentação oficial: https://momentjs.com/docs/#/parsing/string-format/
+
+# Alterar um momento
+
+Após criado um objeto de data e/ou hora no Moment, podemos alterar o momento em si usando métodos do tipo Get (obter o valor) e Set (alterar o valor).
+
+Por exemplo, considere o seguinte momento no tempo, parseado usando o ISO-8061
+
+var data = moment("2020-08-01 14:32:13"); //Cria um momento no dia 01/08/2020 as 14h, 32m e 13s
+
+A seguir, algumas alterações possíveis:
+
+- Horas
+
+```
+data.hour(21); // Altera a hora para 21h
+data.hour(); //Retorna 21
+data.set("hour", 13); //Altera a hora para 13h
+data.get("hour"); // Retorna 13
+```
+
+- Minutos
+
+```
+data.minute(13); // Altera os minutos para 13m
+data.minute(); // Retorna 13
+data.set("minute", 22); // Altera os minutos para 22m
+data.get("minute"); // Retorna 22
+```
+
+- Segundos
+
+```
+data.second(13); // Altera os segundos para 13s
+data.second(); // Retorna 13
+data.set("second", 22); // Altera os segundos para 22s
+data.get("second"); // Retorna 22
+```
+
+- Ano
+
+```
+data.year(2013); // Altera o ano para 2013
+data.year(); // Retorna 2013
+data.set("year", 1090); // Altera o ano para 1090
+data.get("year"); // Retorna 1090
+```
+
+- Mês
+
+```
+data.month(0); // Altera o mês para Janeiro
+data.month(); // Retorna 0
+data.month("Dezembro"); // Altera o mês para dezembro (11)
+data.month("Jun"); // Altera o mês para junho (5)
+data.set("month", 3); // Altera o mês para abril
+data.get("month"); // Retorna 3
+```
+
+- Dia
+
+```
+data.date(21); // Altera o dia para 21
+data.date(); // Retorna 21
+data.set("date", 1); // Altera o dia para 1
+data.get("date"); // Retorna 1
+```
+
+# Manipular um momento
+
+Já sabemos como criar um momento específico no tempo e também como modificá-lo em termos de dias, horas, minutos, etc.
+
+Porém, e se quisermos adicionar ou remover alguma unidade de tempo do nosso momento? Dado o momento atual, podemos por exemplo colocar mais dez minutos para que uma determinada ação ocorra? Poderíamos fazer algo assim:
+
+```
+let data = moment(); // Cria um momento agora
+let minutos = data.get("minute"); // Obtém os minutos do horário
+data.set("minute", minutos+10); // Soma dez minutos ao horário
+```
+
+Apesar de funcionar, é pouco eficiente. Uma opção melhor é:
+
+Manipular o momento significa adicionar ou remover uma certa quantidade de tempo de um objeto momento. O código abaixo, por exemplo, adiciona 3 dias ao momento.
+
+```
+let agora = moment();
+agora.add(3, "days");
+```
+
+Também podemos remover um tempo de um objeto momento. Por exemplo, podemos visualizar esse exato momento no ano passado usando...
+
+```
+let agora = moment();
+agora.subtract(1, "years");
+```
+
+Podemos encadear os acréscimos ou decréscimos de datas/horas em uma única instrução:
+
+```
+let agora = moment();
+agora.add(3,"days").add(2,"hours").subtract(1,"months")
+```
+
+Para reduzir o tamanho das instruções e facilitar o desenvolvimento dessas manipulações, podemos usar as versão abreviadas de minutos, dias, segundos, anos e similares conforme a tabela a seguir:
+
+![image](https://github.com/Lisanju/CS-Intro/assets/106002045/e58e62f7-1c22-4cd2-9e7b-c822872c02dc)
+
+# Exibir um momento
+
+Depois de todas as alterações e manipulações realizadas, é comum termos que exibir ou mostrar a nova data/hora para o usuário. Nesse caso, podemos usar os vastos recursos da Moment.js para obtermos uma forma agradável de exibir as informações.
+
+A formatação do formato de saída de um moment é dada usando o método `format()`.
+
+```
+moment().format();
+moment().format(String);
+```
+
+Caso não seja passado nenhuma string como parâmetro, é utilizado o padrão ISO 8601 para expressar o momento. Como exemplo:
+
+```
+moment.format(); //Imprime --> "2020-08-01T16:02-05:00"
+```
+
+Já a segunda opção (passagem de parâmetro String para o método) modifica a saída de forma customizável. Considere os seguintes exemplos:
+
+```
+var data = moment();
+data.format("dddd, MMMM D YY, hh:mm:ss a"); // Retorna "Sábado, Agosto 1 20, 04:23:19 am"
+data.format("ddd, HH"); // Retorna "Sáb, 23"
+data.format("[Hoje é] DD [de] MMMM [de] YYYY"); //Retorna "Hoje é 01 de Agosto de 2020"
+data.format("LL"); // Retorna "Agosto 1, 2020"
+data.format("L"); // Retorna "01/08/2020"
+```
+
+A lista de opções de formatação é extensa, incluindo opção como antes e depois de cristo, anos estendidos, dias do ano, quadrimestres e muitos outros. Note que várias das opções mencionadas necessitam do uso correto da versão com locale estabelecido. A lista completa com todas as opções de formatação pode ser acessada em: https://momentjs.com/docs/#/displaying/format/
+
+# Customização e outros usos avançados
+
+Por fim, além dos recursos mencionados, a biblioteca Moment.js conta com recursos mais avançados que permite um grande grau de customização dos resultados pelo desenvolvedor.
+
+### Comparação entre momentos
+
+É possível comparar se dois momentos são iguais ou um depois do outro. Veja os exemplos a seguir:
+
+```
+moment("2020-12-01").isBefore("2020-12-02"); // True
+moment("2020-12-02").isSame("2020-12-03"); // False
+moment("2020-10-20").isAfter("2020-10-19"); // True
+moment("2020-01-01").isBetween("2019-12-31", "2020-12-31"); // True
+moment([2020]).isLeapYear(); // True (checa se o ano é bissexto)
+```
+
+### Customização de um locale
+
+É possível modificar as informações do locale de acordo com o desejado. Por exemplo:
+
+```
+moment.updateLocale("pt-br", {
+    monthsShort : [ 
+        "M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8", "M9", "M10", "M11", "M12"
+    ]
+});
+```
+
+Altera a forma abreviada do locale pt-br dos meses do ano (jan...dez) para (m1...m12).
+
+Existem muitas opções de customização. Você pode conferir mais detalhes e outras informações em https://momentjs.com/docs/#/customization/
