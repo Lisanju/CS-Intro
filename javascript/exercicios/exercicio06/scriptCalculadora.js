@@ -24,7 +24,7 @@ $(document).ready(function(){
     else{
       resultado = eval(armazenador);
       armazenador = "";
-      novaCelulaResultado.innerText = eval(resultado);
+      novaCelulaResultado.innerText = resultado;
     };
   });
 });
