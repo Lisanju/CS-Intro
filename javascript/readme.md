@@ -9,7 +9,7 @@ Neste diretório, disponibilizei minhas notas de estudo sobre o conteúdo das au
 - Aula 03 - Eventos em JavaScript;
 - Aula 04 - Funções e Arrays;
 - Aula 05 - Noções de Debug com JavaScript;
-- Aula 06 - Manipulação HTML;
+- Aula 06 - Manipulação DOM;
 - Aula 07 - jQuery;
 - Aula 07 - RESTFull API;
 - Aula 08 - JSON e AJAX.
