@@ -78,5 +78,4 @@ Um elemento criado em memória pode ser modificado como um elemento qualquer: ad
 
 `novoParagrafo = document.innerText = "Novo parágrafo";` modifica o conteúdo textual do parágrafo;
 
-`document.body.appendChild(novoParagrafo);` adiciona o novoParagrafo no <body> da página.
-
+`document.body.appendChild(novoParagrafo);` adiciona o novoParagrafo no `<body>` da página.
