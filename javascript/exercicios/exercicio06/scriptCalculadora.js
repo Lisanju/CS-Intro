@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  const main = document.getElementsByTagName("main");
   let armazenador = "";
   let resultado = "";
 
@@ -11,18 +12,18 @@ $(document).ready(function(){
   novaCelulaResultado.main.appendChild(novaCelulaResultado);
   
   $("div").click(function(e){
-    if (e.div.innerText !== "=" && e.div.innerText !== "AC"){
-      armazenador += "" + e.div.innerText;
+    if ($(this).text() !== "=" && $(this).text() !== "AC"){
+      armazenador += "" + $(this).text();
       novaCelulaResultado.innerText += armazenador;
     };
 
-    else if (e.div.innerText === "AC"){
+    else if ($(this).text() === "AC"){
       armazenador = "";
       novaCelulaResultado.innerText = "";
     };
 
     else{
-      resultado = eval(armazenador);
+      resultado = eval(armaEzenador);
       armazenador = "";
       novaCelulaResultado.innerText = resultado;
     };
