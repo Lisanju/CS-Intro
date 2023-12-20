@@ -1,8 +1,17 @@
 $(document).ready(function(){
 
+  var linhaNome = $("#nome");
+  var linhaFabricante = $("#fabricante");
+  var linhaAno = $("#ano");
+  var linhaPotencia = $("#potencia");
+  var linhaPreco = $("#preco");
+  var linhaAcessorios = $("#acessorios");
+
+  
+  
   function tratamento(dados){
     $.each(dados, function(chave, valor){
-      console.log("O valor de " + chave + " é " + valor);
+      
     });
   };
   
