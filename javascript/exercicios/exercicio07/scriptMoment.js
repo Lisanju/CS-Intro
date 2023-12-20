@@ -1,20 +1,24 @@
 window.onload = function(){
   moment.locale("pt-br");
   
-  const agora = moment(); // momento atual
+  const agora = moment();
+  const comeco = agora.clone().startOf("year");
+  const final = agora.clone().endOf("year");
+
+  const restante = moment.duration(final.diff(agora));
+  const passado = moment.duration(agora.diff(comeco));
+
+  function retornarDiferenca(duration){
+    const meses = duration.months();
+    const dias = duration.days();
+    const horas = duration.hours();
+    const minutos = duration.minutes();
+
+    const texto = `${meses} meses, ${dias} dias, ${horas} horas e ${minutos} minutos`; 
+    return texto
+  };
   
-  const começo = moment({M:1, d:1, h:00, m:00, s:00});
-  const final = moment({M:12, d:31, h:23, m:59, s:59});
-  
-  let começoP = agora.diff(começo, 'seconds');
-  let finalF = final.diff(agora, 'seconds');
-  
-  começoP = moment.duration(começoP);
-  finalF = moment.duration(finalF);
-  
-  let passou = document.getElementById("passou");
-  let falta = document.getElementById("falta");
-  
-  passou.innerHTML = começoP.format("MMMM [meses, ] DD [dias, ] hh [horas e ] mm [minutos]");
-  falta.innerHTML = finalF.format("MMMM [meses, ] DD [dias, ] hh [horas e ] mm [minutos]");
-};
+  const passou = document.getElementById("passou");
+  const falta = document.getElementById("falta");
+  passou.innerHTML = retornarDiferenca(passou);
+  falta.innerHTML = retornarDiferenca(restante);
