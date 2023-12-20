@@ -12,8 +12,8 @@ Neste diretório, disponibilizei minhas notas de estudo sobre o conteúdo das au
 - Aula 06 - Manipulação DOM;
 - Aula 07 - Manipulação de datas com Moment.js;
 - Aula 08 - jQuery;
-- Aula 09 - RESTFull API;
-- Aula 10 - JSON e AJAX.
+- Aula 09 - JSON e AJAX;
+- Aula 10 - RESTFull API.
 
 ## Referências
 
