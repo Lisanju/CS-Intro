@@ -19,10 +19,10 @@ $(document).ready(function(){
   noturno.on("click", function(){
     $("body").css("background-color", "black");
     $("p").css("color", "white");
-  })
+  });
 
   diurno.on("click", function(){
     $("body").css("background-color", "white");
     $("p").css("color", "black");
-  })
+  });
 });
