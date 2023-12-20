@@ -26,5 +26,28 @@ $(document).ready(function(){
     }
   ];
 
+  function adicionarLinha(carro){
+    var acessorios = "<ul>;
 
+    $.each(carro.acessorios, function(chave, valor){
+      acessorios += "<li>" + acessorio + "</li>";
+    });
+
+    acessorios += "</ul>";
+
+    $("#tabelaCarros").append(
+      "<tr>" +
+        "<td>" + carro.nome + "</td>" +
+        "<td>" + carro.fabricante + "</td>" +
+        "<td>" + carro.ano + "</td>" +
+        "<td>" + carro.potencia + "</td>" +
+        "<td>" + carro.preco + "</td>" +
+        "<td>" + acessorios + "</td>" +
+      "</tr>"
+      );
+  }
+
+  $.each(carros, function(chave, valor){
+    adicionarLinha(valor);
+  });
 });
