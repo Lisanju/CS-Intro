@@ -53,7 +53,7 @@ Por exemplo, considere um recurso do tipo "pessoa". Esse recurso possui diferent
 - sexo
 - data_cadastro
 - id
-- 
+
 Essas informações devem ser acessíveis toda vez que um recurso "pessoa" específico seja solicitado pelo cliente. Ou seja, um recurso "completo" é enviado do servidor ao cliente.
 
 Na prática costuma-se representar um recurso usando alguma linguagem como JSON ou XML para atender aos requisitos de uniformidade. Assim, ao requisitar uma "pessoa" ao servidor, uma possível resposta poderia ser:
@@ -69,3 +69,158 @@ Na prática costuma-se representar um recurso usando alguma linguagem como JSON 
 ```
 
 ## Verbos HTTP
+
+A API REST faz uso extensivo dos verbos HTTP, sendo inclusive erroneamente confundido com o protocolo em alguns casos. 
+
+A REST utiliza os verbos pré-definidos do HTTP para identificar quais operações estão sendo realizadas sobre um determinado recurso. Os verbos HTTP utilizados pelo REST e seus usos são:
+
+- GET - Verbo utilizado para requisitar um recurso da API.
+- POST - Verbo utilizado para criar um novo recurso.
+- PUT - Verbo utilizado para atualizar um recurso específico.
+- PATCH - Verbo utilizado para atualizar uma parte de um recurso específico.
+- DELETE - Verbo utilizado para deletar um recurso.
+
+É importante frisar que nem todos os métodos são adotados da forma inicialmente especificada. Por exemplo, é comum usar apenas o PUT para editar um recurso (ignorando o PATCH). Em geral, porém, é bastante incomum suprimirem os métodos GET e POST.
+
+## Exemplos de requisições
+
+Considere um sistema web implementado no lado servidor que possua um recurso básico chamado de pessoa e que possua os seguintes campos/atributos:
+
+- id
+- email
+- sexo
+- idade
+- data_cadastro
+
+Considere ainda que nosso webservice usando a REST API esteja hospedada em "http://endereco/". Com isso, podemos definir o formato básico da interação conforme os tópicos a seguir.
+
+### Requisição de recurso
+
+Para obtermos um recurso usamos o verbo GET. Para obtermos uma lista de todas as pessoas, realizamos uma consulta GET para o endereço "http://endereco/pessoa" que retornará algo como o seguinte:
+
+```
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "email": "teste@ifsp.edu.br",
+            "data_cadastro": "01/01/2020",
+            "sexo": "F"
+        },
+        {
+            "id": 2,
+            "email": "teste2@ifsp.edu.br",
+            "data_cadastro": "01/01/2020",
+            "sexo": "M"
+        },
+        {
+            "id": 3,
+            "email": "noemail@gmail.com",
+            "data_cadastro": "23/04/2017",
+            "sexo": "M"
+        }
+    ]
+}
+```
+
+Caso queiramos os dados de uma pessoa específica, podemos usar sua chave primária (normalmente conhecida como ID) na requisição. Assim, a pessoa com id=5 pode ser obtida com uma requisição GET para "http://endereco/pessoa/5".
+
+```
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 5,
+            "email": "aindaexiste@yahoo.com",
+            "data_cadastro": "23/04/1998",
+            "sexo": "M"
+        }
+    ]
+}
+```
+
+Veja que a resposta é basicamente a mesma. A única diferença é o número de "pessoas" retornado pelo sistema.
+
+### Cadastrar um recurso
+
+Para cadastrar um novo recurso no sistema, usamos o verbo POST. Assim, enviamos os dados em um formato pré-estabelecido para o servidor no endereço "http://endereco/pessoa".
+
+```
+{
+    "email": "testenovo@outlook.com",
+    "data_cadastro": "23/04/2019",
+    "sexo": "M"
+}
+```
+
+Uma possível resposta, a ser enviada pelo servidor indicando o sucesso, é exibida a seguir:
+
+```
+{
+    "status": 201
+}
+```
+
+Atenção: Note que alguns desenvolvedores recomendam que após o cadastro seja retornado alguma informação que aponte ao novo recurso adicionado ao website, tal como:
+
+```
+{
+    "status": 201,
+    "id": 10
+}
+```
+
+ou 
+
+```
+{
+    "status": 201,
+    "recurso": "http://endereco/pessoa/10"
+}
+```
+
+### Atualização de um recurso
+
+Para atualizar um recurso, temos duas opções usando o PATCH ou o PUT. O endereço de requisição ("http://endereco/pessoa/id", onde id é o número que identifica o recurso) é comum a ambos os verbos.
+
+Caso usemos o POST, devemos especificar TODOS os campos do recurso e seu valor modificado.
+
+```
+{
+    "email": "testenovo@outlook.com",
+    "data_cadastro": "23/04/2019",
+    "sexo": "M"
+}
+```
+
+Já no caso do PATCH, podemos especificar apenas alguma(s) parte do recurso em si, como por exemplo a correção do "sexo" de uma pessoa:
+
+```
+{
+    "sexo": "F"
+}
+```
+
+Note que ambos os métodos devem saber QUAL o recurso a ser atualizado, por isso é imprescindível o envio da informação de indexação na url ("http://endereco/pessoa/10", por exemplo).
+
+A resposta possível de um servidor se a requisição for bem sucedida é:
+
+```
+{
+    "status": 200
+}
+```
+
+### Remover um elemento
+
+Para removermos um elemento, basta enviar uma requisição usando o verbo DELETE para o endereço "http://endereco/pessoa/id", onde id é o número que identifica o recurso.
+
+Note que, a princípio não é necessário que o corpo da mensagem contenha qualquer conteúdo (afinal, pedir para DELETAR um id específico é auto-explicativo). Caso seja bem sucedido, o servidor pode responder algo como:
+
+```
+{
+    "status": 200
+}
+```
+
