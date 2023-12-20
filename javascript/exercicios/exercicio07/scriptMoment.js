@@ -6,7 +6,9 @@ window.onload = function(){
   const final = agora.clone().endOf("year");
 
   const restante = moment.duration(final.diff(agora));
+  console.log(restante);
   const passado = moment.duration(agora.diff(comeco));
+  console.log(passado);
 
   function retornarDiferenca(duration){
     const meses = duration.months();
@@ -20,5 +22,6 @@ window.onload = function(){
   
   const passou = document.getElementById("passou");
   const falta = document.getElementById("falta");
-  passou.innerHTML = retornarDiferenca(passou);
-  falta.innerHTML = retornarDiferenca(restante);
+  passou.innerText = retornarDiferenca(passado);
+  falta.innerText = retornarDiferenca(restante);
+};
