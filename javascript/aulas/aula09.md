@@ -125,3 +125,137 @@ Apenas strings devem estar entre aspas duplas.
 ```
 
 ![image](https://github.com/Lisanju/CS-Intro/assets/106002045/583cc329-cd4c-438e-88ae-5a7434635f52)
+
+## JSON com JavaScript
+
+```
+var pessoa = '{"nome" : "Moriarty", "idade" : 34}';
+var json_convertido = JSON.parse(pessoa);
+
+console.log(pessoa);
+console.log(json_convertido);
+```
+
+O `JSON.parse(string);` converte uma string no formato JSON para um objeto em JavaScript.
+
+Depois de ser convertido em objeto, os dados podem ser acessados facilmente pelo JavaScript.
+
+```
+var pessoa='{"nome":"Moriarty","idade":34,"profissao":"Gênio do crime"}';
+var json_convertido = JSON.parse(pessoa);
+
+console.log(json_convertido.nome);
+if(json_convertido.idade > 18) {
+
+console.log("Maior de idade!");
+
+} else {
+
+console.log("Menor de idade!");
+
+}
+console.log(json_convertido.profissao);
+```
+
+Com `JSON.stringify(objeto)`, um objeto também pode ser transformado em JSON.
+
+```
+var objeto_pessoa = {
+   "nome : "Moriarty",
+   "idade" : 34,
+   "profissao" : "Gênio do crime"
+}
+
+var json_string = JSON.stringify(objeto_pessoal);
+console.log(json_string);
+```
+
+## AJAX
+
+AJAX (Asynchronous JavaScript and XML) é um conjunto de tecnologias utilizada por sites modernos, permitindo iterações rápidas e fluídas ao usuário.
+
+- Síncrono: o próximo comando/instrução só é executado quando o comando/instrução atual for finalizado. Por exemplo, o site carrega apenas quando todos os dados estão carregados.
+
+- Assíncrono: permite que a próxima instrução/comando execute mesmo enquanto o comando atual está sendo executado. Por exemplo, exibir a lista de amigos, mesmo se a lista ainda não está totalmente carregada.
+
+Para realizar uma requisição usando o AJAX com JavaScript puro é necessário implementar diversas instruções, sendo bem mais complicado do que deveria:
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+<h3>Start typing a name in the input field below:</h3>
+
+<p>Suggestions: <span id="txtHint"></span></p> 
+<p>First name: <input type="text" id="txt1" onkeyup="showHint(this.value)"></p>
+
+<script>
+function showHint(str) {
+  if (str.length == 0) { 
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("txtHint").innerHTML =
+    this.responseText;
+  }
+  xhttp.open("GET", "gethint.php?q="+str);
+  xhttp.send();   
+}
+</script>
+
+</body>
+</html>
+```
+
+Felizmente, o jQuery oferece vários comandos específicos para AJAX. Alguns comandos mais simples para casos comuns. Uma requisição completa, com todos os recursos possíveis.
+
+## JSON com jQuery
+
+Podemos obter e processar arquivos JSON usando a seguinte função:
+
+`$.getJSON(url, dados, funcao_para_tratamento);`
+
+Os dados obtidos são automaticamente convertidos de JSON para objetos JavaScript.
+
+Por exemplo:
+
+`$.getJSON("pagina_de_exemplo.php", funcao_para_tratamento);`
+
+url: “site.php”, “pagina_externa.html”, “http://webservice.com/acessar.php”.
+
+dados (opcional): “idade=10”, “nome=ifsp”, “op=cadastro&nome=web&q=10+90”.
+
+funcão_para_tratamento:
+
+```
+function funcao_para_tratamento(dados) {
+   console.log(dados.nome);
+   console.log(dados.idade);
+   console.log(dados.profissao);
+}
+```
+
+Os dados retornados pelo endereço podem ter vários objetos. Nesse caso, é necessário percorrer os objetos como no exemplo abaixo:
+
+```
+function funcao_para_tratamento(dados) {
+   for (var i = 0; i < dados.length; i++) {
+      console.log(dados[i].algo);
+      console.log(dados[i].outro_algo);
+   }
+}
+```
+
+Os dados podem ser percorridos também usando o método each do jQuery (para objetos).
+
+```
+function funcao_para_tratamento(dados) {
+   $.each(dados, function(chave, valor) {
+      console.log("O valor de " + chave + " é " + valor);
+   });
+}
+```
