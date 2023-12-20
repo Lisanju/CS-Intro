@@ -275,3 +275,48 @@ Onde "login" e "senha" são informações de quem está fazendo a requisição.
 Caso o login/senha sejam válidos e tem a autorização para fazer a requisição, ela é completada com sucesso. Caso contrário, ela é cancelada...
 
 Obviamente, tais recursos são extremamente limitados e para fins didáticos apenas. Caso tenha interesse em sistemas mais robustos e profissionais, consulte links como este: https://blog.restcase.com/4-most-used-rest-api-authentication-methods/
+
+## JSON com JavaScript
+
+```
+var pessoa = '{"nome" : "Moriarty", "idade" : 34}';
+var json_convertido = JSON.parse(pessoa);
+
+console.log(pessoa);
+console.log(json_convertido);
+```
+
+O `JSON.parse(string);` converte uma string no formato JSON para um objeto em JavaScript.
+
+Depois de ser convertido em objeto, os dados podem ser acessados facilmente pelo JavaScript.
+
+```
+var pessoa='{"nome":"Moriarty","idade":34,"profissao":"Gênio do crime"}';
+var json_convertido = JSON.parse(pessoa);
+
+console.log(json_convertido.nome);
+if(json_convertido.idade > 18) {
+
+console.log("Maior de idade!");
+
+} else {
+
+console.log("Menor de idade!");
+
+}
+console.log(json_convertido.profissao);
+```
+
+Com `JSON.stringify(objeto)`, um objeto também pode ser transformado em JSON.
+
+```
+var objeto_pessoa = {
+   "nome : "Moriarty",
+   "idade" : 34,
+   "profissao" : "Gênio do crime"
+}
+
+var json_string = JSON.stringify(objeto_pessoal);
+console.log(json_string);
+```
+
