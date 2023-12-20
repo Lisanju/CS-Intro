@@ -201,8 +201,8 @@ Depois de todas as alterações e manipulações realizadas, é comum termos que
 A formatação do formato de saída de um moment é dada usando o método `format()`.
 
 ```
-moment().format();
-moment().format(String);
+moment.format();
+moment.format(String);
 ```
 
 Caso não seja passado nenhuma string como parâmetro, é utilizado o padrão ISO 8601 para expressar o momento. Como exemplo:
