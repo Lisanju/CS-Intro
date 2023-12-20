@@ -224,3 +224,55 @@ Note que, a princípio não é necessário que o corpo da mensagem contenha qual
 }
 ```
 
+## Código de status
+
+Como você deve ter percebido anteriormente, a maioria das requisições têm como resposta um parâmetro chamado de "status". Tal parâmetro é opcional, mas pode ser usado para indicar o status da requisição sendo realizada.
+
+Ao invés de criarmos nossos próprios códigos de status, podemos usar os códigos de status do protocolo HTTP. No link a seguir, você encontra todos os códigos estabelecidos: https://cheatography.com/kstep/cheat-sheets/http-status-codes/
+
+Dentre todos esses códigos, alguns são mais utlizados do que outros. A seguir (baseado no link https://codeburst.io/know-your-http-status-a-cheat-sheet-for-http-status-codes-5fb43863e589) foram copiados alguns dos status mais comuns e seu significado.
+
+- 200 — OK: Ok. The request went fine and the content requested was returned. This is normally used on GET requests
+
+- 201 — Created: The resource was created and the server has acknowledged it. It could be useful on responses to POST or PUT requests. Additionally, the new resource could be returned as part of the response body.
+
+- 204 — No Content: The action was successful but there is no content returned. Useful for actions that do not require a response body, such as a DELETE action.
+
+- 301 — Moved Permanently: This resource was moved to another location and the location is returned. This header is especially useful when URLs change over time (maybe due to a change in version, a migration, or some other disruptive change), keeping the old ones and returning a redirection to the new location allows old clients to update their references in their own time.
+
+- 400 — Bad Request: The request issued has problems (for example, might be lacking some required parameters). A good addition to a 400 response might be an error message that a developer can use to fix the request.
+
+- 401 — Unauthorized: Especially useful for authentication when the requested resource is not accessible to the user owning the request
+
+- 403 — Forbidden: The resource is not accessible, but unlike 401, authentication will not affect the response.
+
+- 404 — Not Found: The URL provided does not identify any resource. A good addition to this response could be a set of valid URLs that the client can use to get back on track (root URL, previous URL used, etc.).
+
+- 405 — Method Not Allowed: The HTTP verb(e.g POST, GET, PUT etc)used on a resource is not allowed — for instance, doing a PUT on a resource that is read-only.
+
+- 500 — Internal Server Error: A generic error code when an unexpected condition is met and the server crashes. Normally, this response is accompanied by an error message explaining what went wrong.
+
+## Autenticação e autorização
+
+Em muitos sistemas, usamos sistemas de autenticação e autorização para incluir, atualizar e deletar os recursos. 
+
+Por exemplo, para remover uma pessoa do servidor, podemos necessitar que apenas um determinado tipo de usuário possa realizar a operação (um moderador, por exemplo). Caso não seja feita essa restrição, qualquer usuário poderia excluir qualquer pessoa do sistema!
+
+Podemos querer saber quem fez algo (autenticação) ou quem pode fazer algo (autorização). Existem diferentes formas básicas e didáticas de fazer isso, como por exemplo fazer a seguinte requisição para adicionar uma pessoa:
+
+```
+{
+    "login": "IFSP",
+    "senha": "testenovo",
+    "email": "testenovo@outlook.com",
+    "data_cadastro": "23/04/2019",
+    "sexo": "M"
+}
+```
+
+Onde "login" e "senha" são informações de quem está fazendo a requisição.
+
+Caso o login/senha sejam válidos e tem a autorização para fazer a requisição, ela é completada com sucesso. Caso contrário, ela é cancelada...
+
+Obviamente, tais recursos são extremamente limitados e para fins didáticos apenas. Caso tenha interesse em sistemas mais robustos e profissionais, consulte links como este: https://blog.restcase.com/4-most-used-rest-api-authentication-methods/
+
