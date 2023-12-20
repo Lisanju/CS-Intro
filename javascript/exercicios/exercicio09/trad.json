@@ -1,0 +1,18 @@
+[
+  {
+    "autores": [
+      "Ingrid",
+      "Paulo"
+    ]
+    "titulo" : "O livro",
+    "ano" : 1998
+  }
+  {
+    "autores" : [
+      "Paulo",
+      "Antônia"
+    ]
+    "titulo" : "A história",
+    "ano" : 2016
+  }
+]
