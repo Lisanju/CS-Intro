@@ -259,3 +259,81 @@ function funcao_para_tratamento(dados) {
    });
 }
 ```
+
+## AJAX com jQuery
+
+O jQuery oferece um método .ajax bastante flexível, capaz de suportar diversas configurações diferentes. Todas as opções são opcionais.
+
+```
+$.ajax({
+   url: 'http://www.algumsite.com', // Destino. Pode ser externo (site) ou local (arquivo)
+   type: 'POST', // O método de envio. GET ou POST
+   data: {// As informações que deseja-se enviar. Objeto transforma-se em JSON
+      "nome": "Mickey Mouse",
+      "idade": 18
+   },
+   async: true, // Se a requisição é assíncrona (true - padrão) ou não (false)
+   success: function(msg) {
+      // Faz algo quando a resposta foi recebida. msg é entendido como json.
+      processaResposta(msg);
+   },
+   error: function(request, status, erro) {
+      // Faz algo quando houve algum erro.
+      alert(erro);
+   }
+});
+```
+
+### Type
+
+No protocolo HTTP são previstas diversas formas de comunicação entre um cliente e o servidor. Esses métodos são chamados de verbos HTTP (HTTP Verbs). Entre eles:
+
+- GET;
+- HEAD;
+- POST;
+- PUT;
+- DELETE.
+
+Cada verbo tem uma finalidade própria, embora possam ser usadas de maneira intercambiável. Mais informações em: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
+
+Os métodos mais utilizados são GET e POST.
+
+- GET: Passagem de valores pelo endereço (head) da mensagem. Possui tamanho máximo fixo. É de fácil manipulação, inclusive por um usuário comum. Inadequado para diversos tipos de informações sensíveis, como senhas, endereços de email e outros.
+
+- POST: Passagem de valores pelo corpo (body) da mensagem. Não possui um tamanho máximo. Mais difícil de ser manipulado. Inadequado para identificar o estado ou página particular de um website.
+
+Note que uma mesma requisição pode conter tanto parâmetros GET quanto POST.
+
+```
+$.ajax({
+   url: 'http://www.algumsite.com?id=10&op=cadastrar',      // Parâmetro GET
+   type: 'POST',
+   data: "local=sao+carlos&estado=sao+paulo&pais=brasil"   // Parâmetro POST
+});
+```
+
+### getJSON x AJAX
+
+Qual a diferença entre os métodos getJSON e AJAX?
+
+1. O AJAX suporta qualquer tipo de resposta (HTML, XML, JSON). O getJSON espera apenas um JSON.
+
+2. getJSON não possui diversos campos (como o error do AJAX).
+
+3. getJSON utiliza apenas o método GET. Já o AJAX suporta os demais métodos ou verbos HTTP.
+
+Na dúvida, use o método AJAX.
+
+Além disso, para facilitar, além do método AJAX, existem dois métodos auxiliares para os métodos GET e POST.
+
+```
+$.get("http://site_externo.com/cadastrar.php","pm1=val1&pm2=val2", function(data) {
+   // Código a ser executado quando o resultado for obtido
+});
+
+$.post("outro_site.php", function(data) {
+   // Código a ser executado quando o resultado for obtido
+});
+```
+
+Ambos os métodos são similares ao getJSON, mas suportam qualquer tipo de retorno (e não apenas JSON).
