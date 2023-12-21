@@ -2,15 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <style>
+      body{
+        background-color:lemonchiffon;
+        min-width:915px;
+      }
+      div{
+        margin-bottom:10px;
+        border:1px solid black;
+        border-radius:10px;
+        padding:20px;
+      }
+      input[type=text]{
+        border:1px solid black;
+        border-radius:40px;
+        padding:5px;
+        padding-left:10px;
+      }
+      input[type=button]{
+        display:block;
+        margin-top:10px;
+        width:55px;
+      }
+      table{
+        background-color:white;
+        border-radius:10px;
+        padding:20px;
+      }
+      th{
+        padding-bottom:20px;
+        padding-right:30px;
+      }
+    </style>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
     </script>
-    <script src="script.js">
+    <script src="">
     </script>
   </head>
   <body>
     <div>
       <form>
-        <input type="text" id="digitarCep">
+        <input type="text" id="digitarCep" placeholder="digite um CEP">
+        <input type="button" id="enviarCep" value="Enviar">
       </form>
     </div>
     <div>
