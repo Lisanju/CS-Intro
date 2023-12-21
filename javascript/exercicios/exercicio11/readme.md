@@ -6,4 +6,4 @@ Usando o código fonte presente no moodle, desenvolva um sistema que, dado um CE
 
 Trate os casos de CEP inválido com um alerta de “CEP não encontrado”.
 
-O JSON pode ser obtido usando o seguinte endereço de consulta: https://viacep.com.br/ws/CEP/json/unicode/
+O JSON pode ser obtido usando o seguinte endereço de consulta: viacep.com.br/ws/CEP/json/
