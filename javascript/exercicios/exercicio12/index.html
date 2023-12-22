@@ -3,21 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Exercício</title>
+    <style>
+      img{
+        width:30px;
+        float:left;
+        padding-right:10px;
+        display:none;
+      }
+    </style>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js">
-      $(document).ready(function(){
-        $.ajax({
-          url: "texto.html",
-          sucess: function(data){
-            alert(data);
-          }
-        });
-      });
+    </script>
+    <script src="script.js">
     </script>
   </head>
   <body>
-    <input type="button" value="Exibir texto">
+    <img src="loading.gif"></img>
+    <input type="button" id="b" value="Exibir texto">
     <div>
-      
     </div>
   </body>
 </html>
