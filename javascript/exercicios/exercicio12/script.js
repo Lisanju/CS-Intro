@@ -2,6 +2,9 @@ $(document).ready(function(){
     const bPadrao = $(".bPadrao");
     const bDeletar = $(".bDeletar");
     const bExibir = $(".bExibir");
+    const bCadastrar = $("#bCadastrar");
+    const bEditar = $("#bEditar");
+    let sw = false;
 
     bPadrao.on("mouseover", function(e){
         $(this).css({"border":"4px","border-color":"skyblue","border-style":"solid"}); 
@@ -25,5 +28,16 @@ $(document).ready(function(){
 
     bExibir.on("mouseout", function(e){
         $(this).css({"border":"4px","border-color":"white","border-style":"solid"}); 
+    });
+
+    bExibir.on("click", function(e){
+        if (sw === false){
+            $("direita").css({"display":"block"})
+            sw = true;
+            return sw;
+        }
+        $("direita").css({"display":"none"})
+        sw = false;
+        return sw;
     });
 });
