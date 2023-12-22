@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Loja REST</title>
+    <style>
+      body{
+        font-family:"Verdana", sans-serif;
+      }
+      header{
+        text-align:center;
+        display:block;
+      }
+      div{
+        margin:15px;
+      }
+      .bPadrao{
+        display:block;
+        color:white;
+        background-color:dodgerblue;
+        font-family:"Verdana", sans-serif;
+        font-weight:bold;
+        padding:10px;
+        border:4px solid white;
+        border-radius:5px;
+        margin-top:10px;
+      }
+      input[type=text]{
+        display:block;
+        border:1px solid lightgray;
+        border-radius:5px;
+        padding:10px;
+        font-family:"Verdana", sans-serif;
+      }
+      textarea{
+        display:block;
+        border:1px solid lightgray;
+        border-radius:5px;
+        padding:10px;
+        font-family:"Verdana", sans-serif;
+      }
+      .bExibir{
+        display:inline;
+        color:white;
+        background-color:green;
+        font-family:"Verdana", sans-serif;
+        font-weight:bold;
+        padding:10px;
+        border:4px solid white;
+        border-radius:5px;
+        margin-top:10px;
+      }
+      .bDeletar{
+        display:inline;
+        color:white;
+        background-color:red;
+        font-family:"Verdana", sans-serif;
+        font-weight:bold;
+        padding:10px;
+        border:4px solid white;
+        border-radius:5px;
+        margin-top:10px;
+      }
+      table{
+        border-top:1px solid lightgray;
+      }
+      th{
+        border-bottom:2px solid lightgray;
+        padding:20px 100px 20px 100px;
+      }
+      td{
+        border-bottom:1px solid lightgray;
+        padding:20px 50px 20px 50px;
+        text-align:center;
+      }
+      esquerda{
+        position:absolute;
+      }
+      centro{
+        position:absolute;
+        left:435px;
+      }
+      direita{
+        position:absolute;
+        left:1240px;
+        display:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js">
+    </script>
+    <script src="script.js">
+    </script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Bem vindo à loja REST</h1>
+      </div>
+    </header>
+    <esquerda>
+      <div>
+        <form>
+          <p>Título do produto</p>
+          <input type="text" id="tTitulo" size=45px>
+          <p>Preço do produto</p>
+          <input type="text" id="tPreco" size=45px>
+          <p>Descrição do produto</p>
+          <textarea id="tDescricao" rows=10 cols=45 style="resize:none"></textarea>
+          <input type="button" class="bPadrao" value="Cadastrar">
+        </form>
+      </div>
+    </esquerda>
+    <centro>
+      <div>
+        <table>
+          <thead>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Opções</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>OMO Multiroupas</td>
+              <td>7.99</td>
+              <td>
+                <input type="button" class="bDeletar" value="Deletar">
+                <input type="button" class="bExibir" value="Exibir">
+              </td>
+            </tr>
+            <tr>
+              <td>Nana de pelúcia</td>
+              <td>89.99</td>
+              <td>
+                <input type="button" class="bDeletar" value="Deletar">
+                <input type="button" class="bExibir" value="Exibir">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </centro>
+    <direita>
+      <div>
+        <form>
+          <p>Título do produto</p>
+          <input type="text" id="tTitulo" size=45px>
+          <p>Preço do produto</p>
+          <input type="text" id="tPreco" size=45px>
+          <p>Descrição do produto</p>
+          <textarea id="tDescricao" rows=10 cols=45 style="resize:none"></textarea>
+          <input type="button" class="bPadrao" value="Editar">
+        </form>
+      </div>
+    </direita>
+  </body>
+</html>
