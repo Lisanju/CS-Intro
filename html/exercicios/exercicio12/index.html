@@ -2,201 +2,98 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ho-Kago Chat</title>
+    <title>Cryalot</title>
     <style>
       body{
-        background-color:#FAFAD2;
-        font-family:'Comic Sans MS', cursive;
+        background-color:#F8F8FF;
       }
-      #envolucro{
-        width:800px;
-        padding-top:5px;
-        padding-bottom:5px;
-        background-color:#FAFAD2;
-        margin-left:auto;
-        margin-right:auto;
-      }
-      #divheader{
-      	display:flex;
+      header{
+        display:flex;
         align-items:center;
-        margin-top:10px;
-        margin-bottom:10px;
+        padding-bottom:125px;
       }
-      #cabecalho{
-      	margin:10px;
+      nav{
+        border-bottom:1px solid black;
       }
-      #barranavegacao{
-      	margin:0px 10px 10px 10px;
+      #cryalot{
+        padding:0 350px 0 500px;
+        font-size:20px;
+        font-family:monospace, sans-serif;
+        font-weight:bold;
       }
-      ul.nav{
-        list-style-type:none;
-        margin:0;
-        padding:0;
-        overflow:hidden;
-        background-color:#FFC0CB;
-        border:2px dashed #FF69B4;
+      ul{
+        list-style:none;
+        display:flex
       }
-      ul.nav li{
-        float:left;
+      ul li{
+        font-family:monospace, sans-serif;
+        padding-right:15px;
       }
-      ul.nav li a{
-        display:block;
-        text-align:center;
-        padding:14px 16px;
+      a{
         text-decoration:none;
         color:black;
       }
-      #barralateral{
-        background-color:#FFC0CB;
-        padding:15px;
-        border:2px dashed #FF69B4;
-        margin:0px 10px 10px 10px;
-        width:180px;
-        float:right;
-        text-align:center;
+      main{
+        padding-bottom:320px;
       }
-      ul.amigos{
-      	list-style-type:none;
-        margin:0;
-        padding:0;
-        padding-top:15px;
-        padding-bottom:15px;
-        width:180px;
-        text-align:center;
-        background-color:white;
-     	border:1px solid #FF69B4;
-     	border-radius:30px;
-      }
-      ul.amigos li a{
-      	display:block;
-        padding:8px 16px;
-        text-decoration:none;
-        color:black;
-      }
-      ul.amigos li{
-      	text-align:center;
-      }
-      #mio a{
-      	display:block;
-        text-decoration:none;
-        color:black;
-      }
-      #barraprincipal{
-        background-color:#FFC0CB;
-        padding:15px;
-        border:2px dashed #FF69B4;
-        margin:0px 240px 15px 10px;
-      }
-      article{
-     	 background-color:white;
-     	 border:1px solid #FF69B4;
-     	 border-radius:30px;
-     	 padding:25px;
-      }
-      article.mio{
-      	margin-bottom:10px;
-      }
-      article.mio a{
-      	text-decoration:none;
-        color:black;
-      }
-      article.ritsu a{
-      	text-decoration:none;
-        color:black;
-      }
-      #rodape{
-        background-color:#FFC0CB;
-        text-align:center;
-        padding:15px;
-        border:2px dashed #FF69B4;
-        margin:10px;
-        clear:right;
-      }
-      input[type=text]{
-        box-sizing:border-box;
-        border:2px solid #ccc;
-        border-radius:4px;
-        font-size:16px;
-        background-color:lightpink;
-      }
-      input[type=password]{
-      	box-sizing:border-box;
-        border:2px solid #ccc;
-        border-radius:4px;
-        background-color:lightpink;
+      img{
+        border:1px solid black;
+        position:absolute;
+        left:600px;
       }
       input[type=button]{
-      	background-color:lightyellow;
-        color:purple;
-        font-family:'Comic Sans MS', cursive;
-        border:2px solid #ccc;
-        border-radius:10px;
+        background-color:black;
+        color:white;
+        font-family:monospace,sans-serif;
+        padding:20px;
+        width:300px;
+        font-weight:bold;
+        display:block;
+        margin-bottom:20px;
+        margin-left:1050px;
+      }
+      #botao{
+        padding-top:125px;
+      }
+      footer{
+        background-color:black;
+        padding:30px;
+        color:white;
+        font-family:monospace, sans-serif;
+        text-align:center;
       }
     </style>
-    <body>
-      <div id="envolucro">
-        <div id="cabecalho">
-          <div id="divheader">
-            <img src="img/icon.png" width="150px" height="150px" style="margin-right:15px">
-            <h1>Ho-Kago Chat</h1>
-            <form style="margin-left:220px">
-              <label for="log">Usuário</label><br>
-              <input type="text" id="log" name="log" value=""><br>
-              <label for="psw">Senha</label><br>
-              <input type="password" id="psw" name="psw" value=""><br>
-              <div style="display:flex; align-items:center;">
-                <input type="button" value="Login">
-                <p><a href="sub/suporte/recuperar.html" style="text-decoration:none; color:black; margin-left:10px;">Perdi a senha</a></p>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div id="barranavegacao">
-          <ul class="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sub/entr/musica.html">Músicas</a></li>
-            <li><a href="sub/entr/amigos.html">Amigos</a></li>
-            <li><a href="sub/suporte/sobre.html">Sobre</a></li>
-            <li><a href="sub/suporte/contato.html">Contato</a></li>
-            <li><input type="button" value="Criar uma página"></li>
-          </ul>
-        </div>
-        <div id="barralateral">
-        	<h2 id="mio"><a href="sub/users/mio.html">Akiyama Mio</a></h2>
-          <img src="img/mio.png" alt=user width="160px" height="160px">
-        	<h2>Seus amigos =)</h2>
-          <ul class="amigos">
-            <li><a href="sub/users/ritsu.html">Tainaka Ritsu</a></li><br>
-            <li><a href="sub/users/yui.html">Hirasawa Yui</a></li><br>
-            <li><a href="sub/users/mugi.html">Tsumugi Kotobuki</a></li><br>
-            <li><a href="sub/users/azusa.html">Nakano Azusa</a></li><br>
-            <li><a href="sub/users/sawako.html">Yamanaka Sawako</a></li>
-          </ul>
-        </div>
-        <div id="barraprincipal">
-          <h2>Publicações</h2>
-          <article class="mio">
-            <img src="img/mio.png" width="50px" height="50px">
-            <figcaption style="display:inline-block; vertical-align:top; margin-left:10px;"><a href="sub/users/mio.html">Akiyama Mio</a></figcaption><br>
-            <p>19 de junho às 20:00</p><br>
-            <p>Acho uma ótima ideia, vamos treinar nesse final de semana! Consegui uma vaga pra HTT tocar no estúdio Kogarasu *u*</p><br>
-            <input type="image" id="like" alt="curtir" src="img/curtir.png" width="10px" height="10px">
-            <input type="image" id="comment" alt="comentar" src="img/comentar.png" width="10px" height="10px">
-            <input type="image" id="share" alt="compartilhar" src="img/compartilhar.png" width="10px" height="10px">
-          </article>
-          <article class="ritsu">
-            <img src="img/ritsu.png" width="50px" height="50px">
-            <figcaption style="display:inline-block; vertical-align:top; margin-left:10px;"><a href="sub/users/ritsu.html">Tainaka Ritsu</a></figcaption><br>
-            <p>19 de junho às 20:00</p><br>
-            <p>Alguém aí??? Eu já tô morrendo de tédio, vamos voltar a praticar logo!@!@!</p><br>
-            <input type="image" id="like" alt="curtir" src="img/curtir.png" width="10px" height="10px">
-            <input type="image" id="comment" alt="comentar" src="img/comentar.png" width="10px" height="10px">
-            <input type="image" id="share" alt="compartilhar" src="img/compartilhar.png" width="10px" height="10px">
-        </div>
-        <div id="rodape">
-          <p>HChat - feito com <3 por Lisanju</p>
-        </div>
-      </div>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js">
+    </script>
   </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mercadoria.html">Mercadoria</a></li>
+            <li><a href="ingressos.html">Ingressos</a></li>
+            <li><a href="videos.html">Vídeos</a></li>
+            <li><a href="info.html">Info</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="cryalot">
+        <h1>Cryalot</h1>
+      </div>
+    </header>
+    <main>
+      <article>
+        <img src="img/cryalot.png" style="width:400px">
+        <div id="botao">
+          <input type="button" value="Compre agora">
+          <input type="button" value="Escute 'Touch the Sun'">
+        </div>
+      </article>
+    </main>
+    <footer>
+      <p>Feito com 🤍 por Elisa Anju Lardapide</p>
+    </footer>
+  </body>
 </html>
