@@ -40,16 +40,51 @@ $(document).ready(function() {
                 tTituloEsquerda.val("");
                 tPrecoEsquerda.val("");
                 tDescricaoEsquerda.val("");
+            },
+        });
+    });
 
-                $("tbody").append(`<tr>
-                    <td>${data.title}</td>
-                    <td>${data.price}</td>
-                    <td><input type="button" class="bDeletar" data-id="${data._id}" value="Deletar">
-                        <input type="button" class="bExibir" value="Exibir"></td>
-                </tr>`);
+     function listarProdutos() {
+        $.ajax({
+            url: "https://banco-dados-teste.glitch.me/api/produtos",
+            type: "GET",
+            success: function(data) {
+                $("tbody").empty();
 
-                handleMouseEvents($(".bDeletar:last"), "indianred");
-                handleMouseEvents($(".bExibir:last"), "lightgreen");
+                data.forEach(function(produto) {
+                    $("tbody").append(`<tr>
+                        <td>${produto.title}</td>
+                        <td>${produto.price}</td>
+                        <td>
+                            <input type="button" class="bDeletar" data-id="${produto._id}" value="Deletar">
+                            <input type="button" class="bExibir" data-id="${produto._id}" value="Exibir">
+                        </td>
+                    </tr>`);
+                });
+
+                handleMouseEvents($(".bDeletar"), "indianred");
+                handleMouseEvents($(".bExibir"), "lightgreen");
+            },
+            error: function(error) {
+                console.log("Erro ao listar produtos:", error);
+            },
+        });
+    }
+
+    listarProdutos();
+
+    $("tbody").on("click", ".bDeletar", function() {
+        const produtoId = $(this).data("id");
+
+        $.ajax({
+            url: `https://banco-dados-teste.glitch.me/api/produtos/${produtoId}`,
+            type: "DELETE",
+            success: function(data) {
+                alert("Produto deletado com sucesso!");
+                listarProdutos();
+            },
+            error: function(error) {
+                console.log("Erro ao deletar produto:", error);
             },
         });
     });
