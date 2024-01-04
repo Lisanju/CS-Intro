@@ -30,8 +30,7 @@ Já para a rota /api/produtos/:id (onde id é o valor do _id de cada produto), u
 
 - Para realizar o cadastro, basta o envio dos parâmetros title, price e description. Os demais parâmetros do produto são gerados ou mantidos automaticamente pelo servidor.
 - O servidor https://banco-dados-teste.glitch.me/ tem como característica "desligar-se" a cada 5 minutos se uma nova requisição não for realizada. Assim, antes de testar o código, verifique se o servidor apresenta a mensagem de "Está funcionando".
-- A atividade deve ser entregue como um arquivo HTML único, contendo o site completo. Nesta tarefa, deve ser utilizado JavaScript nativo e/ou jQuery.
-
+  
 Quanto ao funcionamento do sistema em si, é importante mencionar alguns detalhes:
 
 - Após o cadastro bem sucedido de um produto, o formulário de cadastro deve ser "resetado".
