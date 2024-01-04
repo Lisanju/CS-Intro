@@ -74,16 +74,10 @@
         text-align:center;
       }
       esquerda{
-        position:absolute;
       }
       centro{
-        position:absolute;
-        left:435px;
       }
       direita{
-        position:absolute;
-        left:1240px;
-        display:none;
       }
     </style>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js">
@@ -99,14 +93,14 @@
     </header>
     <esquerda>
       <div>
-        <form>
+        <form id="form1">
           <p>Título do produto</p>
-          <input type="text" id="tTitulo" size=45px>
+          <input type="text" id="tTituloEsquerda" size=45px>
           <p>Preço do produto</p>
-          <input type="text" id="tPreco" size=45px>
+          <input type="text" id="tPrecoEsquerda" size=45px>
           <p>Descrição do produto</p>
-          <textarea id="tDescricao" rows=10 cols=45 style="resize:none"></textarea>
-          <input type="button" class="bPadrao" value="Cadastrar">
+          <textarea id="tDescricaoEsquerda" rows=10 cols=45 style="resize:none"></textarea>
+          <input type="button" id="bCadastrar" class="bPadrao" value="Cadastrar">
         </form>
       </div>
     </esquerda>
@@ -119,22 +113,6 @@
             <th>Opções</th>
           </thead>
           <tbody>
-            <tr>
-              <td>OMO Multiroupas</td>
-              <td>7.99</td>
-              <td>
-                <input type="button" class="bDeletar" value="Deletar">
-                <input type="button" class="bExibir" value="Exibir">
-              </td>
-            </tr>
-            <tr>
-              <td>Nana de pelúcia</td>
-              <td>89.99</td>
-              <td>
-                <input type="button" class="bDeletar" value="Deletar">
-                <input type="button" class="bExibir" value="Exibir">
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -143,12 +121,12 @@
       <div>
         <form>
           <p>Título do produto</p>
-          <input type="text" id="tTitulo" size=45px>
+          <input type="text" id="tTituloDireita" size=45px>
           <p>Preço do produto</p>
-          <input type="text" id="tPreco" size=45px>
+          <input type="text" id="tPrecoDireita" size=45px>
           <p>Descrição do produto</p>
-          <textarea id="tDescricao" rows=10 cols=45 style="resize:none"></textarea>
-          <input type="button" class="bPadrao" value="Editar">
+          <textarea id="tDescricaoDireita" rows=10 cols=45 style="resize:none"></textarea>
+          <input type="button" id="bEditar" class="bPadrao" value="Editar">
         </form>
       </div>
     </direita>
