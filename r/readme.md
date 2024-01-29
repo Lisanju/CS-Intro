@@ -4,7 +4,7 @@ Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de ex
 
 ## Conteúdo por aula
 - Aula 01 - Objetos, funções, argumentos e scripts;
-- Aula 02 - Tipos de dados;
+- Aula 02 - Tipos de objetos de dados;
 - Aula 03 -
 
 ## Referências
