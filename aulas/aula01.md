@@ -34,3 +34,30 @@ sempre atento quando for realizar operações com o tipo double, pois erros como
 
 ### Integer
 
+O tipo integer representa números naturais. Ele pode ser usado para variáveis contáveis, como o número de crianças de uma família.
+
+```
+nchild <- as.integer(3)
+is.integer(nchild)
+[1] TRUE
+```
+
+Note que 3.0 não é do tipo integer, nem 3 por padrão é um tipo integer.
+
+```
+nchild <- 3.0
+is.integer(nchild)
+[1] FALSE
+nchild <- 3
+is.integer(nchild)
+[1] FALSE
+```
+
+Para o R, um 3 do tipo integer é diferente de um 3 do tipo double. No entanto, é possível realizar operações entre tipos double e integer sem problemas.
+
+```
+x <- as.integer(7)
+y <- 2.0
+z <- x/y
+```
+
