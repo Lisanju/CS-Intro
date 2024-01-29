@@ -108,3 +108,44 @@ is.double(9.876)
 [1] TRUE
 ```
 
+As expressões lógicas são normalmente construídas a partir dos operadores lógicos:
+
+- `<` - menor que
+- `<=` - menor ou igual que
+- `>` - maior que
+- `>=` - maior ou igual que
+- `==` - igual
+- `!=` - diferente
+
+Os operadores lógicos AND, OR e NOT são expressos, respectivamente, por `&`, `—` e `!`.
+
+```
+x <- c(9,166)
+y <- (3 < x) & (x <= 10)
+[1] TRUE FALSE
+```
+
+Em R, cálculos também podem ser feitos através do tipo logical. Sendo este o caso em que FALSE é substituído por 0 e TRUE é substituído por 1. Então, por exemplo, é possível usar do tipo lógico para contar o número de TRUE's num vetor ou array.
+
+```
+x <- 1:15
+## number of elements in x larger than 9
+sum(x>9)
+[1] 6
+```
+
+### Character
+
+O objeto do tipo character é representado entre aspas duplas `" "`. Há diferentes formas de criar um objeto do tipo character:
+
+```
+x <- c("a","b","c")
+x
+[1] "a" "b" "c"
+mychar1 <- "This is a test"
+mychar2 <- "This is another test"
+charvector <- c("a", "b", "c", "test")
+```
+
+### Factor
+
