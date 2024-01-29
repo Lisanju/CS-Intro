@@ -1,6 +1,6 @@
-## Tipos de dados
+## Tipos de objetos de dados
 
-Em R, há diferentes aspectos para os tipos de dados existentes. A ideia dessa aula, então, é apresentar esses aspectos.
+Em R, há diferentes aspectos para os tipos de objetos de dados existentes. A ideia dessa aula, então, é apresentar esses aspectos.
 
 ### Double
 
