@@ -10,11 +10,3 @@ Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de ex
 ## Referências
 
 ARANTES, Pablo. Noções de Linguagens de Programação para Linguistas. São Carlos: 2022. Notas de aula.
-
-FERREIRA, M.; LOPES, M. Para conhecer: linguistica computacional. Sāo Paulo: Editora Contexto, 2019.
-
-OTHERO, G. DE A.; MENUZZI, S. DE M. Lingüística computacional – teoria e prática. São Paulo: Parábola Editorial, 2005.
-
-MELLO, M. P.; PETERNELLI, L. A. Conhecendo o R: uma visão mais que estatística. 1. ed. Viçosa: Editora UFV, 2013.
-
-TORGO, L. A Linguagem R - Programação para Análise de Dados. Lisboa: Escolar Editora, 2009.
