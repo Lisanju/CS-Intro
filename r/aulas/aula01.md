@@ -149,3 +149,9 @@ charvector <- c("a", "b", "c", "test")
 
 ### Factor
 
+O tipo factor é usado para representar dados categóricos, isto é, dados que possuem como valor uma coleção de codes. Por exemplo:
+
+- Variável 'sexo' com os valores masculino e feminino.
+- Variável 'tipo-sanguineo' com os valores A, AB e O.
+
+Cada code individual de uma variável factor é também chamada de level. Então, a variável 'sexo' possui 2 levels e a variável 'tipo-sanguineo' possui 3 levels.
