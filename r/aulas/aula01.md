@@ -155,3 +155,62 @@ O tipo factor é usado para representar dados categóricos, isto é, dados que p
 - Variável 'tipo-sanguineo' com os valores A, AB e O.
 
 Cada code individual de uma variável factor é também chamada de level. Então, a variável 'sexo' possui 2 levels e a variável 'tipo-sanguineo' possui 3 levels.
+Geralmente o tipo factor é confundido com o tipo character. Variáveis do tipo character são usadas para dar nome à camadas em gráficos, colunas ou linhas. Já variáveis do tipo factor são usadas quando você quer representar uma variável discreta em um dataframe e quer analisar ela.
+
+Você pode criar um objeto factor a partir de um objeto character ou numérico usando a função `factor`.
+
+```
+sex <- c("male","male","female","male","female")
+
+sex <- factor(sex)
+sex
+[1] male male female male female
+```
+
+Inicialmente, o objeto 'sex' é do tipo character. É necessário transformar ele com `factor`. 
+
+Ao usar a função `levels`, é possível conferir quantos levels uma variável do tipo factor possui.
+
+```
+levels(sex)
+[1] "female" "male"
+```
+
+Note que o resultado da função `levels` é do tipo character.
+
+```
+sex <- c(1,1,2,1,2)
+
+sex <- factor(sex)
+sex
+[1] 1 1 2 1 2
+Levels: 1 2
+```
+
+Caso você crie um objeto factor a partir da transformação de uma variável integer para factor, como representado acima, o resultado do objeto 'sex' não será do tipo integer (apesar de se parecer com).
+
+Os números 1 representam level '1' e os números 2 representam level '2'. Por isso, operações aritméticas não funcionam com a variável 'sex'.
+
+```
+sex + 7
+[1] NA NA NA NA NA
+Warning message:
++ not meaningful for factors in: Ops.factor(sex, 7)
+```
+
+Para que você não se confunda, é possível renomear os levels 1 e 2:
+
+```
+levels(sex) <- c("male","female")
+sex
+[1] male male female male female
+```
+
+Você também pode transformar variáveis factor em double ou integer usando as funções `as.double` e `as.integer`.
+
+```
+sex.numeric <- as.double(sex)
+sex.numeric
+[1] 2 2 1 2 1
+```
+
