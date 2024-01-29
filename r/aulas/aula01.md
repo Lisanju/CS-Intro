@@ -71,3 +71,40 @@ as.integer(2^31)
 Warning message:
 NAs introduced by coercion
 ```
+
+### Complex
+
+O tipo complex é usado para representar números complexos. Geralmente eles não são utilizados numa análise de dados estatísticos. Use a função `as.complex` ou `complex` para criar objetos do tipo complex.
+
+```
+test1 <- as.complex(-25+5i)
+sqrt(test1)
+[1] 0.4975427+5.024694i
+
+test2 <- complex(5,real=2,im=6)
+test2
+[1] 2+6i 2+6i 2+6i 2+6i 2+6i
+typeof(test2)
+[1] "complex"
+```
+
+Note que por padrão as operações resultam em números reais. Então, sqrt(-1) resultará em NA. Use `sqrt(as.complex(-1))`.
+
+### Logical
+
+Objetos do tipo logical podem receber os valores TRUE ou FALSE e são usados para indicar se uma condição é verdadeira ou falsa. Esses objetos geralmente são expressos como o resultado de uma expressão lógica.
+
+```
+x <- 9
+y <- x > 10
+y
+[1] FALSE
+```
+
+Por exemplo, o resultado da função `is.double` é um objeto do tipo logical, contendo TRUE ou FALSE.
+
+```
+is.double(9.876)
+[1] TRUE
+```
+
