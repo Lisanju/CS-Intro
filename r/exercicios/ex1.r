@@ -1,8 +1,3 @@
-# ELISA BRITTO ALVES RODRIGUES #
-# RA: 802593 #
-
-# ======================= Capítulo 10 ======================= #
-
 # --------------------- Exercício 10.1 --------------------- #
 
 vetor <- c(2,4,6,8,10) # valores em um vetor fornecido pelo usuário #
