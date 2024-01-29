@@ -1,4 +1,4 @@
-## Tipos e estruturas de dados
+## Tipos de dados
 
 Em R, há diferentes aspectos para os tipos de dados existentes. A ideia dessa aula, então, é apresentar esses aspectos.
 
@@ -214,3 +214,12 @@ sex.numeric
 [1] 2 2 1 2 1
 ```
 
+O número 1 indica o level female apenas porque female aparece antes alfabeticamente. Se a ordem dos levels for importante, você deve utilizar um factor ordenado. Use a função `ordered` e especifique a ordem dos levels no argumento.
+
+```
+Income <- c("High","Low","Average","Low","Average","High","Low")
+Income <- ordered(Income, levels=c("Low","Average","High"))
+Income
+[1] High Low Average Low Average High Low
+Levels: Low < Average < High
+```
