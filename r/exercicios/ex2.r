@@ -1,6 +1,3 @@
-# ELISA BRITTO ALVES RODRIGUES #
-# RA: 802593 #
-
 # ======================= Capítulo 11 ======================= #
 
 adivinhe <- function() {
