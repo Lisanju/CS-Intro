@@ -61,3 +61,13 @@ y <- 2.0
 z <- x/y
 ```
 
+Em contraste com outras linguagens de programação, o resultado da operação acima em R é do tipo double, isto é, 3.5. O integer máximo em R é 2³¹ − 1.
+
+```
+as.integer(2^31 - 1)
+[1] 2147483647
+as.integer(2^31)
+[1] NA
+Warning message:
+NAs introduced by coercion
+```
