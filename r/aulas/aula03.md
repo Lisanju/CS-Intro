@@ -125,3 +125,95 @@ colnames(dados)
 #> [1] "datas"  "cidade" "tar
 ```
 
+Para acessar as variáveis de um dataframe, é possível usar os operadores de extração de elementos `[`, `[[` ou `$`. Observe a seguir as diferenças nos resultados de cada operador.
+
+```
+# variáveis do dataframe
+
+names(dados)
+## [1] "datas"  "cidade" "tar"
+
+# acessando os dados de temperatura
+
+dados[, 3]
+##  [1] 31 35 21 23 33 17 18 16 34 27 15 28 22 29 32
+
+# ou
+
+dados[, "tar"]
+##  [1] 31 35 21 23 33 17 18 16 34 27 15 28 22 29 32
+
+# ou
+
+dados$tar
+##  [1] 31 35 21 23 33 17 18 16 34 27 15 28 22 29 32
+
+is.vector(dados$tar)
+## [1] TRUE
+
+# note a diferença no resultado da extração
+dados["tar"]
+##    tar
+## 1   31
+## 2   35
+## 3   21
+## 4   23
+## 5   33
+## 6   17
+## 7   18
+## 8   16
+## 9   34
+## 10  27
+## 11  15
+## 12  28
+## 13  22
+## 14  29
+## 15  32
+
+class(dados["tar"])
+## [1] "data.frame"
+
+dados[["tar"]]
+##  [1] 31 35 21 23 33 17 18 16 34 27 15 28 22 29 32
+
+class(dados[["tar"]])
+## [1] "numeric"
+
+dados[, "tar"]
+##  [1] 31 35 21 23 33 17 18 16 34 27 15 28 22 29 32
+
+class(dados[, "tar"])
+## [1] "numeric"
+```
+
+Além disso, também é possível acessar as variáveis de um dataframe através da função `with(data, expr)`.
+
+```
+# acesso a variáveis de um dataframe
+
+with(data = dados, expr = tar)
+##  [1] 31 35 21 23 33 17 18 16 34 27 15 28 22 29 32
+
+tarK <- with(data = dados, expr = tar + 273.15)
+tarK
+##  [1] 304.15 308.15 294.15 296.15 306.15 290.15 291.15 289.15 307.15 300.15
+## [11] 288.15 301.15 295.15 302.15 305.15
+
+# gráfico de uma variável usando with()
+with(data = dados, 
+     # parâmetro expr geralmente não é mostrado
+       plot(tar + 273.15, type = "o")
+     )
+```
+
+O argumento `expr` pode ser substituído por qualquer expressão ou conjunto de expressão que envolvam as variáveis de um dataframe. Caso você o substitua por uma expressão com mais de uma linha, você deve utilizar `{`.
+
+```
+with(dados, 
+     {
+       dates <- as.Date(datas)
+       plot(dates, tar, type = "o")
+     }
+)
+```
+
