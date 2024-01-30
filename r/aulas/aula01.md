@@ -1,4 +1,4 @@
-# Objetos, funções, argumentos e scripts
+# Objetos, funções e scripts
 
 ## Objetos
 
@@ -133,4 +133,72 @@ round(3.1415)
 round(3.1415, digits = 2)
 ## 3.14
 ```
+
+## Criando a própria função
+
+Toda função em R tem três partes básicas: nome, corpo de código e lista de argumentos. Para criar uma função em R, você precisa replicar essas partes em um objeto, o que pode ser feito através da função `function`.
+
+```
+funcao_criada <- function() {
+  # corpo de código
+}
+```
+
+Então, para criar uma função que role um dado, podemos fazer o seguinte:
+
+```
+roll <- function() {
+  die <- 1:6
+  dice <- sample(die, size = 2, replace = TRUE)
+  sum(dice)
+}
+
+roll()
+## 8 
+
+roll()
+## 3
+
+roll()
+## 7
+```
+
+Imagine que para função a seguir, você substitua o nome `die` pelo objeto `bones`.
+
+```
+roll2 <- function() {
+  dice <- sample(bones, size = 2, replace = TRUE)
+  sum(dice)
+}
+```
+
+Caso você rode o código assim, o R retornará um erro: 
+
+```
+roll2()
+## Error in sample(bones, size = 2, replace = TRUE) : 
+##   object 'bones' not found
+```
+
+Isso acontece porque, para o escopo da função `sample` dentro da função `roll2`, não há declarado o objeto bones, logo, não há nenhum valor sendo usado pelo argumento.
+
+Para reverter esse erro, você pode adicionar o argumento bones para a função `roll2`.
+
+```
+roll2 <- function(bones) {
+  dice <- sample(bones, size = 2, replace = TRUE)
+  sum(dice)
+}
+
+roll2(bones = 1:4)
+##  3
+
+roll2(bones = 1:6)
+## 10
+
+roll2(1:20)
+## 31
+```
+
+## Script
 
