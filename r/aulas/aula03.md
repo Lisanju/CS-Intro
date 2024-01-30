@@ -1,4 +1,4 @@
-# Dataframes, Arrays e Vetores
+# Dataframes, listas e vetores
 
 ## Dataframe
 
