@@ -125,7 +125,7 @@ y <- (3 < x) & (x <= 10)
 [1] TRUE FALSE
 ```
 
-Em R, cálculos também podem ser feitos através do tipo logical. Sendo este o caso em que FALSE é substituído por 0 e TRUE é substituído por 1. Então, por exemplo, é possível usar do tipo lógico para contar o número de TRUE's num vetor ou array.
+Em R, cálculos também podem ser feitos através do tipo logical. Sendo este o caso em que FALSE é substituído por 0 e TRUE é substituído por 1. Então, por exemplo, é possível usar do tipo lógico para contar o número de TRUE's num vetor ou lista.
 
 ```
 x <- 1:15
