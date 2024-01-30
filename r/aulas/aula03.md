@@ -477,3 +477,71 @@ lst
 
 ## Vetores
 
+É uma estrutura de dados unidimensional, uma sequência de dados ordenada de elementos sem hierarquia interna.
+
+Para criar um vetor, basta usar a função combine `c()`.
+
+```
+ex1 <- c(1, 5, 8)
+ex1
+## [1] 1 5 8
+```
+
+O que pode ser combinado em um vetor - coerção:
+
+- Conversão de número em caractere `c(1, "a")`;
+- Valor lógico para número, T vira 1 e F vira 0 `c(T, 0)`;
+- Valor lógico para caractere, T vira "TRUE" e F vira "FALSE" `c("a", T)`.
+
+Consideremos os vetores abaixo.
+
+```
+v1 <- c(1, 2, 3)
+v2 <- c(2, 4, 6)
+v3 <- 2
+v4 <- c(2, 4, 6, 8)
+```
+
+Compare os resultados das expressões abaixo.
+
+```
+v1 * v2
+# [1]  2  8 18
+v1 * v3
+# [1] 2 4 6
+```
+
+No primeiro caso, o primeiro elemento de v1 é multiplicado pelo primeiro elemento de v2, o segundo de v1 pelo segundo de v2 e assim por diante. No segundo caso, a operação de multiplicação é aplicada de forma distributiva, isto é, cada elemento de v1 é multiplicado pelo elemento único de v3.
+
+Considere a expressão abaixo.
+
+```
+v1 * v4
+# Warning in v1 * v4: comprimento do objeto maior não é múltiplo do comprimento do objeto menor
+```
+
+O problema é que o número de elementos não é o mesmo. Números precisam ser iguais ou um dos vetores precisa ser unitário. Outra possibilidade é que o vetor maior tenha um número de elementos que seja múltiplo do número de elementos do vetor menor.
+
+```
+v5 <- c(0, 1)
+v4 * v5
+# [1] 0 4 0 8
+```
+
+O resultado da operação sugere que o primeiro elemento de v5 multiplica o primeiro e o terceiro elementos de v4 e o segundo de v5 multiplica o segundo e o quarto de v4.
+
+```
+paste0(c("b", "n", "n"), c("a"))
+# [1] "ba" "na" "na"
+
+paste0(c("c", "l", "b", "r"), c("o", "a"))
+# [1] "co" "la" "bo" "ra"
+```
+
+Para acessar os elementos de um vetor, bastar utilizar a notação `nome[indice]`, sendo que podem haver diferentes índices: `[1] ,[1:2], [c(1, 3, 4)]`.
+
+As funções a seguir são funções importantes associadas à vetores.
+
+`lenght` - para descobrir o tamanho de um tipo de dado.
+`sum` - para somar os valores de um vetor.
+`seq` - para gerar uma sequência de elementos.
