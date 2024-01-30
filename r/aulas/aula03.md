@@ -425,3 +425,55 @@ lst
 #> [1] 1
 ```
 
+A função `str` permite uma visualização rápida da estrutura de uma lista.
+
+```
+str(lst)
+#> List of 5
+#>  $ : int [1:4] 1 6 10 NA
+#>  $ : num [1:5] -1 0 1 2 NA
+#>  $ : logi [1:4] FALSE NA FALSE TRUE
+#>  $ : chr [1:3] "ae" NA "ou"
+#>  $ :List of 2
+#>   ..$ : num 0
+#>   ..$ : num 1
+```
+
+É possível criar listas aninhadas, isto é, uma lista que armazena outra lista. Através da função `is.recursive` é possível verificar se uma lista é aninhada.
+
+```
+is.recursive(lst)
+## [1] TRUE
+```
+
+As listas podem ter nomes para seus componentes.
+
+```
+names(lst)
+## NULL
+
+names(lst) <- c("vetor_int", "vetor_dbl", "vetor_log", "vetor_char", "lista")
+
+lst
+## $vetor_int
+## [1]  1  6 10 NA
+## 
+## $vetor_dbl
+## [1] -1  0  1  2 NA
+## 
+## $vetor_log
+## [1] FALSE    NA FALSE  TRUE
+## 
+## $vetor_char
+## [1] "ae" NA   "ou"
+## 
+## $lista
+## $lista[[1]]
+## [1] 0
+## 
+## $lista[[2]]
+## [1] 1
+```
+
+## Vetores
+
