@@ -6,7 +6,7 @@ Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de ex
 - Aula 01 - Objetos, funções e scripts;
 - Aula 02 - Estrutura de dados;
 - Aula 03 - Dataframes, listas e vetores;
-- Aula 04 - Estruturas de controle do fluxo de execução
+- Aula 04 - Estruturas de controle do fluxo de execução;
 - Aula 05 - Entrada e saída de dados;
 - Aula 06 - Expressões regulares.
 
