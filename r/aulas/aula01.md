@@ -200,5 +200,10 @@ roll2(1:20)
 ## 31
 ```
 
-## Script
+## Scripts
 
+Em R, um script é um arquivo de texto que você utiliza para salvar um código. No RStudio, você pode abrir um script em `File > New File > R script` na barra de menu. Os scripts são uma boa maneira de editar e fazer o proofreading de um código, além de ser uma cópia para compartilhar seu código com outras pessoas.
+
+No RStudio, você pode salvar um script em `File > Save As`. Além disso, para executar o trecho de um script, você pode usar a opção Run (ou o atalho Control + Return). E, para rodar o script todo, você pode usar a opção Source.
+
+Os scripts em R são salvos com a extensão `.r`.
