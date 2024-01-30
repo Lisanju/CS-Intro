@@ -125,6 +125,8 @@ colnames(dados)
 #> [1] "datas"  "cidade" "tar
 ```
 
+## Acesso de dados em um dataframe
+
 Para acessar as variáveis de um dataframe, é possível usar os operadores de extração de elementos `[`, `[[` ou `$`. Observe a seguir as diferenças nos resultados de cada operador.
 
 ```
@@ -217,3 +219,166 @@ with(dados,
 )
 ```
 
+## Indexação, seleção e substituição de dados em um dataframe
+
+Como os dataframes possuem duas dimensões, é possível indexicar tanto linhas quanto colunas.
+
+```
+quadro_dados[inds_lin, inds_col]
+
+# exclui a primeira e a última observação para todas variáveis
+
+(inds_lin <- -c(1, nrow(dados)))
+## [1]  -1 -15
+
+(inds_col <- 3)
+## [1] 3
+
+dados[inds_lin, inds_col]
+##  [1] 35 21 23 33 17 18 16 34 27 15 28 22 29
+```
+
+Podemos acessar a temperatura no dia 2013-01-09 usando:
+
+```
+dados[dados$datas == "2013-01-09", "tar"]
+#> [1] 34
+```
+
+Para acrescentar uma nova variável chamada `prec`:
+
+```
+# acrescentar uma nova variavel
+dados$prec <- c(rep(0, 5), 10, 18, 4, 0, 0, 5, 0, 0, 2, 0)
+
+dados
+##         datas      cidade tar prec
+## 1  2013-01-01 Santa Maria  31    0
+## 2  2013-01-02 Santa Maria  35    0
+## 3  2013-01-03 Santa Maria  21    0
+## 4  2013-01-04 Santa Maria  23    0
+## 5  2013-01-05 Santa Maria  33    0
+## 6  2013-01-06 Santa Maria  17   10
+## 7  2013-01-07 Santa Maria  18   18
+## 8  2013-01-08 Santa Maria  16    4
+## 9  2013-01-09 Santa Maria  34    0
+## 10 2013-01-10 Santa Maria  27    0
+## 11 2013-01-11 Santa Maria  15    5
+## 12 2013-01-12 Santa Maria  28    0
+## 13 2013-01-13 Santa Maria  22    0
+## 14 2013-01-14 Santa Maria  29    2
+## 15 2013-01-15 Santa Maria  32    0
+```
+
+A função `subset` permite que um subconjunto de dados de um dataframe seja gerado.
+
+```
+# subconjunto baseado em condição lógica
+ss1 <- subset(dados, datas == "2013-01-09", select = "tar")
+ss1
+#>   tar
+#> 9  34
+# subconjunto baseado em condição lógica
+ss2 <- subset(dados, tar > 26 & prec > 0)
+ss2
+#>         datas      cidade tar prec
+#> 14 2013-01-14 Santa Maria  29    2
+# subconjunto baseado em condição lógica
+ss3 <- subset(dados, tar > 26 | prec > 0)
+ss3
+#>         datas      cidade tar prec
+#> 1  2013-01-01 Santa Maria  31    0
+#> 2  2013-01-02 Santa Maria  35    0
+#> 5  2013-01-05 Santa Maria  33    0
+#> 6  2013-01-06 Santa Maria  17   10
+#> 7  2013-01-07 Santa Maria  18   18
+#> 8  2013-01-08 Santa Maria  16    4
+#> 9  2013-01-09 Santa Maria  34    0
+#> 10 2013-01-10 Santa Maria  27    0
+#> 11 2013-01-11 Santa Maria  15    5
+#> 12 2013-01-12 Santa Maria  28    0
+#> 14 2013-01-14 Santa Maria  29    2
+#> 15 2013-01-15 Santa Maria  32    0
+# subconjunto baseado em condição lógica
+ss4 <- subset(dados,
+  datas %in% c("2013-01-09", "2013-01-13", "2013-01-15"),
+  select = -cidade
+)
+ss4
+#>         datas tar prec
+#> 9  2013-01-09  34    0
+#> 13 2013-01-13  22    0
+#> 15 2013-01-15  32    0
+# subconjunto baseado em condição lógica
+ss4 <- subset(dados,
+  !datas %in% c("2013-01-09", "2013-01-13", "2013-01-15"),
+  select = -cidade
+)
+ss4
+#>         datas tar prec
+#> 1  2013-01-01  31    0
+#> 2  2013-01-02  35    0
+#> 3  2013-01-03  21    0
+#> 4  2013-01-04  23    0
+#> 5  2013-01-05  33    0
+#> 6  2013-01-06  17   10
+#> 7  2013-01-07  18   18
+#> 8  2013-01-08  16    4
+#> 10 2013-01-10  27    0
+#> 11 2013-01-11  15    5
+#> 12 2013-01-12  28    0
+#> 14 2013-01-14  29    2
+```
+
+Para alterar, remover ou incluir variáveis num dataframe é possível usar a função específica `transform`. Normalmente ela é utilizada para alterar mais de uma variável simultaneamente.
+
+```
+# mudança do dataframe, alteração de várias variáveis
+dados <- transform(dados,
+  cidade = ifelse(1:nrow(dados) > 8, "Sao Sepe", cidade),
+  datas = c(datas[1:8], datas[1:7]),
+  anomalias = ifelse(cidade == "Santa Maria",
+    tar - mean(tar[cidade == "Santa Maria"]),
+    tar - mean(tar[cidade == "Sao Sepe"])
+  )
+)
+dados
+#>         datas      cidade tar prec anomalias
+#> 1  2013-01-01 Santa Maria  31    0       5.6
+#> 2  2013-01-02 Santa Maria  35    0       9.6
+#> 3  2013-01-03 Santa Maria  21    0      -4.4
+#> 4  2013-01-04 Santa Maria  23    0      -2.4
+#> 5  2013-01-05 Santa Maria  33    0       7.6
+#> 6  2013-01-06 Santa Maria  17   10      -8.4
+#> 7  2013-01-07 Santa Maria  18   18      -7.4
+#> 8  2013-01-08 Santa Maria  16    4      -9.4
+#> 9  2013-01-01    Sao Sepe  34    0       8.6
+#> 10 2013-01-02    Sao Sepe  27    0       1.6
+#> 11 2013-01-03    Sao Sepe  15    5     -10.4
+#> 12 2013-01-04    Sao Sepe  28    0       2.6
+#> 13 2013-01-05    Sao Sepe  22    0      -3.4
+#> 14 2013-01-06    Sao Sepe  29    2       3.6
+#> 15 2013-01-07    Sao Sepe  32    0       6.6
+# alterar só uma variavel, anomalia normalizada
+dados$anomalias.norm <- ifelse(dados$cidade == "Santa Maria",
+  dados$anomalias / sd(dados$anomalias[dados$cidade == "Santa Maria"]),
+  dados$anomalias / sd(dados$anomalias[dados$cidade == "Sao Sepe"])
+)
+dados
+#>         datas      cidade tar prec anomalias anomalias.norm
+#> 1  2013-01-01 Santa Maria  31    0       5.6      0.7321669
+#> 2  2013-01-02 Santa Maria  35    0       9.6      1.2551433
+#> 3  2013-01-03 Santa Maria  21    0      -4.4     -0.5752740
+#> 4  2013-01-04 Santa Maria  23    0      -2.4     -0.3137858
+#> 5  2013-01-05 Santa Maria  33    0       7.6      0.9936551
+#> 6  2013-01-06 Santa Maria  17   10      -8.4     -1.0982504
+#> 7  2013-01-07 Santa Maria  18   18      -7.4     -0.9675063
+#> 8  2013-01-08 Santa Maria  16    4      -9.4     -1.2289944
+#> 9  2013-01-01    Sao Sepe  34    0       8.6      1.3392114
+#> 10 2013-01-02    Sao Sepe  27    0       1.6      0.2491556
+#> 11 2013-01-03    Sao Sepe  15    5     -10.4     -1.6195115
+#> 12 2013-01-04    Sao Sepe  28    0       2.6      0.4048779
+#> 13 2013-01-05    Sao Sepe  22    0      -3.4     -0.5294557
+#> 14 2013-01-06    Sao Sepe  29    2       3.6      0.5606001
+#> 15 2013-01-07    Sao Sepe  32    0       6.6      1.0277669
+```
