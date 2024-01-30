@@ -69,3 +69,68 @@ die %o% die
 Caso queira transpor uma matriz ou pegar seu determinante, você pode usar respectivamente `t` e `det`.
 
 ## Funções
+
+O R vem com várias funções que você pode utilizar para fazer tarefas sofisticadas. Por exemplo, você pode arredondar um número com `round` ou calcular seu fatorial com `factorial`.
+
+```
+round(3.1415)
+## 3
+
+factorial(3)
+## 6
+```
+
+Os valores que são passados para as funções são chamados de argumentos. Um argumento pode ser um dado, um objeto ou até mesmo o resultado de outra função.
+
+```
+mean(1:6)
+## 3.5
+
+mean(die)
+## 3.5
+
+round(mean(die))
+## 4
+```
+
+Existe uma função chamada `sample`, que pega dois argumentos: um vetor x e um número indicado por `size`. A função `sample` retorna do vetor a quantidade de elementos especificada por `size`.
+
+```
+sample(x = 1:4, size = 2)
+## 3 2
+```
+
+Repare que tanto `1:4` e `2` são especificados para um nome `x` ou `size`. Isso acontece porque, em R, os argumentos de uma função possuem nome.
+
+Porém, usar o nome dos argumentos é opcional. É convencionado por programadores em R que não seja especificado o nome do primeiro argumento, isso porque é óbvio o que o primeiro argumento indica.
+
+```
+sample(die, size = 1)
+## 2
+```
+
+Caso você escreva o nome de um argumento que a função não reconheça, você receberá o erro a seguir.
+
+```
+round(3.1415, corners = 2)
+## Error in round(3.1415, corners = 2) : unused argument(s) (corners = 2)
+```
+
+Por isso, para averiguar os nomes dos argumentos de uma função, use a função `args`.
+
+```
+args(round)
+## function (x, digits = 0) 
+## NULL
+```
+
+Note que o argumento `digits` da função `round` é por padrão setado como 0. Isso acontece porque para algumas funções há argumentos que são opcionais, como é o caso de `digits`. Se não for especificado um valor para o argumento opcional, o R usará o valor setado como padrão.
+
+```
+round(3.1415)
+## 3
+
+round(3.1415, digits = 2)
+## 3.14
+```
+
