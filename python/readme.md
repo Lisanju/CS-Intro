@@ -10,6 +10,8 @@ Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de ex
 - Aula 05 - Comandos de Repetição;
 - Aula 06 - Listas, Tuplas e Dicionários;
 - Aula 07 - Manipulação de Strings;
+- Aula 08 - Funções e Recursividade;
+- Aula 09 - Arquivos e Tratamento de Exceçoes.
 
 Obs: é possível também acessar gratuitamente o conteúdo das aulas no canal do YouTube do professor (Programação Descomplicada).
 
