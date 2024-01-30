@@ -10,3 +10,5 @@ Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de ex
 ## Referências
 
 ARANTES, Pablo. Noções de Linguagens de Programação para Linguistas. São Carlos: 2022. Notas de aula.
+
+TATSCH, Jônatan. Análise de Dados Ambientais com R. Santa Maria: 2021. Disponível em: <https://lhmet.github.io/adar-ebook/>.
