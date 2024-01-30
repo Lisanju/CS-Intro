@@ -6,6 +6,9 @@ Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de ex
 - Aula 01 - Objetos, funções e scripts;
 - Aula 02 - Estrutura de dados;
 - Aula 03 - Dataframes, listas e vetores;
+- Aula 04 - Estruturas condicionais;
+- Aula 05 - Estruturas de repetição;
+- Aula 06 - 
 
 ## Referências
 
