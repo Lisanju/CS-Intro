@@ -1,4 +1,4 @@
-# Estruturas condicionais e de repetição
+# Estruturas de controle do fluxo de execução
 
 ## Estruturas condicionais
 
