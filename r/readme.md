@@ -8,7 +8,9 @@ Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de ex
 - Aula 03 - Dataframes, listas e vetores;
 - Aula 04 - Estruturas condicionais;
 - Aula 05 - Estruturas de repetição;
-- Aula 06 - 
+- Aula 06 - Fluxo de execução;
+- Aula 07 - Entrada e saída de dados;
+- Aula 08 - Expressões regulares.
 
 ## Referências
 
