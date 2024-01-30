@@ -66,7 +66,33 @@ getwd()
 
 ## Arquivos texto
 
-## Arquivos binários
+O formato mais comum de armazenar dados é o retangular, isto é, um dataframe com observações ao longo das linhas e variáveis ao longo das colunas.
 
-## Arquivos Excel
+Os valores de cada linha são separados por um caractere separador: vírgula, espaço, tab e etc.
 
+As linhas são separadas por quebras de linha (`\r\n` no Windows).
+
+As funções de importação de dados possuem um argumento relacionado a codificação (encoding) dos caracteres. Arquivos texto em português geralmente usam a codificação ISO 8859-1 ou equivalente Latin1.
+
+O R usa o esquema de codificação UTF-8 para a associação unívoca de cada caractere a uma sequência de bits.
+
+A especificação da codificação pode ser feita através do menu `Tools > Global Options > Code > Saving > Default Text Encoding`.
+
+A biblioteca rio possui apoio para diversos formatos frequentemente usados. Para usar o rio, basicamente é necessário conhecer duas funções, que são `import` e `export`.
+
+Os formatos suportados pelo rio são:
+
+- .csv - Valores separados por vírgula;
+- .tsv - Dados separados por tab;
+- .xls / .xlsx - Excel;
+- .RData / .rda - Objetos salvos no R;
+- .rds - Objetos do R serializados;
+- *sem extensão reconhecida - Dados Fortran;
+- .fwf - Formato de dados com largura fixa;
+- .feather - Feather R/Python interchange format;
+- .fst - Armazenamento Rápido (Fast Storage);
+- .json - JSON;
+- .mat - Matlab;
+- .ods - Planilha OpenDocument;
+- .html - Tabelas HTML;
+- .xml - Documentos XML.
