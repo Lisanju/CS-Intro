@@ -46,3 +46,28 @@ if (x == 30) {
 print(res)
 ```
 
+## Estruturas de repetição
+
+## While
+
+A estrutura `while` realiza um teste lógico de repetição, em que caso a condição especificada pelo programador seja verdadeira o código continuará executando um bloco de código.
+
+Quando o teste retornar falso, a repetição é interrompida.
+
+```
+x <- 1
+while(x <= 10) {
+  print(x)
+  x <- x + 1
+}
+```
+
+## For
+
+A estrutura de repetição `for` permite que a gente execute um loop de código em casos onde sabemos de antemão o número de repetições que devem ser realizadas. Para isso, especificamos o intervalo de repetições em `for`.
+
+```
+for (i in 1:10) {
+  print(i)
+}
+```
