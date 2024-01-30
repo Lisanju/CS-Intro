@@ -85,3 +85,43 @@ summary(dados)
 ##                                        3rd Qu.:31.5  
 ##                                        Max.   :35.0
 ```
+
+Através da função `rownames` é possível atribuir um nome para cada observação do dataframe.
+
+```
+# novos nomes para as linhas de dados
+rownames(dados) <- paste0("linha", rownames(dados))
+dados
+##              datas      cidade tar
+## linha1  2013-01-01 Santa Maria  31
+## linha2  2013-01-02 Santa Maria  35
+## linha3  2013-01-03 Santa Maria  21
+## linha4  2013-01-04 Santa Maria  23
+## linha5  2013-01-05 Santa Maria  33
+## linha6  2013-01-06 Santa Maria  17
+## linha7  2013-01-07 Santa Maria  18
+## linha8  2013-01-08 Santa Maria  16
+## linha9  2013-01-09 Santa Maria  34
+## linha10 2013-01-10 Santa Maria  27
+## linha11 2013-01-11 Santa Maria  15
+## linha12 2013-01-12 Santa Maria  28
+## linha13 2013-01-13 Santa Maria  22
+## linha14 2013-01-14 Santa Maria  29
+## linha15 2013-01-15 Santa Maria  32
+```
+
+Apesar desse recurso existir, normalmente ele não é muito utilizado porque é possível adicionar uma coluna com nome para identificar cada observação.
+
+Por isso, para remover os nomes das observações, use `rownames(dados) <- NULL`.
+
+Os nomes das variáveis de um dataframe podem ser adicionados com a função `names` ou também `colnames`.
+
+```
+names(dados)
+#> [1] "datas"  "cidade" "tar"
+
+# mesmo que names(dados)
+colnames(dados)
+#> [1] "datas"  "cidade" "tar
+```
+
