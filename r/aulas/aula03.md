@@ -382,3 +382,46 @@ dados
 #> 14 2013-01-06    Sao Sepe  29    2       3.6      0.5606001
 #> 15 2013-01-07    Sao Sepe  32    0       6.6      1.0277669
 ```
+
+## Listas
+
+Listas são um tipo de vetor. Porém, a lista é uma estrutura de dado mais versátil por três motivos:
+
+- Os elementos podem ser objetos de diferentes tipos;
+- Cada elemento pode ter um tamanho diferente;
+- Os elementos podem conter estruturas de dados diferentes (como uma matriz e outro vetor).
+
+Para criar uma lista, utiliza-se a função `list`. A especificação do conteúdo de uma lista é similar à função `c()`. Apenas separamos por vírgula os elementos da lista.
+
+```
+# lista de dados heterogêneos
+lst <- list(
+  # 4 vetores atômicos
+  c(1L, 6L, 10L, NA),
+  c(-1, 0, 1, 2, NA),
+  c(FALSE, NA, FALSE, TRUE),
+  c('ae', NA, "ou"),
+  # uma lista com 2 elementos 
+  list(0, 1)
+)
+lst
+#> [[1]]
+#> [1]  1  6 10 NA
+#> 
+#> [[2]]
+#> [1] -1  0  1  2 NA
+#> 
+#> [[3]]
+#> [1] FALSE    NA FALSE  TRUE
+#> 
+#> [[4]]
+#> [1] "ae" NA   "ou"
+#> 
+#> [[5]]
+#> [[5]][[1]]
+#> [1] 0
+#> 
+#> [[5]][[2]]
+#> [1] 1
+```
+
