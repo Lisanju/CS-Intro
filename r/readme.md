@@ -4,8 +4,8 @@ Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de ex
 
 ## Conteúdo por aula
 - Aula 01 - Objetos, funções e scripts;
-- Aula 02 - Tipos de objetos;
-- Aula 03 -
+- Aula 02 - Estrutura de dados;
+- Aula 03 - Dataframes e Vetores;
 
 ## Referências
 
