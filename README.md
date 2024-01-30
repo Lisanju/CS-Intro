@@ -12,14 +12,8 @@ BROOKSHEAR, J. Glenn. Ciência da Computação: Uma Visão Abrangente. 11 Ed. Bo
 
 DÍSCOLA, Sérgio. Introdução à Web. São Carlos: 2020. Notas de aula.
 
-FERREIRA, M.; LOPES, M. Para conhecer: linguistica computacional. Sāo Paulo: Editora Contexto, 2019.
-
-MELLO, M. P.; PETERNELLI, L. A. Conhecendo o R: uma visão mais que estatística. 1. ed. Viçosa: Editora UFV, 2013.
-
 MORIMOTO, Carlos. Introdução à Ciência da Computação: em C. IME-USP. São Carlos: 2010.
 
-OTHERO, G. DE A.; MENUZZI, S. DE M. Lingüística computacional – teoria e prática. São Paulo: Parábola Editorial, 2005.
-
-TORGO, L. A Linguagem R - Programação para Análise de Dados. Lisboa: Escolar Editora, 2009.
+TATSCH, Jônatan. Análise de Dados Ambientais com R. Santa Maria: 2021. Disponível em: https://lhmet.github.io/adar-ebook/.
 
 TROJAHN, Tiago. Programação para Web I. São Carlos: 2020. Notas de aula.
