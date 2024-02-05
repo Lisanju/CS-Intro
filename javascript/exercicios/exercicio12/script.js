@@ -1,11 +1,16 @@
 $(document).ready(function(){
-  $(".menu").on("click", function () {
-    if ($(".l-site").hasClass("is-open")) {
-      $(".menu").removeClass("is-active");
-      $(".l-site").removeClass("is-open");
-    } else {
-      $(".menu").addClass("is-active");
-      $(".l-site").addClass("is-open");
-    }
-  });
+    $("#b").on("click", function(e){
+        $.ajax({
+            url: "texto.html",
+            success: function(data){
+                $("div").html(data);
+            },
+            beforeSend: function(){
+                $("img").css({display:"block"});
+            },
+            complete: function(){
+                $("img").css({display:"none"});
+            }
+        });
+    });
 });
