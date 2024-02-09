@@ -25,5 +25,3 @@ já reveladas da palavra oculta.
 
 Ao selecionar a opção “Sair”, o jogo termina.
 '''
-
-test()
