@@ -24,7 +24,7 @@
 
 ## ================== Implementação do Jogo da Forca a seguir: ==================
 
-while True:
+while (True):
     
     # Menu de opções
     print("========== Menu de Opções ========== \n \n Selecione uma das opções a seguir: \n \n 1 - Gerenciar arquivo de palavras; \n 2 - Jogar; \n 3 - Sair. \n")
