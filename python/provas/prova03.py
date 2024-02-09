@@ -25,3 +25,42 @@ já reveladas da palavra oculta.
 
 Ao selecionar a opção “Sair”, o jogo termina.
 '''
+
+# Menu de opções
+
+print("========== Menu de Opções ========== \n \n Selecione uma das opções a seguir: \n \n 1 - Gerenciar arquivo de palavras; \n 2 - Jogar; \n 3 - Sair. \n")
+opcaoMenu = int(input())
+
+# Opção 1 - Gerenciador de arquivo de palavras
+
+arquivo = "palavras.txt"
+
+if (opcaoMenu == 1):
+    print("========== Gerenciar arquivo de palavras ========== \n \n Selecione uma das opções a seguir: \n \n 1 - Adicionar palavra; \n 2 - Excluir palavra; \n 3 - Voltar.")
+    opcaoGer = int(input())
+
+    if (opcaoGer == 1):
+        novaPalavra = str(input("Insira uma nova palavra: "))
+        
+        lista = open(arquivo, "r")
+        textoLista = lista.read()
+        lista.close()
+
+        if (novaPalavra in textoLista):
+            print("A palavra inserida já está no arquivo.")
+            pass
+        
+        else:
+            lista = open(arquivo, "a+")
+            lista.write(novaPalavra)
+            lista.write("\n")
+            lista.close()
+
+            print("A palavra inserida foi adicionada ao arquivo.")
+        
+    
+# Opção 2 - Jogar
+
+
+# Opção 3 - Sair
+
