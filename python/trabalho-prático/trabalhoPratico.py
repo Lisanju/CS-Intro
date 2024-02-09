@@ -156,13 +156,3 @@ while rodarJogo == True:
     else:
 
         print("\n A opção selecionada é inválida. \n")
-
-    # Função do jogo
-
-    def acertar(palavraEscolhida, palpite):
-        for letra in palavraEscolhida:
-            if letra not in palpite:
-                return True
-
-            else:
-                return False
