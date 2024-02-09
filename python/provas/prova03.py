@@ -22,6 +22,7 @@
 
 ## Ao selecionar a opção “Sair”, o jogo termina.
 
+## ================== Implementação do Jogo da Forca a seguir: ==================
 
 # Menu de opções
 
