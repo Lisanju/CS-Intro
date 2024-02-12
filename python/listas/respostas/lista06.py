@@ -239,3 +239,19 @@ print(operacoes(2,3,"-"))
 
 #Ex 17#
 
+def calcConsumo(distanciaKm,quantidadeL):
+    consumo = distanciaKm/quantidadeL
+
+    if (consumo < 8):
+        return "Venda o carro!"
+
+    elif (consumo > 12):
+        return "Super econômico!"
+
+    else:
+        return "Econômico!"
+
+print(calcConsumo(10,4))
+
+#Ex 18#
+
