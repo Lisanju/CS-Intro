@@ -76,13 +76,36 @@ desenhaLinha(77)
 
 #Ex 5#
 
+def somaEntre(n1,n2):
+    soma = 0
 
+    if (n1 > n2):
+        while (n2 < n1 - 1):
+            n2 = n2 + 1
+            soma = soma + n2 
 
+    else:
+        while (n2 - 1 > n1):
+            n1 = n1 + 1
+            soma = soma + n1
 
+    return soma
 
+print(somaEntre(12,20))
 
+#Ex 6#
 
+def exponenciacao(x,z):
+    i = 1
+    exp = x
 
+    while (i < z):
+        exp = exp * x
+        i = i + 1
+
+    return exp
+
+print(exponenciacao(2,3))
 
 
 
