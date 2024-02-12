@@ -312,3 +312,16 @@ def vAnagrama(s1,s2):
 print(vAnagrama("listen","sileny"))
 
 #Ex 21#
+
+def intercalar(s1,s2):
+    sI = ""
+
+    for char1, char2 in zip(s1,s2):
+        sI = sI + char1 + char2
+
+    return sI
+
+print(intercalar("aaaaaaaaa","bbbbbb"))
+
+#Ex 22#
+
