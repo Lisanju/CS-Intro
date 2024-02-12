@@ -72,7 +72,6 @@ def desenhaLinha(numeroDeSinais):
 
     print(string)
 
-
 desenhaLinha(77)
 
 #Ex 5#
