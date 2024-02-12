@@ -126,3 +126,47 @@ verificarQuadradoPerfeito(16)
 
 #Ex 8#
 
+def volumeEsfera(raio):
+    volume = (4/3) * 3.14 * (raio ** 3)
+    return volume
+
+print(volumeEsfera(4))
+
+#Ex 9#
+
+def convSegundos(hora,minuto,segundo):
+    hora = hora * 60
+    minuto = minuto + hora
+    minuto = minuto * 60
+    segundo = segundo + minuto
+    return segundo
+
+print(convSegundos(2,25,50))
+
+#Ex 10#
+
+def CpraF(celsius):
+    fahrenheit = celsius * (9/5) + 32
+    return fahrenheit
+
+print(CpraF(30))
+
+#Ex 11#
+
+def calcHipotenusa(a,b):
+    hipotenusa = (a**2 + b**2)**1/2
+    return hipotenusa
+
+print(calcHipotenusa(4,6))
+
+#Ex 12#
+
+def volCilindro(altura,raio):
+    volume = 3.141592 * raio**2 * altura
+    return volume
+
+print(volCilindro(4,2))
+
+#Ex 13#
+
+
