@@ -325,3 +325,20 @@ print(intercalar("aaaaaaaaa","bbbbbb"))
 
 #Ex 22#
 
+def maiorFatorPrimo(numero):
+    return True
+
+#Ex 23#
+
+#Ex 24#
+
+def gerarLinha(numero):
+    if (numero <= 0):
+        return "Número inválido."
+
+    for i in range(1, numero + 1):
+        print("!" * i)
+
+gerarLinha(5)
+
+#Ex 25#
