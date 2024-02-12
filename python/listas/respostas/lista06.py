@@ -255,3 +255,60 @@ print(calcConsumo(10,4))
 
 #Ex 18#
 
+a = int(input("Digite um valor a: "))
+b = int(input("Digite um valor b: "))
+c = int(input("Digite um valor c: "))
+
+def vFormaTriangulo(a,b,c):
+    if (a + b > c and b + c > a and a + c > b):
+        return True
+
+    else:
+        return False
+
+def mTipoTriangulo(a,b,c):
+    if (vFormaTriangulo(a,b,c)):
+        if (a == b and a == c):
+            return "Equilátero"
+
+        elif (a == b or a == c or b == c):
+            return "Isósceles"
+
+        else:
+            return "Escaleno"
+
+    else:
+        False
+
+print(mTipoTriangulo(a,b,c))
+
+#Ex 19#
+
+def retornaSubstring(string,substring):
+    return string.find(substring)
+
+print(retornaSubstring("Eu gosto da Nana pra caramba porque a Nana é fofa","gato"))
+
+#Ex 20#
+
+def vAnagrama(s1,s2):
+    s1 = s1.replace(" ","").lower()
+    s2 = s2.replace(" ","").lower()
+
+    if (len(s1) != len(s2)):
+        return False
+
+    contador1 = {}
+    contador2 = {}
+
+    for letra in s1:
+        contador1[letra] = contador1.get(letra, 0) + 1
+
+    for letra in s2:
+        contador2[letra] = contador2.get(letra, 0) + 1
+
+    return contador1 == contador2
+
+print(vAnagrama("listen","sileny"))
+
+#Ex 21#
