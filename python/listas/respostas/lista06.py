@@ -107,5 +107,22 @@ def exponenciacao(x,z):
 
 print(exponenciacao(2,3))
 
+#Ex 7#
 
+def verificarQuadradoPerfeito(numero):
+    if numero < 0:
+        return False
+
+    rq = 0
+    while (rq * rq < numero):
+        rq = rq + 1
+
+    if (rq * rq == numero):
+        print(f"{numero} é um quadrado perfeito.")
+    else:
+        print(f"{numero} não é um quadrado perfeito.")
+
+verificarQuadradoPerfeito(16)
+
+#Ex 8#
 
