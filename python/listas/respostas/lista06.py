@@ -169,4 +169,73 @@ print(volCilindro(4,2))
 
 #Ex 13#
 
+def fatorial(n):
+    c = 0
+    fatorial = 1
+    i = n
+    
+    while (c < n):
+        fatorial = fatorial * i
+        i = i - 1
+        c = c + 1
+
+    return fatorial
+
+print(fatorial(5))
+
+#Ex 14#
+
+def calcMedia(n1,n2,n3,letra):
+    if (letra == "a"):
+        mediaA = (n1 + n2 + n3)/3
+        return mediaA
+
+    elif (letra == "p"):
+        mediaP = (n1*5 + n2*3 + n3*2)/10
+        return mediaP
+
+    else:
+        return False
+
+print(calcMedia(4,5,6,"p"))
+
+#Ex 15#
+
+def somaAlgarismos(numero):
+    if (numero <= 0):
+        return "Número inválido."
+
+    else:
+        soma = 0
+        
+        while (numero > 0):
+            digito = numero % 10
+            soma = soma + digito
+            numero = numero // 10
+            
+        return soma
+
+print(somaAlgarismos(251))
+
+#Ex 16#
+
+def operacoes(n1,n2,simbolo):
+    if (simbolo == "+"):
+        return n1+n2
+
+    elif (simbolo == "-"):
+        return n1-n2
+
+    elif (simbolo == "/"):
+        return n1/n2
+
+    elif (simbolo == "*"):
+        return n1*n2
+
+    else:
+        return False
+
+print(operacoes(2,3,"-"))
+
+#Ex 17#
 
