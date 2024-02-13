@@ -359,3 +359,19 @@ def tLateral(n):
 
 tLateral(55)
 
+#Ex 26#
+
+def gerarTriangulo(n):
+    if (n <= 0):
+        print("Número inválido.")
+
+    else:
+        cE = n - 1
+        cD = 0
+
+        for i in range(1,n+1):
+            print((" " * cE) + ("*" * i) + ("*" * cD))
+            cE = cE - 1
+            cD = cD + 1
+
+gerarTriangulo(6)
