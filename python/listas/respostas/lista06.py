@@ -553,3 +553,46 @@ elif (opcao == 3):
 
 else:
     print("Opção inválida.")
+
+#Ex 48#
+
+a = [
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12],
+    [13,14,15,16]
+    ]
+
+def maiorQue10(matriz):
+    c = 0
+
+    for linha in matriz:
+        for elemento in linha:
+            if (elemento > 10):
+                c = c + 1
+
+    print(f"Na matriz há {c} elementos maiores que 10")
+    return c
+
+maiorQue10(a)
+
+#Ex 49#
+
+b = [
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12]
+    ]
+
+def somaAD(matriz):
+    soma = 0
+
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            if (i < j):
+                soma = soma + matriz[i][j]
+
+    print(f"A soma dos elementos da matriz acima da diagonal principal é {soma}.")
+    return soma
+
+somaAD(b)
