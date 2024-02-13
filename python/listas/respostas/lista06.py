@@ -436,3 +436,81 @@ def qPar(lista):
 
 lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 print(qPar(lista))
+
+#Ex 42#
+
+def retornaMaior(lista):
+    maior = -9999999999
+
+    for num in lista:
+        if (num > maior):
+            maior = num
+
+    return maior
+
+lista = [-30,-2,0,1,4,14,20,23,35]
+print(retornaMaior(lista))
+
+#Ex 43#
+
+def retornaMedia(lista):
+    soma = 0
+    q = 0
+
+    for num in lista:
+        soma = soma + num
+        q = q + 1
+
+    return soma/q
+
+print(retornaMedia([1,2,3,4,5]))
+
+#Ex 44#
+
+def aleatorio(lista):
+    for i in range(0,20+1):
+        if (i not in lista):
+            lista.append(i)
+
+    return lista
+
+print(aleatorio([0,1,4,5,6,7,10,23]))
+
+#Ex 45#
+
+def separarLista(listaTrinta):
+    listaPar = []
+    listaImpar = []
+
+    for num in listaTrinta:
+        if (num % 2 == 0):
+            listaPar.append(num)
+
+        else:
+            listaImpar.append(num)
+
+    return f"Lista par: {listaPar} \nLista ímpar: {listaImpar}"
+    
+print(separarLista([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]))
+
+#Ex 46#
+
+def desvioPadrao(v):
+    n = len(v)
+    desvioPadrao = 1/(n-1)
+    somatorio = 0
+    somaMedia = 0
+
+    for i in v:
+        somaMedia = somaMedia + i
+
+    media = somaMedia / n
+    
+    for i in v:
+        somatorio = somatorio + (i - media)**2
+
+    desvioPadrao = desvioPadrao * somatorio
+
+    return f"O desvio padrão é {desvioPadrao}"
+
+print(desvioPadrao([1,2,3,4,5,6,7,8,9,10]))
