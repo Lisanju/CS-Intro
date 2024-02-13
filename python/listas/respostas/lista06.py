@@ -514,3 +514,42 @@ def desvioPadrao(v):
     return f"O desvio padrão é {desvioPadrao}"
 
 print(desvioPadrao([1,2,3,4,5,6,7,8,9,10]))
+
+#Ex 47#
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+
+def imprimir(v):
+    print(v)
+    return v
+
+def reverter(v):
+    vRevertido = []
+    vRevertido.append(v[::-1])
+    print(vRevertido)
+    return vRevertido
+
+def mediaAritmetica(v):
+    media = 0
+    soma = 0
+
+    for i in v:
+        soma = soma + i
+
+    media = soma / len(v)
+    print(media)
+    return media
+
+opcao = int(input("Digite uma das opções a seguir:\n1 - Impressão normal da lista.\n2 - Impressão reversa.\n3 - Função que retorna a média aritmética dos elementos da lista.\n\n-> "))
+
+if (opcao == 1):
+    imprimir(lista)
+
+elif (opcao == 2):
+    reverter(lista)
+
+elif (opcao == 3):
+    mediaAritmetica(lista)
+
+else:
+    print("Opção inválida.")
