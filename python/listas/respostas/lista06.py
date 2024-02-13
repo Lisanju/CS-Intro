@@ -375,3 +375,18 @@ def gerarTriangulo(n):
             cD = cD + 1
 
 gerarTriangulo(6)
+
+#Ex 27#
+
+def serie(n):
+    if (n <= 0):
+        print("Número inválido.")
+
+    else:
+        soma = 0
+        for i in range(1, n+1):
+            soma = soma + (i**2 + 1)/(i +3)
+
+        print("Resultado da série: ", soma)
+
+serie(2)
