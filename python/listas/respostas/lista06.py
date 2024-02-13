@@ -342,3 +342,20 @@ def gerarLinha(numero):
 gerarLinha(5)
 
 #Ex 25#
+
+def tLateral(n):
+    if (n <= 0):
+        print("Número inválido.")
+
+    else:
+        c = 0
+        for i in range(1,2*n):
+            if (i < n):
+                print("*" * i)
+
+            else:
+                print("*" * (n - c))
+                c = c + 1
+
+tLateral(55)
+
