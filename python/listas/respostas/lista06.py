@@ -390,3 +390,49 @@ def serie(n):
         print("Resultado da série: ", soma)
 
 serie(2)
+
+#Ex 28#
+
+def somatorio(n):
+    if (n <= 0):
+        print("Número inválido.")
+
+    else:
+        soma = 0
+
+        for i in range(1,n+1):
+            soma = soma + i
+
+        print(soma)
+
+somatorio(3)
+
+#Ex 33#
+
+import math
+
+def neperiano(n):
+    if (n < 0):
+        print("Número inválido.")
+
+    else:
+        soma = 0
+        for i in range(0,n+1):
+            soma = soma + (1/math.factorial(i))
+
+        print(soma)
+
+neperiano(5)
+
+#Ex 41#
+
+def qPar(lista):
+    listaPar = []
+    for num in lista:
+        if (num % 2 == 0):
+            listaPar.append(num)
+
+    return listaPar
+
+lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+print(qPar(lista))
