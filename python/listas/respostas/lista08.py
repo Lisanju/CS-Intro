@@ -22,4 +22,26 @@ print(f"O arquivo possui {qtVogais} vogais")
 
 #Ex 3#
 
+nomeArquivo = str(input("Digite o nome do arquivo: ")) + ".txt"
+arquivo = open(nomeArquivo,"r")
+texto = arquivo.read()
+
+vogais = ["a","e","i","o","u"]
+consoantes = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"]
+
+qtVogais = 0
+qtConsoantes = 0
+
+for char in texto:
+    for v in vogais:
+        if (char == v):
+            qtVogais = qtVogais + 1
+
+    for c in consoantes:
+        if (char == c):
+            qtConsoantes = qtConsoantes + 1
+
+print(f"O arquivo possui {qtVogais} vogais e {qtConsoantes} consoantes")
+
+#Ex 4#
 
