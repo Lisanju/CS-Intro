@@ -44,22 +44,22 @@ print(somaCuboR(3))
 #Ex 4#
 
 def fibonacciR(n):
-    if (n == 0 or n == 1):
-        return n
+    if (n == 1 or n == 2):
+        return n-1
 
     else:
         return fibonacciR(n-1) + fibonacciR(n-2)
 
-print(fibonacciR(6))
+print(fibonacciR(5))
 
 def fibonacciIt(n):
-    if (n == 0 or n == 1):
-        return n
+    if (n == 1 or n == 2):
+        return n-1
 
     else:
         a = 0
         b = 1
-        cont = 1
+        cont = 2
 
         while (cont < n):
             c = a + b
@@ -69,6 +69,7 @@ def fibonacciIt(n):
 
         return c
 
-print(fibonacciIt(6))
+print(fibonacciIt(5))
 
 #Ex 5#
+
