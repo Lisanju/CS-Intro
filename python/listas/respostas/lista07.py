@@ -226,3 +226,60 @@ print(fatorialQuadruploR(3))
 
 #Ex 15#
 
+def superfatorialR(n):
+    def fatorialR(n):
+        if (n <= 1):
+            return 1
+
+        else:
+            return n * fatorialR(n-1)
+
+    if (n <= 1):
+        return 1
+
+    else:
+        return fatorialR(n) * superfatorialR(n-1)
+
+print(superfatorialR(4))
+
+#Ex 16#
+
+def hiperfatorialR(n):
+
+    if (n <= 1):
+        return 1
+
+    else:
+        return n**n * hiperfatorialR(n-1)
+
+print(hiperfatorialR(3))
+
+#Ex 17#
+
+def fatExpoR(n):
+    i = 1
+    if (n <= 1):
+        return 1
+
+    else:
+        fatorialExponencial = n**fatExpoR(n-1) 
+        return fatorialExponencial
+
+print(fatExpoR(3))
+
+#Ex 18#
+
+def sequenciaR(n):
+    if (n <= 0):
+        return "Número inválido"
+
+    elif (n == 1 or n == 2):
+        return n
+
+    else:
+        return 2 * sequenciaR(n-1) + 3 * sequenciaR(n-2)
+
+print(sequenciaR(3))
+
+#Ex 19#
+
