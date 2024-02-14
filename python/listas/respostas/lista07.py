@@ -325,3 +325,67 @@ print(fibgR(6))
 
 #Ex 22#
 
+def tetranacci(n):
+    if (n > 0 and n < 4):
+        return 0
+
+    elif (n == 4):
+        return 1
+
+    else:
+        return tetranacci(n-1) + tetranacci(n-2) + tetranacci(n-3) + tetranacci(n-4)
+
+print(tetranacci(9))
+
+#Ex 23#
+
+def padovan(n):
+    if (n < 3):
+        return 1
+
+    else:
+        return padovan(n-2) + padovan(n-3)
+
+print(padovan(8))
+
+#Ex 24#
+
+def h(m,n):
+    if (n == 1):
+        return m+1
+
+    elif (m == 1):
+        return n+1
+
+    else:
+        return h(m,n-1) + h(m-1,n)
+
+print(h(5,3))
+
+#Ex 25#
+
+def ackerman(m,n):
+    if (m == 0):
+        return n+1
+
+    elif (m > 0 and n == 0):
+        return ackerman(m-1,1)
+
+    else:
+        return ackerman(m-1,ackerman(m,n-1))
+
+print(ackerman(2,3))
+
+#Ex 26#
+
+def pell(n):
+    if (n == 0 or n == 1):
+        return n
+
+    else:
+        return 2 * pell(n-1) + pell(n-2)
+
+print(pell(3))
+
+#Ex 27#
+
