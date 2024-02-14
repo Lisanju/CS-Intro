@@ -43,6 +43,17 @@ print(somaCuboR(3))
 
 #Ex 4#
 
+def expoR(k,n):
+    if (k == 1 or n == 0):
+        return 1
+
+    else:
+        return k * expoR(k,n-1)
+
+print(expoR(2,3))
+
+#Ex 5#
+
 def fibonacciR(n):
     if (n == 1 or n == 2):
         return n-1
@@ -71,5 +82,5 @@ def fibonacciIt(n):
 
 print(fibonacciIt(5))
 
-#Ex 5#
+#Ex 6#
 
