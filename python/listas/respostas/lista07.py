@@ -154,4 +154,33 @@ imparCresR(11)
 
 #Ex 10#
 
+def exibirR(lista,i=0):
+    if (i < len(lista)):
+        print(lista[i], end = " ")
+        exibirR(lista,i+1)
+
+exibirR([1,2,3,4,5])
+
+#Ex 11#
+
+def menorL(lista):
+    if (len(lista) == 0):
+        return None
+
+    elif (len(lista) == 1):
+        return lista[0]
+
+    else:
+        restoLista = menorL(lista[1:])
+
+        if (lista[0] < restoLista):
+            return lista[0]
+
+        else:
+            return restoLista
+
+ml = [7,5,4,2,8]
+print(menorL(ml))
+
+#Ex 12#
 
