@@ -6,6 +6,8 @@ listaLinhas = arquivo.readlines()
 
 print(f"O arquivo possui {len(listaLinhas)} linhas")
 
+arquivo.close()
+
 #Ex 2#
 
 nomeArquivo = str(input("Digite o nome do arquivo: ")) + ".txt"
@@ -19,6 +21,8 @@ for char in texto:
         qtVogais = qtVogais + 1
 
 print(f"O arquivo possui {qtVogais} vogais")
+
+arquivo.close()
 
 #Ex 3#
 
@@ -43,5 +47,24 @@ for char in texto:
 
 print(f"O arquivo possui {qtVogais} vogais e {qtConsoantes} consoantes")
 
+arquivo.close()
+
 #Ex 4#
+
+nomeArquivo = str(input("Digite o nome do arquivo: ")) + ".txt"
+arquivo = open(nomeArquivo,"r")
+texto = arquivo.read()
+
+inputChar = str(input("Digite um caracter: "))
+qtInputChar = 0
+
+for char in texto:
+    if (char == inputChar):
+        qtInputChar = qtInputChar + 1
+
+print(f"A quantidade de [{inputChar}] no texto é {qtInputChar}")
+
+arquivo.close()
+
+#Ex 5#
 
