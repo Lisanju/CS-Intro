@@ -84,3 +84,74 @@ print(fibonacciIt(5))
 
 #Ex 6#
 
+def cresR(n):
+    if (n == 0):
+        print(0)
+        return n
+
+    else:
+        resultado = cresR(n-1)
+        print(n)
+        return resultado
+
+print(cresR(4))
+
+#Ex 7#
+
+def decresR(n):
+    if (n == 0):
+        return n
+
+    else:
+        print(n)
+        return decresR(n-1)
+
+print(decresR(4))
+
+#Ex 8#
+
+def parCresR(n):
+    if (n < 0 or n % 2 != 0):
+        return
+
+    else:
+        parCresR(n-2)
+        print(n)
+
+parCresR(10)
+
+def imparCresR(n):
+    if (n < 0 or n % 2 == 0):
+        return
+
+    else:
+        imparCresR(n-2)
+        print(n)
+
+imparCresR(11)
+
+#Ex 9#
+
+def parCresR(n):
+    if (n < 0 or n % 2 != 0):
+        return
+
+    else:
+        print(n)
+        parCresR(n-2)
+
+parCresR(10)
+
+def imparCresR(n):
+    if (n < 0 or n % 2 == 0):
+        return
+
+    else:
+        print(n)
+        imparCresR(n-2)
+
+imparCresR(11)
+
+#Ex 10#
+
+
