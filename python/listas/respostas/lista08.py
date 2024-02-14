@@ -68,3 +68,22 @@ arquivo.close()
 
 #Ex 5#
 
+nomeArquivo = str(input("Digite o nome do arquivo: ")) + ".txt"
+arquivo = open(nomeArquivo,"r")
+texto = arquivo.read()
+
+listaChar = []
+alfabeto = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+for char in texto:
+    listaChar.append(char)
+
+print("== Quantidade de vezes em que cada caractere aparece no texto ==\n")
+
+for letra in alfabeto:
+    print(f"{letra}: {listaChar.count(letra)}")
+
+arquivo.close()
+
+#Ex 6#
+
