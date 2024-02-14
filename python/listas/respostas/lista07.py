@@ -283,3 +283,45 @@ print(sequenciaR(3))
 
 #Ex 19#
 
+def fibgR(n):
+    if (n < 0):
+        return "Número inválido."
+
+    elif (n == 0 or n == 1):
+        return 1
+
+    else:
+        return fibgR(n-1) + fibgR(n-2)
+
+print(fibgR(6))
+
+#Ex 20#
+
+def somaListaR(lista):
+    if (lista == []):
+        return 0
+
+    else:
+        return lista[-1] + somaListaR(lista[:-1])
+
+print(somaListaR([1,2,3,4,5]))
+        
+#Ex 21#
+
+def fibgR(n):
+    if (n < 0):
+        return "Número inválido."
+
+    elif (n == 0 or n == 1):
+        return 0
+
+    elif (n == 2):
+        return 1
+
+    else:
+        return fibgR(n-1) + fibgR(n-2) + fibgR(n-3)
+
+print(fibgR(6))
+
+#Ex 22#
+
