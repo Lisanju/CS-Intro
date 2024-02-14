@@ -163,24 +163,66 @@ exibirR([1,2,3,4,5])
 
 #Ex 11#
 
-def menorL(lista):
-    if (len(lista) == 0):
-        return None
-
-    elif (len(lista) == 1):
+def menorElemento(lista):
+    if (len(lista) == 1):
         return lista[0]
 
     else:
-        restoLista = menorL(lista[1:])
+        copia = menorElemento(lista[1:])
 
-        if (lista[0] < restoLista):
+        if (lista[0] < copia):
             return lista[0]
 
         else:
-            return restoLista
+            return copia
 
-ml = [7,5,4,2,8]
-print(menorL(ml))
+print(menorElemento([4,3,6,2,7]))
 
 #Ex 12#
+
+def serieR(n):
+    if (n <= 0):
+        return 1
+
+    else:
+        nAnterior = serieR(n-1)
+        serie = (1 + nAnterior**2) / nAnterior
+        return serie
+
+print(serieR(3))
+
+#Ex 13#
+
+def fatDuplo(n):
+    if (n % 2 == 0):
+        return "Número inválido"
+
+    elif (n <= 0):
+        return 1
+
+    else:
+        fatorial = n * fatDuplo(n-2)
+        return fatorial
+
+print(fatDuplo(5))
+
+#Ex 14#
+
+def fatorialQuadruploR(n):
+    def fatorialR(n):
+        if (n <= 1):
+            return 1
+
+        else:
+            return n * fatorialR(n-1)
+    
+    if (n <= 1):
+        return 1
+
+    else:
+        return fatorialR(2*n) / fatorialR(n)
+
+print(fatorialQuadruploR(3))
+
+#Ex 15#
 
