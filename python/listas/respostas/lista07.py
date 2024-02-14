@@ -389,3 +389,66 @@ print(pell(3))
 
 #Ex 27#
 
+def catalan(n):
+    if (n == 0):
+        return 1
+
+    else:
+        return ((2*(2*n - 1))/(n+1)) * catalan(n-1)
+
+print(catalan(5))
+
+#Ex 28#
+
+def palavraFibonacci(n):
+    if (n == 0):
+        return "b"
+
+    elif (n == 1):
+        return "a"
+
+    else:
+        return palavraFibonacci(n-1) + palavraFibonacci(n-2)
+
+print(palavraFibonacci(5))
+
+#Ex 29#
+
+def convBinario(n):
+    if (n == 0 or n == 1):
+        return str(n)
+
+    else:
+        quociente = n // 2
+        resto = n % 2
+
+        return convBinario(quociente) + str(resto)
+
+print(convBinario(23))
+
+#Ex 30#
+
+def oR(n,k):
+    if (n == 0):
+        return 0
+
+    elif (n % 10 == k):
+        o = 1
+
+    elif (n % 10 != k):
+          o = 0
+
+    return o + oR(n // 10,k)
+
+print(oR(762021192,2))
+
+#Ex 31#
+
+def mdc(x,y):
+    if (y == 0):
+        return x
+
+    else:
+        return mdc(y,x%y)
+
+print(mdc(4,8))
