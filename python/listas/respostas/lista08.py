@@ -87,7 +87,22 @@ arquivo.close()
 
 #Ex 6#
 
+nomeAO = str(input("Digite o nome de um arquivo já existente: ")) + ".txt"
+AO = open(nomeAO,"r")
+textoAO = AO.read()
 
+nomeAN = str(input("Digite o nome de um novo arquivo para criar: ")) + ".txt"
+AN = open(nomeAN,"w")
+
+for char in textoAO:
+    if (char == "a" or char == "e" or char == "i" or char == "o" or char == "u"):
+        AN.write(char.upper())
+
+    else:
+        AN.write(char)
+
+AO.close()
+AN.close()
 
 #Ex 7#
 
