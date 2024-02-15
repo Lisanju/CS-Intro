@@ -16,7 +16,7 @@ Neste diretório, disponibilizei as minhas notas de estudo sobre a linguagem C#.
 - Aula 11 - File IO;
 - Aula 12 - Genéricos, Delegados e Reflexão;
 - Aula 13 - Multithreading e Sincronização;
-- Aula 14 - Webservices com C#;
+- Aula 14 - Webservices com C#.
 
 ## Referências
 
