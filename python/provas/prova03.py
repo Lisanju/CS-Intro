@@ -44,10 +44,45 @@ print(textoAN)
 #    11 12 13 14 15     
 #    16 17 18 19 20 21
 
+def trianguloFloyd(n):
 
+    valor = 1
+    for i in range(1,n+1):
+        for j in range(1,i+1):
+            print(valor,end=" ")
+            valor = valor + 1
+        print()
+
+trianguloFloyd(6)
 
 # 4 - Faça uma função recursiva que calcule e retorne o N-ésimo termo da sequência Fibonacci. Alguns números desta sequência são: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89... #
+
+def fibonacciR(n):
+    if (n == 1 or n == 2):
+        return n - 1
+
+    else:
+        return fibonacciR(n-1) + fibonacciR(n-2)
+
+print(fibonacciR(5))
 
 # 5 - Faça um programa que calcule e escreva o valor de S: 
 #      S = 1/1 + 3/2 + 5/3 + 7/4 ... 99/50
 
+def sequencia(n):
+    a = 1
+    b = 1
+
+    if (n == 1):
+        print("1/1")
+        return a/b
+
+    else:
+        for i in range(2,n+1):
+            a = a + 2
+            b = b + 1
+
+        print(f"{a}/{b}")
+        return a/b
+
+print(sequencia(50))
