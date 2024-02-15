@@ -87,3 +87,36 @@ arquivo.close()
 
 #Ex 6#
 
+
+
+#Ex 7#
+
+nomeAO = str(input("Digite o nome de um arquivo já existente: ")) + ".txt"
+AO = open(nomeAO,"r")
+textoAO = AO.read()
+AO.close()
+
+nomeAN = str(input("Digite o nome de um novo arquivo para criar: ")) + ".txt"
+AN = open(nomeAN,"w")
+AN.write(textoAO.upper())
+AN.close()
+
+#Ex 8#
+
+nomeAR1 = str(input("1 - Digite o nome de um arquivo já existente: ")) + ".txt"
+AR1 = open(nomeAR1,"r")
+textoAR1 = AR1.read()
+AR1.close()
+
+nomeAR2 = str(input("2 - Digite o nome de outro arquivo já existente: ")) + ".txt"
+AR2 = open(nomeAR2,"r")
+textoAR2 = AR2.read()
+AR2.close()
+
+nomeAC = str(input("3 - Digite o nome de um novo arquivo para criar: ")) + ".txt"
+AC = open(nomeAC,"w")
+textoAC = AC.write(textoAR1 + textoAR2)
+AC.close()
+
+#Ex 9#
+
