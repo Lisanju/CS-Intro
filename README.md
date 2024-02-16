@@ -1,12 +1,24 @@
 # Introdução à Ciência da Computação
 
-Repositório para o estudo introdutório de tópicos em Ciência da Computação.
+Repositório para o estudo introdutório de tópicos em Ciência da Computação e linguagens de programação.
+
+## Sobre o repositório
+
+Todo o conteúdo presente neste repositório foi retirado dos meus materiais de estudo em disciplinas de cursos de Ciência da Computação, Análise e Desenvolvimento de Sistemas e áreas correlatas. Além disso, também inclui o conteúdo de livros e sites sobre esses assuntos. Todos os materiais utilizados foram referenciados no tópico 'Referências' deste arquivo.
+
+- A pasta 'teoria-da-comp' contém um resumo do conteúdo científico e tecnológico da computação, a ideia é fornecer uma base técno-teórica para que seja mais fácil de explorar a área.
+
+- As outras pastas, como 'c', 'javascript', 'html' são dedicadas exclusivamente ao estudo de linguagens de programação, linguagens de marcação de texto e outras tecnologias utilizadas na área. Essas pastas seguem um padrão de organização: no geral, cada uma delas contém uma pasta 'aulas' (para o conteúdo instrucional da tecnologia), 'listas' (conjunto de exercícios divididos por tema), 'exercicios' (exercicios individuais) e 'projeto' ou 'trabalho' (para a construção de um projeto consideravelmente robusto utilizando a tecnologia estudada).
+
+
 
 ## Referências
 
 ARANTES, P. Noções de Linguagens de Programação para Linguistas. São Carlos: 2022. Notas de aula.
 
 BACKES, A. Introdução à Computação. São Carlos: 2023. Notas de aula.
+
+BACKES, A. Introdução ao Pensamento Algorítmico. São Carlos: 2023. Notas de aula.
 
 BACKES, A. Linguagem C: completa e descomplicada. Rio de Janeiro: Elsevier, 2013.
 
