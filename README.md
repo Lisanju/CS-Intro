@@ -8,6 +8,8 @@ ARANTES, P. Noções de Linguagens de Programação para Linguistas. São Carlos
 
 BACKES, A. Introdução à Computação. São Carlos: 2023. Notas de aula.
 
+BACKES, A. Linguagem C: completa e descomplicada. Rio de Janeiro: Elsevier, 2013.
+
 BROOKSHEAR, G. Ciência da Computação: Uma Visão Abrangente. 11 Ed. Bookman. Porto Alegre: 2013.
 
 DÍSCOLA, S. Introdução à Web. São Carlos: 2020. Notas de aula.
