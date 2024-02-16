@@ -20,4 +20,6 @@ Obs: é possível também acessar gratuitamente o conteúdo das aulas no canal d
 
 BACKES, André. Introdução ao Pensamento Algorítmico. São Carlos: 2023. Notas de aula.
 
+BACKES, André. Linguagem C: completa e descomplicada. Rio de Janeiro: Elsevier, 2013.
+
 MORIMOTO, Carlos. Introdução à Ciência da Computação: em C. IME-USP. São Carlos: 2010.
