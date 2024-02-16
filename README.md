@@ -8,7 +8,7 @@ Todo o conteúdo presente neste repositório foi retirado dos meus materiais de 
 
 - A pasta 'teoria-da-comp' contém um resumo do conteúdo científico e tecnológico da computação, a ideia é fornecer uma base técno-teórica para que seja mais fácil de explorar a área.
 
-- As outras pastas, como 'c', 'javascript', 'html' são dedicadas exclusivamente ao estudo de linguagens de programação, linguagens de marcação de texto e outras tecnologias utilizadas na área. Essas pastas seguem um padrão de organização: no geral, cada uma delas contém uma pasta 'aulas' (para o conteúdo instrucional da tecnologia), 'listas' (conjunto de exercícios divididos por tema), 'exercicios' (exercicios individuais) e 'projeto' ou 'trabalho' (para a construção de um projeto consideravelmente robusto utilizando a tecnologia estudada).
+- As outras pastas, como 'c', 'javascript', 'html' são dedicadas exclusivamente ao estudo de linguagens de programação, linguagens de marcação de texto e outras tecnologias utilizadas na área. Essas pastas seguem um padrão de organização: no geral, cada uma delas contém uma pasta 'aulas' (para o conteúdo instrucional da tecnologia), 'listas' (conjunto de exercícios divididos por tema), 'exercicios' (exercícios individuais) e 'projeto' ou 'trabalho' (para a construção de um projeto consideravelmente robusto utilizando a tecnologia estudada).
 
 Este repositório é construído exclusivamente para fins educativos.
 
