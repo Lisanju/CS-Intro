@@ -10,7 +10,7 @@ Todo o conteúdo presente neste repositório foi retirado dos meus materiais de 
 
 - As outras pastas, como 'c', 'javascript', 'html' são dedicadas exclusivamente ao estudo de linguagens de programação, linguagens de marcação de texto e outras tecnologias utilizadas na área. Essas pastas seguem um padrão de organização: no geral, cada uma delas contém uma pasta 'aulas' (para o conteúdo instrucional da tecnologia), 'listas' (conjunto de exercícios divididos por tema), 'exercicios' (exercicios individuais) e 'projeto' ou 'trabalho' (para a construção de um projeto consideravelmente robusto utilizando a tecnologia estudada).
 
-
+Este repositório é construído exclusivamente para fins educativos.
 
 ## Referências
 
