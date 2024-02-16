@@ -324,3 +324,37 @@ print(f"{int(hT)}:{int(mTd)}:{int(sT)}")
 
 # Ex 49 #
 
+anoAtual = int(input("Digite o ano atual: "))
+idade = int(input("Digite sua idade: "))
+print(f"Você nasceu em {anoAtual - idade}")
+
+# Ex 50 #
+
+x = float(input("Digite a coordenada x: "))
+y = float(input("Digite a coordenada y: "))
+r = (x**2 + y**2)**1/2
+print(f"A distância é: {r}")
+
+# Ex 51 #
+
+a1 = float(input("Aposta do jogador 1: "))
+a2 = float(input("Aposta do jogador 2: "))
+a3 = float(input("Aposta do jogador 3: "))
+v = float(input("Valor do prêmio: "))
+atotal = a1+a2+a3
+p1 = a1/atotal
+p2 = a2/atotal
+p3 = a3/atotal
+r1 = v*p1
+r2 = v*p2
+r3 = v*p3
+print(f"O jogador 1 recebe {r1}, o jogador 2 recebe {r2} e o jogador 3 recebe {r3}.")
+
+# Ex 52 #
+
+c = float(input("Comprimento do terreno: "))
+l = float(input("Largura do terreno: "))
+p = float(input("Preço do metro de tela: "))
+mQ = c*l
+custo = mQ**1/2
+print(f"O custo é {custo}")
