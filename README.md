@@ -12,7 +12,7 @@ BROOKSHEAR, G. Ciência da Computação: Uma Visão Abrangente. 11 Ed. Bookman. 
 
 DÍSCOLA, S. Introdução à Web. São Carlos: 2020. Notas de aula.
 
-JAVATPOINT. JavaTPoint: CSharp Tutorial. Index. Disponível em: https://www.javatpoint.com/c-sharp-tutorial. 2023.
+JAVATPOINT. JavaTPoint: CSharp Tutorial. Index. 2023. Disponível em: https://www.javatpoint.com/c-sharp-tutorial.
 
 JESUS, W. Introdução e Conceitos Fundamentais da Linguagem C#. UniVap: 2019. Notas de Aula.
 
