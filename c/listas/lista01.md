@@ -16,7 +16,7 @@
 
 8) Faça um programa que leia dois números inteiros e depois os imprima na ordem inversa em que eles foram lidos.
 
-9) Faça um programa que leia dois valoers do tipo float. Use um único comando de leitura para ioss. Em seguida, imprima os valores lidos na ordem inversa em que eles foram lidos.
+9) Faça um programa que leia dois valores do tipo float. Use um único comando de leitura para ioss. Em seguida, imprima os valores lidos na ordem inversa em que eles foram lidos.
 
 10) Elabore um programa que solicite ao usuário entrar com o valor do dia, mês e ano (inteiros). Em seguida, imprima os valores lidos separados por uma barra (/).
 
