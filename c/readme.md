@@ -3,7 +3,7 @@
 Neste diretório, disponibilizei os materiais (slides de conteúdo, listas de exercícios e provas) das aulas públicas da disciplina '2023/1 - Introdução ao Pensamento Algorítmico', ofertada pelo Departamento de Computação da Universidade Federal de São Carlos e ministrada pelo Prof. Dr. André Ricardo Backes. Os fundamentos sobre programação são ensinados através da linguagem C.
 
 ## Conteúdo por aula
-- Aula 01 - Introdução e Breve Histórico;
+- Aula 01 - Algoritmos e Fluxogramas;
 - Aula 02 - Configurando CodeBlocks;
 - Aula 03 - Variáveis e Expressões;
 - Aula 04 - Comandos de Controle Condicional;
