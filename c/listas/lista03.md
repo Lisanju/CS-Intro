@@ -1,4 +1,4 @@
-# Lista 02 #
+# Lista 03 - Comandos de Controle Condicional #
 
 1) Faça um programa que leia dois números e mostre qual deles é o maior.
 
