@@ -287,3 +287,40 @@ print(inverso)
 
 #Ex 46#
 
+a = int(input("Digite um número entre (1000 e 9999): "))
+
+if (a < 10000 and a > 999):
+    for digito in str(a):
+        print(digito)
+
+else:
+    print("Número inválido.")
+
+# Ex 47 #
+
+s = int(input("Digite um valor em segudos: "))
+m = s / 60
+h = m / 60
+print(f"Horas: {h}\nMinutos: {m}\nSegundos: {s}")
+
+# Ex 48 #
+
+print("A seguir, digite o horário de início do experimento biológico.")
+hI = int(input("Em que hora começou? "))
+mI = int(input("Em que minuto começou? "))
+sI = int(input("Em que segundo começou? "))
+d = int(input("Quantos segundos durou o experimento biológico?"))
+
+mI = mI + hI * 60
+sI = sI + mI * 60
+sI = sI + d
+
+sT = sI % 60
+mTa = (sI - sT) / 60
+mTd = mTa % 60
+hT = (mTa - mTd) / 60
+
+print(f"{int(hT)}:{int(mTd)}:{int(sT)}")
+
+# Ex 49 #
+
