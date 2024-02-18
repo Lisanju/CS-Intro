@@ -162,3 +162,156 @@ int main()
 }
 
 // Ex 11
+
+#include <stdio.h>
+#include <stdlib.h>
+
+const float pi = 3.141592;
+int main()
+{
+    int raio,area;
+    printf("Digite o valor do raio de um circulo: \n");
+    scanf("%d",&raio);
+    area = pi * (pow(raio,2));
+    printf("Area do circulo = %d\n",area);
+    system("pause");
+    return 0;
+}
+
+// Ex 12
+
+#include <stdio.h>
+#include <stdlib.h>
+
+const float pi = 3.141592;
+int main()
+{
+    float altura,raio,volume;
+    printf("Digite a altura e o raio de um cilindro circular: \n");
+    scanf("%f %f",&altura,&raio);
+    volume = pi * (pow(raio,2)) * altura;
+    printf("Volume = %f\n",volume);
+    system("pause");
+    return 0;
+}
+
+// Ex 13
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int a,b,h;
+    printf("Digite os valores dos lados a e b de um triangulo: \n");
+    scanf("%d %d",&a,&b);
+    h = (int) sqrt(pow(a,2) + pow(b,2));
+    printf("Hipotenusa = %d\n",h);
+    system("pause");
+    return 0;
+}
+
+// Ex 14
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char min,mai;
+    printf("Digite uma letra maiuscula: \n");
+    scanf("%c",&mai);
+    min = mai | 32;
+    printf("Em minusculo = %c\n",min);
+    system("pause");
+    return 0;
+}
+
+// Ex 15
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num,d1,d2,d3;
+    printf("Digite um numero inteiro de tres digitos (ex 320, 255, etc): \n");
+    scanf("%d",&num);
+    d1 = num % 10;
+    num = num / 10;
+    d2 = num % 10;
+    num = num / 10;
+    d3 = num % 10;
+    printf("O numero inverso = %d%d%d\n",d1,d2,d3);
+    system("pause");
+    return 0;
+}
+
+// Ex 16
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n,nd,nm;
+    printf("Digite um numero: \n");
+    scanf("%d",&n);
+    nd = n >> 1;
+    nm = n << 1;
+    printf("Divisao: %d\nMultiplicacao: %d\n",nd,nm);
+    system("pause");
+    return 0;
+}
+
+// Ex 17
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    unsigned char numero,complemento;
+    printf("Digite um numero inteiro: \n");
+    scanf("%u",&numero);
+    complemento = ~numero;
+    printf("Complemento bit a bit: %u\n",complemento);
+    system("pause");
+    return 0;
+}
+
+// Ex 18
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b,ad,ae;
+    printf("Digite dois numeros: \n");
+    scanf("%d %d",&a,&b);
+    ae = a << b;
+    ad = a >> b;
+    printf("Deslocamento pra esquerda: %d\nDeslocamento pra direita: %d\n",ae,ad);
+    system("pause");
+    return 0;
+}
+
+// Ex 19
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b,xor,or,and;
+    printf("Digite dois numeros: \n");
+    scanf("%d %d",&a,&b);
+    xor = a ^ b;
+    or = a | b;
+    and = a & b;
+    printf("=== Operacores bit a bit ===\nXOR: %d\nOR: %d\nAND: %d\n",xor,or,and);
+    system("pause");
+    return 0;
+}
