@@ -13,7 +13,7 @@ Arquivo para o estudo introdutório da linguagem Haskell. Todos os materiais uti
 
 ## Instalação do Agda
 
-Agda é uma linguagem de programação funcional de tipo dependente, implementada pela linguagem Haskell. Além disso, o Agda é um demonstrador automatizado de teoremas com base no paradigma de Isomorfismo de Curry-Howard (<https://pt.wikipedia.org/wiki/Isomorfismo_de_Curry-Howard>). A linguagem possui construtores como data types, pattern matching, records, expressões let e módulos, além de possuir uma sintaxe próxima do Haskell. 
+Agda é uma linguagem de programação funcional de tipo dependente, implementada pela linguagem Haskell. Além disso, o Agda é um demonstrador automatizado de teoremas com base no paradigma de <a href=https://pt.wikipedia.org/wiki/Isomorfismo_de_Curry-Howard>Isomorfismo de Curry-Howard</a>. A linguagem possui construtores como data types, pattern matching, records, expressões let e módulos, além de possuir uma sintaxe próxima do Haskell. 
 
 É possível acessar as instruções para a instalação do Agda em: <https://agda.readthedocs.io/en/latest/getting-started/installation.html>.
 
