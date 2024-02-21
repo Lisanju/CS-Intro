@@ -2,6 +2,8 @@
 
 Arquivo para o estudo introdutório da linguagem Haskell. Todos os materiais utilizados neste arquivo foram referenciados no tópico Referências.
 
+https://learnyouahaskell.com/chapters
+
 ## Instalação do Haskell
 
 É possível acessar as instruções para a instalação do Haskell em: <https://www.haskell.org/downloads/>. O Haskell toolchain contém:
